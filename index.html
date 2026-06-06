@@ -4,17 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hair Herb's Oil by Sakila | Premium Organic Hair Care</title>
-    <meta name="description" content="১০০% অর্গানিক এবং প্রাকৃতিক উপাদান দিয়ে তৈরি Hair Herb's Oil। চুল পড়া রোধ করে এবং নতুন চুল গজাতে সাহায্য করে।">
     
-    <!-- Google Fonts: Hind Siliguri for Bengali -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Tailwind CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -24,850 +19,159 @@
                         primary: '#2D6A4F',
                         secondary: '#40916C',
                         accent: '#95D5B2',
-                        darkGreen: '#1B4332',
-                        lightCream: '#FDFBF7',
-                        warmGold: '#E6C594',
-                        earthyLinen: '#FAF6F0',
-                        darkText: '#1B4332',
-                        lightText: '#F8F9FA'
+                        dark: '#1B4332',
+                        cream: '#F8F9FA',
+                        creamDark: '#E9EDC9'
                     },
                     fontFamily: {
-                        sans: ['"Hind Siliguri"', 'sans-serif'],
-                    },
-                    boxShadow: {
-                        'glass': '0 8px 32px 0 rgba(27, 67, 50, 0.15)',
-                        'soft': '0 20px 40px -15px rgba(27, 67, 50, 0.08)',
-                        'glow': '0 0 20px rgba(149, 213, 178, 0.4)',
-                        'gold-glow': '0 0 20px rgba(230, 197, 148, 0.4)'
+                        bengali: ['"Hind Siliguri"', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
-
-    <!-- Custom CSS for Animations & Glassmorphism -->
     <style>
-        body {
-            background-color: #FDFBF7;
-            color: #1B4332;
-            overflow-x: hidden;
-        }
-
-        /* Glassmorphism Utilities */
-        .glass {
-            background: rgba(255, 255, 255, 0.75);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-        }
-        
-        .glass-dark {
-            background: rgba(27, 67, 50, 0.65);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(149, 213, 178, 0.15);
-        }
-
-        .glass-gold {
-            background: rgba(230, 197, 148, 0.15);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(230, 197, 148, 0.3);
-        }
-
-        /* Animations */
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
-        .floating { animation: float 6s ease-in-out infinite; }
-        
-        @keyframes pulse-glow {
-            0% { box-shadow: 0 0 0 0 rgba(149, 213, 178, 0.4); }
-            70% { box-shadow: 0 0 0 15px rgba(149, 213, 178, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(149, 213, 178, 0); }
-        }
-        .btn-glow { animation: pulse-glow 2s infinite; }
-
-        @keyframes pulse-gold {
-            0% { box-shadow: 0 0 0 0 rgba(230, 197, 148, 0.5); }
-            70% { box-shadow: 0 0 0 15px rgba(230, 197, 148, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(230, 197, 148, 0); }
-        }
-        .btn-gold-glow { animation: pulse-gold 2.5s infinite; }
-
-        /* Scroll Reveal setup */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Gradient Text */
-        .text-gradient-green {
-            background: linear-gradient(to right, #95D5B2, #E6C594);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .text-gradient-dark {
-            background: linear-gradient(to right, #1B4332, #40916C);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #FDFBF7; }
-        ::-webkit-scrollbar-thumb { background: #40916C; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #2D6A4F; }
-
-        /* Hide scrollbar for review slider */
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-
-        /* Blob Background */
-        .blob {
-            position: absolute;
-            filter: blur(85px);
-            z-index: -1;
-            opacity: 0.35;
-        }
+        body { font-family: 'Hind Siliguri', sans-serif; background-color: #F8F9FA; color: #1B4332; overflow-x: hidden; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.5); }
+        .glass-dark { background: rgba(27, 67, 50, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(149, 213, 178, 0.2); }
+        .text-gradient { background: linear-gradient(to right, #2D6A4F, #40916C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        #loader { position: fixed; inset: 0; background: #F8F9FA; z-index: 9999; display: flex; justify-content: center; align-items: center; transition: opacity 0.5s ease; }
+        .spinner { width: 50px; height: 50px; border: 4px solid rgba(45, 106, 79, 0.2); border-top-color: #2D6A4F; border-radius: 50%; animation: spin 1s linear infinite; }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
     </style>
 </head>
-<body class="antialiased selection:bg-primary selection:text-white relative">
+<body class="antialiased selection:bg-accent selection:text-dark">
 
-    <!-- Background Decorative Blobs -->
-    <div class="blob bg-accent w-96 h-96 rounded-full top-[-10%] left-[-10%]"></div>
-    <div class="blob bg-warmGold w-96 h-96 rounded-full top-[30%] right-[-5%] opacity-20"></div>
-    <div class="blob bg-primary w-96 h-96 rounded-full top-[60%] left-[-10%] opacity-15"></div>
+    <div id="loader"><div class="spinner"></div></div>
 
-    <!-- Navigation Bar -->
-    <nav class="fixed w-full z-50 transition-all duration-500 py-4" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <span class="font-bold text-2xl tracking-tight transition-colors duration-500 text-white" id="navBrandName">Hair Herb's Oil</span>
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="glass rounded-full px-6 py-3 flex justify-between items-center shadow-sm">
+                <a href="#" class="flex items-center gap-2 group">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhAl_Sp2C-jtEbNshmugg6NKcAxWZWNymq2SYyXSqZRBe7ekdfYHRW_ao78010C7USDFnJ1bW712Oq8_0JoYMEHMRH0cxOLEd1KzQlO_62BSC_KwaoZSvtyEuYJs4wsvUuE7-yWWOUG8ZsIixZyZSUZfZXkK9A-Wnb78sIdozUHWMplMwwbz99NRQV8G-cn/s320/558917667_122094575205057075_6040296853123557872_n.png" alt="Logo" class="w-10 h-10 object-contain">
+                    <span class="font-bold text-xl text-dark" id="navBrandName">Hair Herb's Oil by Sakila</span>
+                </a>
+                <div class="hidden lg:flex items-center gap-8 font-medium text-dark/80">
+                    <a href="#home">হোম</a>
+                    <a href="#about">আমাদের সম্পর্কে</a>
+                    <a href="#products">প্রোডাক্টস</a>
+                    <a href="#benefits">উপকারিতা</a>
+                    <a href="#reviews">রিভিউ</a>
                 </div>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8 items-center font-medium">
-                    <a href="#home" class="nav-link transition-colors duration-500 text-gray-200 hover:text-accent">হোম</a>
-                    <a href="#about" class="nav-link transition-colors duration-500 text-gray-200 hover:text-accent">আমাদের সম্পর্কে</a>
-                    <a href="#products" class="nav-link transition-colors duration-500 text-gray-200 hover:text-accent">প্রোডাক্টস</a>
-                    <a href="#benefits" class="nav-link transition-colors duration-500 text-gray-200 hover:text-accent">উপকারিতা</a>
-                    <a href="#reviews" class="nav-link transition-colors duration-500 text-gray-200 hover:text-accent">রিভিউ</a>
-                    <a href="#order" class="bg-warmGold text-darkGreen px-6 py-2.5 rounded-full font-bold hover:bg-white transition-all shadow-lg hover:shadow-gold-glow">অর্ডার করুন</a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobileMenuBtn" class="transition-colors duration-500 text-white hover:text-accent focus:outline-none">
-                        <i class="fas fa-bars text-2xl" id="menuIcon"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Mobile Menu Panel -->
-        <div id="mobileMenu" class="md:hidden hidden glass absolute w-full top-20 left-0 border-t border-gray-200 shadow-xl">
-            <div class="px-4 pt-2 pb-6 space-y-2 text-center font-medium">
-                <a href="#home" class="block px-3 py-2 text-darkText hover:text-primary">হোম</a>
-                <a href="#about" class="block px-3 py-2 text-darkText hover:text-primary">আমাদের সম্পর্কে</a>
-                <a href="#products" class="block px-3 py-2 text-darkText hover:text-primary">প্রোডাক্টস</a>
-                <a href="#benefits" class="block px-3 py-2 text-darkText hover:text-primary">উপকারিতা</a>
-                <a href="#reviews" class="block px-3 py-2 text-darkText hover:text-primary">রিভিউ</a>
-                <a href="#order" class="block px-3 py-2 text-primary font-bold">অর্ডার করুন</a>
+                <a href="#order" class="bg-primary hover:bg-dark text-white px-6 py-2 rounded-full shadow-md">অর্ডার করুন</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section (Green Base - Beautiful luxury dark green to organic green gradient) -->
-    <section id="home" class="relative pt-32 pb-24 lg:pt-44 lg:pb-32 overflow-hidden min-h-screen flex items-center bg-gradient-to-br from-darkGreen via-[#143224] to-primary text-white">
-        <!-- Floating leaf assets for premium organic vibe -->
-        <div class="absolute inset-0 pointer-events-none opacity-20">
-            <i class="fas fa-leaf absolute text-accent text-3xl floating" style="top: 15%; left: 10%; animation-delay: 0.5s;"></i>
-            <i class="fas fa-seedling absolute text-warmGold text-2xl floating" style="top: 70%; left: 8%; animation-delay: 2s;"></i>
-            <i class="fas fa-leaf absolute text-accent text-2xl floating" style="top: 25%; right: 12%; animation-delay: 1.5s;"></i>
-            <i class="fas fa-spa absolute text-warmGold text-3xl floating" style="top: 60%; right: 15%; animation-delay: 3s;"></i>
-        </div>
-
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center">
-            <!-- Text Content -->
-            <div class="reveal flex flex-col items-center">
-                <div class="inline-block px-4 py-1.5 rounded-full glass-dark border border-accent/20 text-accent font-semibold text-sm mb-6">
-                    <i class="fas fa-leaf mr-2 text-warmGold"></i> ১০০% প্রাকৃতিক ও অর্গানিক হেয়ার কেয়ার
-                </div>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 max-w-3xl">
-                    <span class="text-white">প্রাকৃতিকভাবে আপনার চুলের</span><br>
-                    <span class="text-gradient-green">সৌন্দর্য ফিরিয়ে আনুন</span>
-                </h1>
-                <p class="text-base md:text-lg text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed" id="heroTagline">
-                    কেমিক্যাল মুক্ত, সম্পূর্ণ ঘরে তৈরি অর্গানিক হেয়ার অয়েল। স্বাস্থ্যোজ্জ্বল, ঘন ও লম্বা চুলের জন্য আজই ব্যবহার শুরু করুন।
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
-                    <a href="#order" class="btn-gold-glow bg-warmGold text-darkGreen px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-darkGreen transition-all flex items-center justify-center">
-                        <i class="fas fa-shopping-bag mr-2"></i> এখনই কিনুন
-                    </a>
-                    <a href="#products" class="glass-dark border border-white/10 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-darkGreen transition-all flex items-center justify-center">
-                        বিস্তারিত দেখুন
-                    </a>
-                </div>
-                
-                <!-- Trust Badges -->
-                <div class="mt-12 flex flex-wrap items-center justify-center gap-6 text-sm font-medium text-gray-300">
-                    <div class="flex items-center"><i class="fas fa-check-circle text-warmGold text-xl mr-2"></i> বিএসটিআই অনুমোদিত উপাদান</div>
-                    <div class="flex items-center"><i class="fas fa-shipping-fast text-warmGold text-xl mr-2"></i> সারা দেশে ক্যাশ অন ডেলিভারি</div>
-                </div>
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-24 bg-gradient-to-br from-cream to-creamDark text-center px-4">
+        <div class="glass p-8 md:p-12 rounded-3xl max-w-3xl shadow-glow">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-dark leading-tight">
+                প্রাকৃতিকভাবে আপনার<br> <span class="text-gradient">চুলের সৌন্দর্য</span> ফিরিয়ে আনুন
+            </h1>
+            <p class="text-xl text-gray-700 mb-8">১০০% অর্গানিক ও প্রাকৃতিক উপাদানে তৈরি আমাদের হোমমেড হেয়ার অয়েল, যা আপনার চুলকে করবে মজবুত ও সিল্কি।</p>
+            <div class="flex gap-4 justify-center">
+                <a href="#order" class="bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-dark transition-all">এখনই অর্ডার করুন</a>
+            </div>
+            <!-- Trust Badges -->
+            <div class="flex flex-wrap justify-center gap-6 mt-10 opacity-70">
+                <div class="flex items-center gap-2"><i class="fa-solid fa-leaf text-primary"></i> ১০০% প্রাকৃতিক</div>
+                <div class="flex items-center gap-2"><i class="fa-solid fa-truck text-primary"></i> দ্রুত ডেলিভারি</div>
+                <div class="flex items-center gap-2"><i class="fa-solid fa-star text-yellow-500"></i> সেরা কোয়ালিটি</div>
             </div>
         </div>
     </section>
 
-    <!-- Flash Sale / Announcement Bar (Unique Warm Gold/Sand Accent color) -->
-    <div class="bg-gradient-to-r from-warmGold via-[#ebd2ab] to-warmGold text-darkGreen py-3.5 relative overflow-hidden shadow-md">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#1B4332_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm md:text-base font-bold relative z-10">
-            <div class="flex items-center gap-2 mb-2 md:mb-0">
-                <i class="fas fa-bolt text-darkGreen text-lg animate-bounce"></i>
-                <span class="tracking-wide">আজকের ধামাকা স্পেশাল অফার! ৩০% পর্যন্ত ছাড় সীমিত সময়ের জন্য।</span>
-            </div>
-            <div class="flex items-center gap-3">
-                <span class="text-xs uppercase tracking-wider bg-darkGreen text-white px-2 py-0.5 rounded">অফারটি শেষ হবে:</span>
-                <div class="flex gap-2 text-white font-mono" id="countdown">
-                    <div class="bg-darkGreen px-2.5 py-1 rounded shadow">00</div> :
-                    <div class="bg-darkGreen px-2.5 py-1 rounded shadow">00</div> :
-                    <div class="bg-darkGreen px-2.5 py-1 rounded shadow">00</div>
-                </div>
-            </div>
+    <!-- Products Section -->
+    <section id="products" class="py-24 bg-[#F5F8F6]">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16">প্রিমিয়াম <span class="text-gradient">প্রোডাক্টসমূহ</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="productGrid"></div>
         </div>
-    </div>
+    </section>
 
-    <!-- About Brand Section (Clean White Base) -->
-    <section id="about" class="py-24 bg-white relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="reveal relative flex justify-center lg:justify-start">
-                    <div class="grid grid-cols-2 gap-4 w-full max-w-md lg:max-w-none">
-                        <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?q=80&w=600&auto=format&fit=crop" alt="Natural Ingredients" class="rounded-3xl shadow-lg w-full h-56 md:h-64 object-cover hover:scale-105 transition-transform duration-300">
-                        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=600&auto=format&fit=crop" alt="Healthy Hair" class="rounded-3xl shadow-lg w-full h-56 md:h-64 object-cover mt-8 hover:scale-105 transition-transform duration-300">
-                    </div>
-                    <div class="absolute inset-0 bg-primary opacity-5 rounded-3xl -z-10 transform translate-x-4 translate-y-4"></div>
-                </div>
-                
-                <div class="reveal delay-200">
-                    <h4 class="text-secondary font-bold tracking-wider uppercase mb-2 flex items-center gap-2">
-                        <span class="w-8 h-0.5 bg-secondary inline-block"></span> আমাদের ঐতিহ্য ও শুদ্ধতা
-                    </h4>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gradient-dark">বিশুদ্ধ প্রকৃতির স্পর্শ আপনার চুলে</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed text-base">
-                        <span id="brandNameText" class="font-bold text-primary">Hair Herb's Oil by Sakila</span> একটি সম্পূর্ণ ঘরে তৈরি, শতভাগ প্রাকৃতিক এবং কেমিক্যাল-মুক্ত লাক্সারি হেয়ার অয়েল ব্র্যান্ড। আমাদের প্রতিটি ড্রপ চুলের গভীর পুষ্টি এবং সুরক্ষার জন্য নিবেদিত।
-                    </p>
-                    <p class="text-gray-600 mb-8 leading-relaxed text-base">
-                        দীর্ঘদিনের প্রাচীন আয়ুর্বেদিক পদ্ধতি অনুসরণ করে বাছাইকৃত খাঁটি নারিকেল তেল, আমলকী, শিকাকাই, মেথি এবং আরও ১৫+ দুর্লভ পাহাড়ি ভেষজ উপাদানের সঠিক মিশ্রণে অত্যন্ত যত্ন সহকারে এটি প্রস্তুত করা হয়।
-                    </p>
-                    
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-earthyLinen border border-gray-100 shadow-soft">
-                            <div class="bg-primary/10 p-3.5 rounded-xl text-primary text-xl">
-                                <i class="fas fa-leaf"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-darkText">১০০% অর্গানিক</h4>
-                                <p class="text-xs text-gray-500 mt-1">কোনো প্রিজারভেটিভ বা ক্ষতিকর প্যারাবেন নেই</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-earthyLinen border border-gray-100 shadow-soft">
-                            <div class="bg-primary/10 p-3.5 rounded-xl text-primary text-xl">
-                                <i class="fas fa-hand-holding-heart"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-darkText">যত্নে হাতে তৈরি</h4>
-                                <p class="text-xs text-gray-500 mt-1">ছোট ছোট ব্যাচে সর্বোচ্চ গুণগত মান নিয়ন্ত্রণ</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-24 bg-dark text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-16">কেন আমাদের তেল <span class="text-accent">সেরা?</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 glass-dark rounded-3xl"><i class="fa-solid fa-arrow-down text-4xl text-accent mb-4"></i><h3 class="font-bold text-xl mb-2">চুল পড়া রোধ করে</h3></div>
+                <div class="p-6 glass-dark rounded-3xl"><i class="fa-solid fa-seedling text-4xl text-accent mb-4"></i><h3 class="font-bold text-xl mb-2">নতুন চুল গজায়</h3></div>
+                <div class="p-6 glass-dark rounded-3xl"><i class="fa-solid fa-check-double text-4xl text-accent mb-4"></i><h3 class="font-bold text-xl mb-2">খুশকি দূর করে</h3></div>
             </div>
         </div>
     </section>
 
-    <!-- Product Showcase Section (Clean White Base with soft earthy textures) -->
-    <section id="products" class="py-24 bg-earthyLinen relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
-                <h4 class="text-secondary font-bold tracking-wider uppercase mb-2 flex justify-center items-center gap-2">
-                    <span class="w-6 h-0.5 bg-secondary inline-block"></span> প্রিমিয়াম কালেকশন
-                </h4>
-                <h2 class="text-3xl md:text-4xl font-bold text-darkText mb-4">আপনার চুলের জন্য সেরা যত্নটি বেছে নিন</h2>
-                <div class="w-16 h-1 bg-primary mx-auto rounded-full mb-4"></div>
-                <p class="text-gray-600 text-sm md:text-base">প্রতিটি বোতলে রয়েছে সুপ্রাচীন ও খাঁটি আয়ুর্বেদের পুষ্টিগুণ, যা আপনার চুলে ফিরিয়ে আনবে প্রাকৃতিক জৌলুস ও কোমলতা।</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="productContainer">
-                <!-- Products dynamically injected here via JS -->
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center mb-16">গ্রাহকদের <span class="text-gradient">মতামত</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="reviewsContainer">
+                <!-- Injected via JS -->
             </div>
         </div>
     </section>
 
-    <!-- Benefits Section (Rich Forest Green Base) -->
-    <section id="benefits" class="py-24 bg-gradient-to-b from-darkGreen to-[#133023] text-white relative overflow-hidden">
-        <div class="absolute inset-0 opacity-5 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:24px_24px]"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16 reveal">
-                <h4 class="text-warmGold font-bold tracking-wider uppercase mb-2">কার্যকরী গুণাবলী</h4>
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">কেন আমাদের হেয়ার অয়েল অনন্য?</h2>
-                <div class="w-24 h-1 bg-warmGold mx-auto rounded-full"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Benefit Card 1 -->
-                <div class="glass-dark p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 reveal group border border-white/5">
-                    <div class="w-16 h-16 bg-warmGold rounded-2xl flex items-center justify-center text-darkGreen text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-warmGold/20">
-                        <i class="fas fa-arrow-down"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">চুল পড়া স্থায়ীভাবে রোধ</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">প্রথম সপ্তাহ থেকেই চুলের গোড়া শক্ত ও মজবুত করে চুল পড়া লক্ষণীয়ভাবে নিয়ন্ত্রণে আনে।</p>
-                </div>
-                <!-- Benefit Card 2 -->
-                <div class="glass-dark p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 reveal delay-100 group border border-white/5">
-                    <div class="w-16 h-16 bg-warmGold rounded-2xl flex items-center justify-center text-darkGreen text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-warmGold/20">
-                        <i class="fas fa-seedling"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">নতুন চুল গজানো</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">মাথার ত্বকে রক্ত সঞ্চালন বাড়িয়ে নিষ্ক্রিয় ফলিকল সচল করে নতুন ঘন চুল গজাতে ভূমিকা রাখে।</p>
-                </div>
-                <!-- Benefit Card 3 -->
-                <div class="glass-dark p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 reveal delay-200 group border border-white/5">
-                    <div class="w-16 h-16 bg-warmGold rounded-2xl flex items-center justify-center text-darkGreen text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-warmGold/20">
-                        <i class="fas fa-spa"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">খুশকি ও চুলকানি মুক্ত স্ক্যাল্প</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">ভেষজ উপাদানের প্রাকৃতিক অ্যান্টি-ফাঙ্গাল অ্যাকশন খুশকি ও স্ক্যাল্পের ইনফেকশন দূর করতে অত্যন্ত সহায়ক।</p>
-                </div>
-                <!-- Benefit Card 4 -->
-                <div class="glass-dark p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 reveal group border border-white/5">
-                    <div class="w-16 h-16 bg-warmGold rounded-2xl flex items-center justify-center text-darkGreen text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-warmGold/20">
-                        <i class="fas fa-magic"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">সিল্কি ও উজ্জ্বল টেক্সচার</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">রুক্ষ ও ড্যামেজ হওয়া চুলের ভেতর থেকে আর্দ্রতা ফিরিয়ে চুলকে করে ঝলমলে ও কোমল।</p>
-                </div>
-                <!-- Benefit Card 5 -->
-                <div class="glass-dark p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 reveal delay-100 group lg:col-span-2 border border-white/5">
-                    <div class="flex flex-col md:flex-row items-center gap-6">
-                        <img src="https://images.unsplash.com/photo-1608248593842-8021f62cb592?q=80&w=400&auto=format&fit=crop" alt="Natural Ingredients Raw" class="w-32 h-32 rounded-2xl object-cover shadow-md border border-white/10">
-                        <div>
-                            <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                                <i class="fas fa-shield-alt text-warmGold"></i> ১০০% কেমিক্যাল ফ্রি গ্যারান্টি
-                            </h3>
-                            <p class="text-gray-300 text-sm leading-relaxed">কোনো প্রকার কৃত্রিম সুগন্ধি, রঙ, ক্ষতিকর সিলিকন বা মিনারেল অয়েল ব্যবহার করা হয় না। সম্পূর্ণ নিরাপদ ও সব বয়সের মানুষের ব্যবহারোপযোগী অত্যন্ত বিশ্বস্ত একটি তেল।</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Order Section -->
+    <section id="order" class="py-24 bg-cream">
+        <div class="container mx-auto px-4 max-w-lg bg-white p-8 rounded-3xl shadow-lg">
+            <h2 class="text-3xl font-bold mb-6 text-center">অর্ডার করুন</h2>
+            <form class="space-y-4">
+                <input type="text" placeholder="নাম" class="w-full p-4 border rounded-xl">
+                <input type="tel" placeholder="মোবাইল নাম্বার" class="w-full p-4 border rounded-xl">
+                <textarea placeholder="ঠিকানা" class="w-full p-4 border rounded-xl"></textarea>
+                <button class="w-full bg-primary text-white py-4 rounded-xl font-bold">কনফার্ম অর্ডার</button>
+            </form>
         </div>
     </section>
 
-    <!-- Testimonials / Reviews (Deep Forest Green Base) -->
-    <section id="reviews" class="py-24 bg-[#112B1F] relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/dust.png')] opacity-5"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16 reveal">
-                <h4 class="text-warmGold font-bold tracking-wider uppercase mb-2 flex justify-center items-center gap-2">
-                    <span class="w-6 h-0.5 bg-warmGold inline-block"></span> প্রশংসাপত্র
-                </h4>
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">আমাদের গ্রাহকদের বিশ্বস্ত অভিজ্ঞতা</h2>
+    <!-- Footer -->
+    <footer class="bg-[#122b20] text-gray-400 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center items-center gap-2 mb-4">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhAl_Sp2C-jtEbNshmugg6NKcAxWZWNymq2SYyXSqZRBe7ekdfYHRW_ao78010C7USDFnJ1bW712Oq8_0JoYMEHMRH0cxOLEd1KzQlO_62BSC_KwaoZSvtyEuYJs4wsvUuE7-yWWOUG8ZsIixZyZSUZfZXkK9A-Wnb78sIdozUHWMplMwwbz99NRQV8G-cn/s320/558917667_122094575205057075_6040296853123557872_n.png" alt="Logo" class="w-12 h-12 object-contain">
+                <span class="text-white font-bold text-xl">Hair Herb's Oil by Sakila</span>
             </div>
-
-            <!-- Review Slider Container -->
-            <div class="flex overflow-x-auto gap-6 pb-8 no-scrollbar snap-x reveal" id="reviewContainer">
-                <!-- Reviews injected via JS -->
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section (Clean White Base) -->
-    <section class="py-24 bg-white relative">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 reveal">
-            <div class="text-center mb-16">
-                <h4 class="text-secondary font-bold tracking-wider uppercase mb-2">জিজ্ঞাসা</h4>
-                <h2 class="text-3xl font-bold text-darkText">সাধারণ কিছু প্রশ্ন ও উত্তর (FAQ)</h2>
-                <div class="w-16 h-1 bg-primary mx-auto rounded-full mt-3"></div>
-            </div>
-            <div class="space-y-4" id="faqContainer">
-                <!-- FAQs injected via JS -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact & Order Section (Unique Warm Sand/Linen Premium Earthy Tone) -->
-    <section id="order" class="py-24 bg-gradient-to-br from-[#FAF6F0] via-[#F4EFEB] to-[#E9DFD6] relative overflow-hidden">
-        <div class="blob bg-accent w-80 h-80 rounded-full bottom-[10%] right-[10%] opacity-15"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="glass border-0 shadow-soft rounded-3xl overflow-hidden border border-[#E6C594]/20">
-                <div class="grid grid-cols-1 lg:grid-cols-5">
-                    
-                    <!-- Contact Info & Map (Left/Top - Forest Green accent) -->
-                    <div class="bg-darkGreen text-white p-10 lg:col-span-2 flex flex-col justify-between relative overflow-hidden">
-                        <div class="absolute inset-0 opacity-5 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:20px_20px]"></div>
-                        <div class="relative z-10">
-                            <h2 class="text-3xl font-bold mb-2">যোগাযোগ করুন</h2>
-                            <p class="text-accent mb-8 text-sm">যেকোনো তথ্যের জন্য ২৪/৭ আমাদের সাথে যোগাযোগ করতে পারেন</p>
-                            
-                            <div class="space-y-6">
-                                <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-xl text-warmGold border border-white/5">
-                                        <i class="fas fa-phone-alt"></i>
-                                    </div>
-                                    <div>
-                                        <div class="text-xs text-accent">হটলাইন / কাস্টমার কেয়ার</div>
-                                        <div class="font-bold text-base md:text-lg text-white" id="contactPhone">+880 1973-191586</div>
-                                    </div>
-                                </div>
-                                <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-xl text-warmGold border border-white/5">
-                                        <i class="fas fa-envelope"></i>
-                                    </div>
-                                    <div>
-                                        <div class="text-xs text-accent">অফিসিয়াল ইমেইল</div>
-                                        <div class="font-bold text-base md:text-lg text-white">info@hairherbs.com</div>
-                                    </div>
-                                </div>
-                                <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-xl text-warmGold border border-white/5">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                    </div>
-                                    <div>
-                                        <div class="text-xs text-accent">কার্যালয়</div>
-                                        <div class="font-bold text-base md:text-lg text-white">ঢাকা, বাংলাদেশ</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-12 relative z-10">
-                            <h4 class="font-bold mb-4 text-sm uppercase tracking-wider text-warmGold">সোশ্যাল মিডিয়াতে ফলো করুন</h4>
-                            <div class="flex gap-4" id="socialLinks">
-                                <!-- Social links injected via JS -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Order Form (Right/Bottom) -->
-                    <div class="p-8 sm:p-10 lg:col-span-3 bg-white">
-                        <h2 class="text-2xl font-bold text-darkText mb-6 border-b pb-4 flex items-center gap-2">
-                            <i class="fas fa-shopping-basket text-primary"></i> সঠিক ডেলিভারি ঠিকানা দিয়ে অর্ডার করুন
-                        </h2>
-                        
-                        <form id="orderForm" class="space-y-6">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-2">আপনার নাম *</label>
-                                    <input type="text" id="custName" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-gray-50 text-darkText" placeholder="যেমন: রাসেল আহমেদ">
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700 mb-2">মোবাইল নাম্বার *</label>
-                                    <input type="tel" id="custPhone" required placeholder="01XXXXXXXXX" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-gray-50 text-darkText">
-                                </div>
-                            </div>
-
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">সম্পূর্ণ ঠিকানা (যেখানে ডেলিভারি হবে) *</label>
-                                <textarea id="custAddress" required rows="2" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-gray-50 text-darkText" placeholder="যেমন: গ্রাম/রাস্তা, পোস্ট কোড, থানা, জেলা"></textarea>
-                            </div>
-
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">আপনার পছন্দের প্রোডাক্ট সিলেক্ট করুন *</label>
-                                <select id="productSelect" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-gray-50 text-darkText font-medium">
-                                    <!-- Options injected via JS -->
-                                </select>
-                            </div>
-                            
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">পরিমাণ (Quantity)</label>
-                                <div class="flex items-center gap-4">
-                                    <button type="button" id="qtyMinus" class="w-10 h-10 rounded-xl bg-gray-200 flex items-center justify-center hover:bg-gray-300 font-bold text-lg text-darkText transition-colors">-</button>
-                                    <span id="qtyDisplay" class="font-bold text-xl text-darkText w-8 text-center">1</span>
-                                    <button type="button" id="qtyPlus" class="w-10 h-10 rounded-xl bg-gray-200 flex items-center justify-center hover:bg-gray-300 font-bold text-lg text-darkText transition-colors">+</button>
-                                </div>
-                            </div>
-
-                            <!-- Order Summary Box -->
-                            <div class="bg-primary/5 p-5 rounded-2xl border border-primary/10">
-                                <div class="flex justify-between mb-2 text-sm text-gray-600">
-                                    <span>প্রোডাক্ট মূল্য:</span>
-                                    <span class="font-bold text-darkText" id="summaryPrice">৳0</span>
-                                </div>
-                                <div class="flex justify-between mb-2 text-sm text-gray-600">
-                                    <span>ডেলিভারি চার্জ:</span>
-                                    <span class="font-bold text-darkText text-xs sm:text-sm">ঢাকার ভেতরে ৳৬০ / বাইরে ৳১২০</span>
-                                </div>
-                                <div class="border-t border-gray-200 my-3 pt-3 flex justify-between items-center">
-                                    <span class="font-bold text-primary">সর্বমোট পরিশোধযোগ্য (ডেলিভারি ছাড়া):</span>
-                                    <span class="font-bold text-2xl text-primary" id="summaryTotal">৳0</span>
-                                </div>
-                            </div>
-
-                            <button type="submit" class="w-full bg-primary text-white py-4.5 rounded-xl font-bold text-lg hover:bg-darkGreen transition-colors flex justify-center items-center gap-2 shadow-lg hover:shadow-glow">
-                                <i class="fab fa-whatsapp text-2xl text-accent"></i> WhatsApp-এ অর্ডার সম্পূর্ণ করুন
-                            </button>
-                            <p class="text-center text-xs text-gray-500 mt-2"><i class="fas fa-lock"></i> আপনার সকল ব্যক্তিগত তথ্য ১০০% সুরক্ষিত</p>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Google Map -->
-            <div class="mt-12 rounded-3xl overflow-hidden shadow-soft reveal h-80 glass border-4 border-white">
-                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233667.8223908687!2d90.27923710646985!3d23.780887457084543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka!5e0!3m2!1sen!2sbd!4v1716300000000!5m2!1sen!2sbd" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer (Forest Green Base) -->
-    <footer class="bg-darkGreen pt-16 pb-8 border-t-4 border-warmGold relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
-                <div>
-                    <h3 class="text-2xl font-bold text-white mb-4" id="footerBrandName">Hair Herb's Oil</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed mb-6">
-                        প্রকৃতির সেরা সব বাছাইকৃত উপাদান দিয়ে পরম যত্নে তৈরি আমাদের প্রিমিয়াম অর্গানিক হেয়ার অয়েল। আপনার চুলের সম্পূর্ণ পুষ্টি ও সুরক্ষায় আমরা সর্বদাই অঙ্গীকারবদ্ধ।
-                    </p>
-                </div>
-                <div>
-                    <h4 class="text-warmGold font-bold mb-4 uppercase tracking-wider text-sm">সহজ লিংকসমূহ</h4>
-                    <ul class="space-y-2 text-gray-300 text-sm font-medium">
-                        <li><a href="#home" class="hover:text-accent transition-colors">হোম</a></li>
-                        <li><a href="#about" class="hover:text-accent transition-colors">আমাদের সম্পর্কে</a></li>
-                        <li><a href="#products" class="hover:text-accent transition-colors">প্রোডাক্টস</a></li>
-                        <li><a href="#reviews" class="hover:text-accent transition-colors">রিভিউ</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-warmGold font-bold mb-4 uppercase tracking-wider text-sm">প্রাইভেসি ও পলিসি</h4>
-                    <ul class="space-y-2 text-gray-300 text-sm font-medium">
-                        <li><a href="#" class="hover:text-accent transition-colors">প্রাইভেসি পলিসি</a></li>
-                        <li><a href="#" class="hover:text-accent transition-colors">রিফান্ড পলিসি</a></li>
-                        <li><a href="#" class="hover:text-accent transition-colors">টার্মস এন্ড কন্ডিশনস</a></li>
-                        <li><a href="#" class="hover:text-accent transition-colors">ডেলিভারি ইনফরমেশন</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-400 text-xs sm:text-sm">
-                <p>&copy; 2026 <span id="copyrightName">Hair Herb's Oil by Sakila</span>. All rights reserved.</p>
-                <p class="mt-2 md:mt-0">Designed with <i class="fas fa-heart text-warmGold"></i> for Natural Beauty</p>
-            </div>
+            <p>&copy; ২০২৬ সকল স্বত্ব সংরক্ষিত।</p>
         </div>
     </footer>
 
-    <!-- ========================================== -->
-    <!-- DYNAMIC CONFIGURATION & JAVASCRIPT LOGIC   -->
-    <!-- ========================================== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // ১. DYNAMIC DATA CONFIGURATION (এখানে যাবতীয় তথ্য পরিবর্তন করা যাবে)
-        const SITE_CONFIG = {
-            brandName: "Hair Herb's Oil by Sakila",
-            whatsappNumber: "8801973191586", // কান্ট্রি কোড সহ
-            displayPhone: "01973-191586",
-            heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhERdGo6gRywhaABFhY_Wv93P6VpFQA7_OMHMKmtQJh5wQ9emSkg3uqU_LDoTREN2y00HPEJNMl-XkO9wsRZ8lknwu1jGlOzxaSzQZC_ibi1M7rb2xEVXQ6lOqAvdPc0lTJAWjM8GCgMHf7GxKg23ahhGsAl72nPTawjuf_7hkLadOP-K0NsHW-Ul0kooB8/s1014/Gemini_Generated_Image_gmq4czgmq4czgmq4.png",
-            
-            socialLinks: [
-                { icon: 'fab fa-facebook-f', url: '#', color: 'hover:bg-blue-600 hover:scale-110' },
-                { icon: 'fab fa-instagram', url: '#', color: 'hover:bg-pink-600 hover:scale-110' },
-                { icon: 'fab fa-tiktok', url: '#', color: 'hover:bg-black hover:scale-110' },
-                { icon: 'fab fa-youtube', url: '#', color: 'hover:bg-red-600 hover:scale-110' }
-            ],
-
+        const siteData = {
             products: [
-                {
-                    id: 'p1',
-                    name: "Premium Organic Herbal Hair Oil",
-                    size: "200ml",
-                    originalPrice: 500,
-                    offerPrice: 350,
-                    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhERdGo6gRywhaABFhY_Wv93P6VpFQA7_OMHMKmtQJh5wQ9emSkg3uqU_LDoTREN2y00HPEJNMl-XkO9wsRZ8lknwu1jGlOzxaSzQZC_ibi1M7rb2xEVXQ6lOqAvdPc0lTJAWjM8GCgMHf7GxKg23ahhGsAl72nPTawjuf_7hkLadOP-K0NsHW-Ul0kooB8/s1014/Gemini_Generated_Image_gmq4czgmq4czgmq4.png",
-                    rating: 4.9,
-                    badge: "Best Seller"
-                },
-                {
-                    id: 'p2',
-                    name: "Anti Hair Fall Secret formula Oil",
-                    size: "150ml",
-                    originalPrice: 450,
-                    offerPrice: 300,
-                    image: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=600&auto=format&fit=crop",
-                    rating: 4.8,
-                    badge: "Top Rated"
-                },
-                {
-                    id: 'p3',
-                    name: "Complete Hair Growth Combo",
-                    size: "Herbal Oil + Mild Ayurvedic Shampoo",
-                    originalPrice: 850,
-                    offerPrice: 650,
-                    image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=600&auto=format&fit=crop",
-                    rating: 5.0,
-                    badge: "Mega Deal"
-                }
+                { name: "Premium Herbal Hair Oil", price: "৪০০", image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhERdGo6gRywhaABFhY_Wv93P6VpFQA7_OMHMKmtQJh5wQ9emSkg3uqU_LDoTREN2y00HPEJNMl-XkO9wsRZ8lknwu1jGlOzxaSzQZC_ibi1M7rb2xEVXQ6lOqAvdPc0lTJAWjM8GCgMHf7GxKg23ahhGsAl72nPTawjuf_7hkLadOP-K0NsHW-Ul0kooB8/s1014/Gemini_Generated_Image_gmq4czgmq4czgmq4.png" },
+                { name: "Organic Hair Pake", price: "৩৯৯", image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj6hyphenhyphen6BUSzxVNEl0lfsChk0jDKN1XWW14QbvK432G7Ply5pcA81KxmLFJyFUp2PnNi3i0KFv2HKw_MyPFZ45y6vH0lRM7gxEf73MkQ9mznJ-_nlb6xk4wveSYKyqPYfiOTCtfUkBKkqVya6ZYeLhjhJbukHwcZKwXcNIDN7-OnIC5MsNNJJ6SZRQHLg6QKQ/s320/9bd1fcca-9056-4d60-9c74-940b185ebe4f.png" },
+                { name: "Organic Face Pake", price: "৩৯৯", image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjT8h-1klfZ3Zxz3Hhrfo8RWHv8BaP1jmRkWjIGGJf6btD2r9qBJVl47ywaMJxCr60xPuRGWTuPlryqE0WeTr8KnKT-OdLDwqrEPDW2RbUdyMFS4CAvW9kb7sMklZw5XFxFfGzYwvqmoxLHHjYHndVKwbR1w-LVH6zS95qw34pW_lloMV3up70XeiZDkg_w/s320/e552f28e-33a8-46f2-9abc-b5cfa073bc6e.png" }
             ],
-
             reviews: [
-                { name: "নাসিমা বেগম", text: "তেলটা আসলেই দারুণ কাজ করে! মাত্র তিন সপ্তাহ নিয়মিত ব্যবহারেই আমার চুল পড়া অনেক কমে গেছে। ভেষজ সুঘ্রাণ সত্যিই অসাধারণ।", rating: 5 },
-                { name: "রুমা আক্তার", text: "রুক্ষ চুলের জন্য অসাধারণ একটা সমাধান। আমার চুলগুলো আগের চেয়ে অনেক সিল্কি আর সাইনি হয়েছে। আপুর ব্যবহারে মুগ্ধ।", rating: 5 },
-                { name: "সুমা আক্তার", text: "প্যাকেজিং একদম প্রিমিয়াম ছিল। তেল ব্যবহারে মাথায় খুশকির সমস্যা অনেকটাই দূর হয়ে গেছে। খুব দ্রুত ডেলিভারি পেয়েছি।", rating: 5 },
-                { name: "রোজা বেগম", text: "মাথায় নতুন চুল গজাচ্ছে দেখে আমি নিজেই অবাক। সম্পূর্ণ অর্গানিক উপাদানে তৈরি তাই কোনো ভয় ছাড়াই ব্যবহার করা যায়।", rating: 5 },
-                { name: "জান্নাত খাতুন", text: "আমার চুলের রুক্ষতা দূর করে চুলকে সিল্কি ও উজ্জ্বল করেছে এই তেলটি। সাকিলা আপুর ব্যবহার ও প্রোডাক্ট দুটোই প্রিমিয়াম!", rating: 5 }
-            ],
-
-            faqs: [
-                { q: "তেলটি কীভাবে এবং কতবার ব্যবহার করবো?", a: "সপ্তাহে কমপক্ষে ২ থেকে ৩ দিন রাতে ঘুমানোর আগে মাথার স্ক্যাল্পে ভালোভাবে ম্যাসাজ করে লাগান। পরদিন সকালে যেকোনো মৃদু শ্যাম্পু দিয়ে ধুয়ে ফেলুন।" },
-                { q: "রেজাল্ট পেতে কত দিন সময় লাগতে পারে?", a: "সাধারণত নিয়মিত ব্যবহারে ২ থেকে ৩ সপ্তাহের মধ্যে চুল পড়া কমা এবং চুলের টেক্সচারের দৃশ্যমান পরিবর্তন লক্ষ্য করা যায়।" },
-                { q: "সারা বাংলাদেশে ডেলিভারি পেতে কতদিন সময় লাগে?", a: "ঢাকার ভেতরে ২৪ থেকে ৪৮ ঘণ্টার মধ্যে এবং ঢাকার বাইরে ৩ থেকে ৪ দিনের মধ্যে শতভাগ ক্যাশ অন ডেলিভারি করা হয়।" },
-                { q: "তেলটি কি শিশুদের জন্য ব্যবহার করা যাবে?", a: "হ্যাঁ, এটি সম্পূর্ণ অর্গানিক এবং কোনো ক্ষতিকর কেমিক্যাল মুক্ত হওয়ায় ৫ বছরের বেশি বয়সের বাচ্চাদের চুলে অনায়াসেই ব্যবহার করতে পারবেন।" }
+                { name: "নাসিমা বেগম", text: "তেলটা সত্যিই অনেক ভালো। ২ সপ্তাহে চুল পড়া অনেক কমেছে।" },
+                { name: "রুমা আক্তার", text: "খুশকি একদম দূর হয়ে গেছে। খুব ভালো প্রোডাক্ট।" },
+                { name: "সুমা আক্তার", text: "চুল আগের চেয়ে অনেক সিল্কি ও উজ্জ্বল হয়েছে।" },
+                { name: "রোজা বেগম", text: "অরিজিনাল অর্গানিক প্রোডাক্ট। আমি খুব সন্তুষ্ট।" }
             ]
         };
 
-        // ২. INITIALIZE DATA INTO DOM ON LOAD
-        document.addEventListener('DOMContentLoaded', () => {
-            // Set Texts
-            document.getElementById('navBrandName').innerText = SITE_CONFIG.brandName;
-            document.getElementById('brandNameText').innerText = SITE_CONFIG.brandName;
-            document.getElementById('footerBrandName').innerText = SITE_CONFIG.brandName;
-            document.getElementById('copyrightName').innerText = SITE_CONFIG.brandName;
-            document.getElementById('contactPhone').innerText = SITE_CONFIG.displayPhone;
-
-            // Render Social Links
-            const socialHtml = SITE_CONFIG.socialLinks.map(link => `
-                <a href="${link.url}" class="w-10 h-10 rounded-xl bg-white/10 border border-white/5 flex items-center justify-center text-white transition-all duration-300 ${link.color}">
-                    <i class="${link.icon}"></i>
-                </a>
-            `).join('');
-            document.getElementById('socialLinks').innerHTML = socialHtml;
-
-            // Render Products with Premium cards
-            const productHtml = SITE_CONFIG.products.map(p => `
-                <div class="bg-white rounded-3xl overflow-hidden shadow-soft hover:shadow-xl transition-all duration-300 group border border-gray-100 flex flex-col justify-between">
-                    <div class="relative overflow-hidden h-64 bg-gray-50">
-                        ${p.badge ? `<div class="absolute top-4 left-4 z-10 bg-warmGold text-darkGreen text-xs font-bold px-3 py-1 rounded-full shadow-md">${p.badge}</div>` : ''}
-                        <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-darkGreen/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
-                             <button onclick="selectProduct('${p.id}')" class="bg-warmGold text-darkGreen font-bold px-6 py-2.5 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all shadow-lg shadow-warmGold/20">Order Now</button>
-                        </div>
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col justify-between">
-                        <div>
-                            <div class="flex justify-between items-start mb-2 gap-2">
-                                <h3 class="font-bold text-lg md:text-xl text-darkText line-clamp-2">${p.name}</h3>
-                                <div class="flex items-center text-yellow-500 text-xs font-bold bg-yellow-50 px-2 py-1 rounded-lg shrink-0">
-                                    <i class="fas fa-star mr-1"></i> <span>${p.rating}</span>
-                                </div>
-                            </div>
-                            <p class="text-gray-500 text-sm mb-4">Size/Volume: <span class="font-medium text-darkText">${p.size}</span></p>
-                        </div>
-                        <div class="flex justify-between items-center mt-auto pt-4 border-t border-gray-100">
-                            <div>
-                                <span class="text-gray-400 line-through text-xs md:text-sm">৳${p.originalPrice}</span>
-                                <span class="text-primary font-extrabold text-xl md:text-2xl ml-2">৳${p.offerPrice}</span>
-                            </div>
-                            <button onclick="selectProduct('${p.id}')" class="w-11 h-11 rounded-full bg-primary/10 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-sm">
-                                <i class="fas fa-shopping-cart text-base"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            `).join('');
-            document.getElementById('productContainer').innerHTML = productHtml;
-
-            // Populate Product Select Dropdown in Form
-            const selectHtml = SITE_CONFIG.products.map(p => `
-                <option value="${p.id}" data-price="${p.offerPrice}">${p.name} - ৳${p.offerPrice}</option>
-            `).join('');
-            document.getElementById('productSelect').innerHTML = selectHtml;
-            updateSummary(); // Initial calculation
-
-            // Render Reviews
-            const reviewHtml = SITE_CONFIG.reviews.map(r => `
-                <div class="min-w-[280px] sm:min-w-[320px] md:min-w-[360px] glass-dark p-6 rounded-3xl snap-center border border-white/5 flex flex-col justify-between">
-                    <div>
-                        <div class="flex text-warmGold text-xs gap-1 mb-4">
-                            ${'<i class="fas fa-star"></i>'.repeat(r.rating)}
-                            ${r.rating < 5 ? '<i class="far fa-star"></i>'.repeat(5 - r.rating) : ''}
-                        </div>
-                        <p class="text-gray-200 italic text-sm md:text-base mb-6 leading-relaxed">"${r.text}"</p>
-                    </div>
-                    <div class="flex items-center gap-3 border-t border-white/5 pt-4">
-                        <div class="w-10 h-10 rounded-full bg-warmGold/20 border border-warmGold/30 text-warmGold flex items-center justify-center text-lg shadow-sm shrink-0">
-                            <i class="fas fa-user-circle"></i>
-                        </div>
-                        <h4 class="font-bold text-white text-sm md:text-base">${r.name}</h4>
-                    </div>
-                </div>
-            `).join('');
-            document.getElementById('reviewContainer').innerHTML = reviewHtml;
-
-            // Render FAQs
-            const faqHtml = SITE_CONFIG.faqs.map((faq, i) => `
-                <div class="glass bg-white rounded-2xl overflow-hidden transition-all duration-300 shadow-soft border border-gray-100">
-                    <button class="faq-btn w-full px-6 py-4.5 text-left font-bold text-darkText flex justify-between items-center focus:outline-none" onclick="toggleFaq(${i})">
-                        <span class="text-sm md:text-base">${faq.q}</span>
-                        <i class="fas fa-chevron-down text-primary transition-transform duration-300 ml-4 shrink-0" id="faq-icon-${i}"></i>
-                    </button>
-                    <div class="px-6 pb-5 text-gray-600 text-sm md:text-base hidden border-t border-gray-50 pt-3" id="faq-answer-${i}">
-                        ${faq.a}
-                    </div>
-                </div>
-            `).join('');
-            document.getElementById('faqContainer').innerHTML = faqHtml;
+        const productGrid = document.getElementById('productGrid');
+        siteData.products.forEach(p => {
+            productGrid.innerHTML += `<div class="bg-white p-6 rounded-3xl shadow-lg text-center transform hover:scale-105 transition-all"><img src="${p.image}" class="w-full h-48 object-cover rounded-2xl mb-4"><h3 class="font-bold text-xl">${p.name}</h3><p class="text-primary font-bold text-lg">৳${p.price}</p></div>`;
         });
 
-        // ৩. INTERACTIVE LOGIC & EFFECTS
-
-        // Navbar Scroll Adaptive Styling (Green/White transition contrast)
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('navbar');
-            const navBrand = document.getElementById('navBrandName');
-            const navLinks = document.querySelectorAll('.nav-link');
-            const menuBtn = document.getElementById('mobileMenuBtn');
-            
-            if (window.scrollY > 50) {
-                nav.classList.add('glass', 'shadow-soft', 'py-2');
-                nav.classList.remove('py-4');
-                navBrand.classList.replace('text-white', 'text-primary');
-                menuBtn.classList.replace('text-white', 'text-primary');
-                navLinks.forEach(link => {
-                    link.classList.replace('text-gray-200', 'text-darkText');
-                    link.classList.add('hover:text-primary');
-                });
-            } else {
-                nav.classList.remove('glass', 'shadow-soft', 'py-2');
-                nav.classList.add('py-4');
-                navBrand.classList.replace('text-primary', 'text-white');
-                menuBtn.classList.replace('text-primary', 'text-white');
-                navLinks.forEach(link => {
-                    link.classList.replace('text-darkText', 'text-gray-200');
-                    link.classList.remove('hover:text-primary');
-                });
-            }
+        const reviewsContainer = document.getElementById('reviewsContainer');
+        siteData.reviews.forEach(r => {
+            reviewsContainer.innerHTML += `
+                <div class="bg-gray-50 p-6 rounded-3xl border border-gray-100">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white"><i class="fa-solid fa-user"></i></div>
+                        <h4 class="font-bold text-lg">${r.name}</h4>
+                    </div>
+                    <p class="text-gray-600">"${r.text}"</p>
+                </div>`;
         });
 
-        // Mobile Menu Show/Hide
-        const mobileBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const menuIcon = document.getElementById('menuIcon');
-        
-        mobileBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            if (mobileMenu.classList.contains('hidden')) {
-                menuIcon.classList.replace('fa-times', 'fa-bars');
-            } else {
-                menuIcon.classList.replace('fa-bars', 'fa-times');
-            }
-        });
-        
-        // Auto-close mobile menu on click
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                menuIcon.classList.replace('fa-times', 'fa-bars');
-            });
-        });
-
-        // Scroll Reveal Animation Engine
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 80;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-        window.addEventListener("scroll", reveal);
-        reveal(); // Initial run
-
-        // Countdown Timer Engine (Flash Sale)
-        let targetTime = new Date().getTime() + (18 * 60 * 60 * 1000); // 18 Hours limit
-        setInterval(() => {
-            let now = new Date().getTime();
-            let distance = targetTime - now;
-            
-            if (distance < 0) {
-                targetTime = new Date().getTime() + (18 * 60 * 60 * 1000); // Reset loop for demo continuity
-                return;
-            }
-            
-            let h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            let m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            let s = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            const boxes = document.getElementById('countdown').children;
-            if(boxes.length >= 3) {
-                boxes[0].innerText = h.toString().padStart(2, '0');
-                boxes[1].innerText = m.toString().padStart(2, '0');
-                boxes[2].innerText = s.toString().padStart(2, '0');
-            }
-        }, 1000);
-
-        // FAQ Collapse Toggle Logic
-        function toggleFaq(index) {
-            const answer = document.getElementById(`faq-answer-${index}`);
-            const icon = document.getElementById(`faq-icon-${index}`);
-            if (answer.classList.contains('hidden')) {
-                answer.classList.remove('hidden');
-                icon.classList.add('rotate-180');
-            } else {
-                answer.classList.add('hidden');
-                icon.classList.remove('rotate-180');
-            }
-        }
-
-        // Form Interactive Calculator
-        let qty = 1;
-        const qtyDisplay = document.getElementById('qtyDisplay');
-        const productSelect = document.getElementById('productSelect');
-        
-        document.getElementById('qtyPlus').addEventListener('click', () => { qty++; updateSummary(); });
-        document.getElementById('qtyMinus').addEventListener('click', () => { if(qty > 1) { qty--; updateSummary(); }});
-        productSelect.addEventListener('change', updateSummary);
-
-        function updateSummary() {
-            qtyDisplay.innerText = qty;
-            const price = parseInt(productSelect.options[productSelect.selectedIndex].getAttribute('data-price'));
-            const total = price * qty;
-            document.getElementById('summaryPrice').innerText = `৳${total}`;
-            document.getElementById('summaryTotal').innerText = `৳${total}`;
-        }
-
-        // Select specific product dynamically from showcase card click
-        window.selectProduct = function(id) {
-            document.getElementById('productSelect').value = id;
-            updateSummary();
-            document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // WhatsApp Checkout automation
-        document.getElementById('orderForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('custName').value;
-            const phone = document.getElementById('custPhone').value;
-            const address = document.getElementById('custAddress').value;
-            const prodName = productSelect.options[productSelect.selectedIndex].text;
-            const totalStr = document.getElementById('summaryTotal').innerText;
-
-            const text = `*নতুন অর্ডার - ${SITE_CONFIG.brandName}*%0A%0A*কাস্টমার নাম:* ${name}%0A*ফোন নাম্বার:* ${phone}%0A*ডেলিভারি ঠিকানা:* ${address}%0A%0A*প্রোডাক্ট:* ${prodName}%0A*পরিমাণ:* ${qty}%0A*সর্বমোট মূল্য:* ${totalStr} (ডেলিভারি চার্জ ছাড়া)`;
-            
-            const waUrl = `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${text}`;
-            window.open(waUrl, '_blank');
-        });
+        AOS.init();
+        setTimeout(() => document.getElementById('loader').style.display = 'none', 500);
     </script>
 </body>
 </html>
