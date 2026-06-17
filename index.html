@@ -2,853 +2,862 @@
 <html lang="bn" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <!-- স্ট্যান্ডার্ড রেসপনসিভ ভিউপোর্ট (সব ধরনের মোবাইল ব্রাউজারে নিখুঁত প্রদর্শনের জন্য) -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>IIOM - প্রিমিয়াম AI কার্টুন ভিডিও মেকিং কোর্স</title>
-    
-    <!-- Google Fonts for premium Bengali typography -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Herb's Oil by Sakila | Premium Organic Hair Care</title>
+   
+    <!-- Google Fonts: Hind Siliguri -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS CDN with Custom Brand Colors Config -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <!-- Tailwind CSS (CDN for Single File config) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Hind Siliguri', 'Noto Sans Bengali', 'sans-serif'],
-                    },
                     colors: {
-                        brand: {
-                            50: '#edf4fc',
-                            100: '#dbebfa',
-                            200: '#bdd7f5',
-                            300: '#90bfef',
-                            400: '#5c9fe6',
-                            500: '#347cdb',
-                            600: '#0050b3', /* Royal Blue Theme */
-                            700: '#004294',
-                            800: '#003373',
-                            900: '#002554',
-                            950: '#00142e'
-                        }
+                        primary: '#2D6A4F',
+                        secondary: '#40916C',
+                        accent: '#95D5B2',
+                        dark: '#1B4332',
+                        cream: '#F8F9FA',
+                        creamDark: '#E9EDC9'
+                    },
+                    fontFamily: {
+                        bengali: ['"Hind Siliguri"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.15)',
+                        'glow': '0 0 20px rgba(149, 213, 178, 0.5)',
+                        'premium': '0 10px 40px -10px rgba(27,67,50,0.3)',
                     }
                 }
             }
         }
     </script>
 
-    <!-- Lucide Icons for vector icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        /* Smooth transitions and custom animations */
-        .fade-in {
-            animation: fadeIn 0.4s ease-out forwards;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        /* Form inputs target size helper for mobile */
-        input, select, textarea {
-            font-size: 16px !important; /* Prevents iOS Safari auto-zoom */
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background-color: #F8F9FA;
+            color: #1B4332;
+            overflow-x: hidden;
         }
 
-        /* ==================================================
-           CRITICAL BLOGGER MOBILE LAYOUT OVERRIDES (অপ্রতিরোধ্য মোবাইল ভিউ ফিক্স)
-           ================================================== */
-        /* ব্লগারের রুট লেভেলের যেকোনো ফিক্সড উইডথ জোরপূর্বক ভেঙে ফুল-উইডথ ও রেসপনসিভ করা */
-        html, body {
-            width: 100% !important;
-            max-width: 100% !important;
-            min-width: 100% !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            overflow-x: hidden !important;
-            overflow-y: auto !important;
-            display: block !important;
-            height: auto !important;
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F8F9FA;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #40916C;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2D6A4F;
         }
 
-        /* ব্লগারের সকল সম্ভাব্য লেআউট কন্টেইনার এবং কলাম ফিক্স করা */
-        .column-center-outer, .column-center-inner, .main-inner, .content-inner, .content-outer,
-        #main, #main-wrapper, .post-outer, .post, .post-body, .entry-content, .post-body-container,
-        #outer-wrapper, #content-wrapper, .body-outer, .region-inner {
-            width: 100% !important;
-            max-width: 100% !important;
-            min-width: 100% !important;
-            padding: 0 !important;
-            margin: 0 !important;
-            float: none !important;
-            display: block !important;
-            background: transparent !important;
-            border: none !important;
-            box-shadow: none !important;
-            overflow: visible !important;
+
+        /* Glassmorphism Utilities */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+       
+        .glass-dark {
+            background: rgba(27, 67, 50, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(149, 213, 178, 0.2);
         }
 
-        /* ব্লগারের ব্যাকগ্রাউন্ড কালার বা ইমেজ ওভাররাইড করা */
-        body.bg-brand-50\/20 {
-            background-color: rgba(237, 244, 252, 0.2) !important;
+
+        /* Animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
         }
+        .floating {
+            animation: float 4s ease-in-out infinite;
+        }
+       
+        @keyframes float-slow {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        .floating-slow {
+            animation: float-slow 6s ease-in-out infinite;
+        }
+
+
+        /* Gradient Text */
+        .text-gradient {
+            background: linear-gradient(to right, #2D6A4F, #40916C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        /* Smooth reveal for details/summary */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+       
+        /* Loader */
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: #F8F9FA;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease;
+        }
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(45, 106, 79, 0.2);
+            border-top-color: #2D6A4F;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
     </style>
 </head>
-<body class="bg-brand-50/20 text-slate-800 font-sans min-h-screen flex flex-col antialiased">
+<body class="antialiased font-bengali selection:bg-accent selection:text-dark">
 
-    <!-- Navigation Bar -->
-    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-brand-100">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-20 items-center">
-          
-          <!-- Logo & Brand Name -->
-          <div class="flex items-center space-x-3 cursor-pointer group" onclick="showPage('home')">
-            <img 
-              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBcDTnbqscKmgueQ6wWXLxgE_GWXA3iTUHj5uv-rKIO2TsdFLpZ-c0hyphenhyphenTY7PQFe8YxNkAGOkF-ljJampHEs44xXvlELR5Q1ZKixEIng0U1w1AOa0QrAspUK1SUI4LUmW5oE0d3LnsOl9rU5djFRG3rIL4qZNZJ1xu2w9H9DDo58e2IyHR9EqXFDqJXQA8p/s320/d5664f8e-64ac-4540-a4e5-1b11e2bc533a.jfif" 
-              alt="IIOM Logo" 
-              class="h-12 w-12 rounded-full object-cover border-2 border-brand-600 shadow-sm transition-transform group-hover:scale-105"
-              onerror="this.src='https://placehold.co/100x100/0050b3/ffffff?text=IIOM'"
-            />
-            <div>
-              <h1 class="text-xl sm:text-2xl font-bold text-brand-900 leading-none">IIOM</h1>
-              <p class="text-[0.6rem] sm:text-[0.65rem] uppercase tracking-widest text-brand-600 font-semibold mt-0.5">AI কার্টুন একাডেমি</p>
-            </div>
-          </div>
 
-          <!-- Desktop Menu links -->
-          <div class="hidden md:flex items-center space-x-8">
-            <button onclick="showPage('home')" class="text-base font-medium text-slate-600 hover:text-brand-700 transition-colors">হোম</button>
-            <button onclick="showPage('register')" class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">নিবন্ধন করুন</button>
-          </div>
-
-          <!-- Mobile menu trigger with Inline SVG -->
-          <div class="md:hidden flex items-center">
-            <button id="mobile-menu-btn" class="text-brand-900 p-2 focus:outline-none" aria-label="মেনু খুলুন">
-              <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-              </svg>
-            </button>
-          </div>
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="flex flex-col items-center">
+            <div class="spinner mb-4"></div>
+            <h2 class="text-xl font-bold text-primary" id="loaderBrandName">লোড হচ্ছে...</h2>
         </div>
-      </div>
+    </div>
 
-      <!-- Mobile dropdown layout -->
-      <div id="mobile-dropdown" class="hidden md:hidden bg-white border-b border-brand-100 px-4 pt-2 pb-6 space-y-3 shadow-xl fade-in">
-        <button onclick="showPage('home')" class="block w-full text-left px-4 py-3 text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700 rounded-lg">হোম</button>
-        <button onclick="showPage('register')" class="w-full bg-amber-500 text-white py-3 rounded-lg font-bold text-center block shadow-md">নিবন্ধন করুন</button>
-      </div>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="glass rounded-full px-6 py-3 flex justify-between items-center shadow-sm">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 group">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-accent flex items-center justify-center text-white font-bold text-xl shadow-glow group-hover:rotate-12 transition-transform">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <span class="font-bold text-xl md:text-2xl text-dark" id="navBrandName">ব্র্যান্ড নাম</span>
+                </a>
+
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-8 font-medium text-dark/80">
+                    <a href="#home" class="hover:text-primary transition-colors">হোম</a>
+                    <a href="#about" class="hover:text-primary transition-colors">আমাদের সম্পর্কে</a>
+                    <a href="#products" class="hover:text-primary transition-colors">প্রোডাক্টস</a>
+                    <a href="#benefits" class="hover:text-primary transition-colors">উপকারিতা</a>
+                    <a href="#reviews" class="hover:text-primary transition-colors">রিভিউ</a>
+                </div>
+
+
+                <!-- CTA & Icons -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <a href="#order" class="bg-primary hover:bg-dark text-white px-6 py-2 rounded-full transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                        অর্ডার করুন
+                    </a>
+                </div>
+
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="lg:hidden text-dark text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden absolute top-20 left-4 right-4 glass rounded-2xl p-4 flex flex-col gap-4 shadow-lg border-t border-white/50 lg:hidden transform origin-top transition-transform">
+            <a href="#home" class="mobile-link text-center font-medium p-2 hover:bg-accent/20 rounded-lg">হোম</a>
+            <a href="#about" class="mobile-link text-center font-medium p-2 hover:bg-accent/20 rounded-lg">আমাদের সম্পর্কে</a>
+            <a href="#products" class="mobile-link text-center font-medium p-2 hover:bg-accent/20 rounded-lg">প্রোডাক্টস</a>
+            <a href="#benefits" class="mobile-link text-center font-medium p-2 hover:bg-accent/20 rounded-lg">উপকারিতা</a>
+            <a href="#order" class="mobile-link text-center font-medium p-2 bg-primary text-white rounded-full mt-2">অর্ডার করুন</a>
+        </div>
     </nav>
 
-    <!-- Content Area -->
-    <main class="pt-20 flex-grow">
 
-      <!-- ==================== HOME PAGE SECTION ==================== -->
-      <div id="home-page" class="fade-in">
-        
-        <!-- Hero Section -->
-        <section class="relative overflow-hidden bg-brand-900 text-white py-16 sm:py-24">
-          <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#fbbf24 2px, transparent 2px); background-size: 40px 40px;"></div>
-          
-          <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="inline-flex items-center space-x-2 bg-brand-800/60 rounded-full px-4 py-2 mb-6 sm:mb-8 border border-brand-700/50">
-              <svg class="text-amber-400 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 21L14.907 15.158M16 10l-1.5 1.5M19 3l-1.5 1.5M14 3l.5 1.5M19 8l-1.5-.5M14.25 10.75L19 6l-3.25-3.25-4.75 4.75m3.25 3.25L10 14H6v-4l4.75-4.75m3.25 3.25L10 6.5M6 14l-4 4m0 0h3m-3 0v-3"></path>
-              </svg>
-              <span class="text-brand-100 text-xs sm:text-sm font-medium tracking-wide">স্মার্টফোন ও কম্পিউটার দিয়ে প্রফেশনাল এনিমেশন শিখুন</span>
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-24 pb-12 overflow-hidden bg-gradient-to-br from-cream via-[#e8f3ee] to-creamDark">
+        <!-- Abstract Background Shapes -->
+        <div class="absolute top-20 left-10 w-64 h-64 bg-accent/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 floating-slow"></div>
+        <div class="absolute bottom-10 right-10 w-72 h-72 bg-primary/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 floating"></div>
+       
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="flex flex-col items-center justify-center text-center max-w-4xl mx-auto">
+                <!-- Text Content -->
+                <div data-aos="fade-up" data-aos-duration="1000">
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-accent/30 text-primary font-semibold text-sm mb-6 border border-accent/50 backdrop-blur-sm">
+                        <i class="fa-solid fa-leaf mr-2"></i> ১০০% অর্গানিক ও প্রাকৃতিক
+                    </div>
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-dark">
+                        <span id="heroTitle1">প্রাকৃতিকভাবে আপনার</span><br>
+                        <span class="text-gradient" id="heroTitle2">চুলের সৌন্দর্য</span>
+                        <span id="heroTitle3">ফিরিয়ে আনুন</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-700 mb-8 max-w-2xl mx-auto" id="heroSubtitle">
+                        সম্পূর্ণ প্রাকৃতিক উপাদানে তৈরি আমাদের অর্গানিক হেয়ার অয়েল, যা চুল পড়া বন্ধ করে এবং নতুন চুল গজাতে সাহায্য করে।
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#order" class="bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-full font-bold text-lg shadow-premium hover:shadow-glow hover:-translate-y-1 transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-bag-shopping"></i> এখনই কিনুন
+                        </a>
+                        <a href="#products" class="glass px-8 py-4 rounded-full font-bold text-dark text-lg hover:bg-white transition-all flex items-center justify-center gap-2">
+                            <i class="fa-regular fa-eye"></i> প্রোডাক্ট দেখুন
+                        </a>
+                    </div>
+                   
+                    <!-- Trust Badges -->
+                    <div class="mt-10 flex items-center justify-center gap-6 opacity-80">
+                        <div class="flex items-center gap-2 text-sm font-medium"><i class="fa-solid fa-check-circle text-primary"></i> কেমিক্যাল মুক্ত</div>
+                        <div class="flex items-center gap-2 text-sm font-medium"><i class="fa-solid fa-star text-yellow-500"></i> সেরা কোয়ালিটি</div>
+                    </div>
+                </div>
             </div>
-            <h1 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4 sm:mb-6 text-white leading-snug sm:leading-tight">
-              মোবাইল ও কম্পিউটার দিয়ে সহজে <br class="hidden md:block" />
-              <span class="text-amber-400">প্রফেশনাল AI কার্টুন ভিডিও তৈরি করুন</span>
-            </h1>
-            <p class="mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl max-w-2xl mx-auto text-brand-100 leading-relaxed px-2">
-              আজই আমাদের প্রিমিয়াম AI কার্টুন ভিডিও মেকিং কোর্সে নিবন্ধন করুন এবং সম্পূর্ণ প্র্যাক্টিক্যাল প্রজেক্টের মাধ্যমে ইউটিউব, ফেসবুক বা ফ্রিল্যান্সিং করে ক্যারিয়ার গড়ার চমৎকার যাত্রা শুরু করুন।
-            </p>
-            <div class="mt-8 sm:mt-10 flex justify-center">
-              <button onclick="showPage('register')" class="bg-amber-500 hover:bg-amber-400 text-brand-950 px-8 py-3.5 sm:py-4 rounded-full font-bold text-base sm:text-lg transition-all shadow-lg hover:shadow-amber-500/25 flex items-center group">
-                নিবন্ধন করুন
-                <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-        </section>
-
-        <!-- Features Section -->
-        <section class="py-16 sm:py-20 bg-white">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 sm:text-center sm:mb-16">
-              <h2 class="text-2xl sm:text-3xl font-bold text-brand-900 px-2">এই কোর্সে আপনি কী কী শিখবেন?</h2>
-              <div class="w-20 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
-            </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-              <!-- Feature Card 1 -->
-              <div class="bg-brand-50/50 border border-brand-100 rounded-2xl p-6 sm:p-8 text-center hover:shadow-xl transition-shadow group">
-                <div class="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-brand-100 text-brand-600 mb-5 group-hover:scale-110 transition-transform">
-                  <svg class="w-7 h-7 sm:w-8 sm:h-8 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
-                    <polygon points="10 8 16 11 10 14 10 8" fill="currentColor" stroke="currentColor"></polygon>
-                  </svg>
-                </div>
-                <h3 class="text-lg sm:text-xl font-bold text-brand-900 mb-2">মোবাইল ফ্রেন্ডলি এনিমেশন</h3>
-                <p class="text-slate-600 leading-relaxed text-sm">ভারী কোনো ল্যাপটপ বা কম্পিউটার ছাড়াই আপনার হাতের মোবাইল দিয়ে আকর্ষণীয় ৩D কার্টুন ভিডিও তৈরি করুন।</p>
-              </div>
-              <!-- Feature Card 2 -->
-              <div class="bg-brand-50/50 border border-brand-100 rounded-2xl p-6 sm:p-8 text-center hover:shadow-xl transition-shadow group">
-                <div class="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-brand-100 text-brand-600 mb-5 group-hover:scale-110 transition-transform">
-                  <svg class="w-7 h-7 sm:w-8 sm:h-8 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
-                    <path d="M19 10v1a7 7 0 0 1-14 0v-1"></path>
-                    <line x1="12" y1="19" x2="12" y2="23"></line>
-                    <line x1="8" y1="23" x2="16" y2="23"></line>
-                  </svg>
-                </div>
-                <h3 class="text-lg sm:text-xl font-bold text-brand-900 mb-2">এআই ভয়েস ও স্ক্রিপ্ট</h3>
-                <p class="text-slate-600 leading-relaxed text-sm">কোনো জটিলতা ছাড়াই আর্টিফিসিয়াল ইন্টেলিজেন্স বা AI দিয়ে প্রফেশনাল লেভেলের ভয়েস ওভার এবং নিখুঁত স্ক্রিপ্ট তৈরি শিখুন।</p>
-              </div>
-              <!-- Feature Card 3 -->
-              <div class="bg-brand-50/50 border border-brand-100 rounded-2xl p-6 sm:p-8 text-center hover:shadow-xl transition-shadow group">
-                <div class="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-brand-100 text-brand-600 mb-5 group-hover:scale-110 transition-transform">
-                  <svg class="w-7 h-7 sm:w-8 sm:h-8 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <rect x="2" y="5" width="20" height="14" rx="2"></rect>
-                    <path d="M12 8v8M10 10h3.5a1.5 1.5 0 0 1 0 3H10.5a1.5 1.5 0 0 0 0 3H14"></path>
-                  </svg>
-                </div>
-                <h3 class="text-lg sm:text-xl font-bold text-brand-900 mb-2">মনিটাইজেশন ও আয়</h3>
-                <p class="text-slate-600 leading-relaxed text-sm">ইউটিউব ও ফেসবুকে কপিরাইট ছাড়া কীভাবে আপনার বানানো কার্টুন আপলোড করে সফলভাবে আয় করবেন তার লাইভ সিক্রেট গাইডলাইন।</p>
-              </div>
-              <!-- Feature Card 4 -->
-              <div class="bg-brand-50/50 border border-brand-100 rounded-2xl p-6 sm:p-8 text-center hover:shadow-xl transition-shadow group">
-                <div class="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-brand-100 text-brand-600 mb-5 group-hover:scale-110 transition-transform">
-                  <svg class="w-7 h-7 sm:w-8 sm:h-8 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                  </svg>
-                </div>
-                <h3 class="text-lg sm:text-xl font-bold text-brand-900 mb-2">লাইফটাইম মেন্টরশিপ</h3>
-                <p class="text-slate-600 leading-relaxed text-sm">ভর্তি হওয়ার পর যেকোনো সমস্যায় মেন্টরের থেকে ডেডিকেটেড লাইভ সাপোর্ট এবং নিয়মিত রিসোর্স আপডেট সাপোর্ট পাবেন।</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="py-16 sm:py-20 bg-brand-900 text-white">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 sm:mb-16">
-              <h2 class="text-2xl sm:text-3xl font-bold text-white px-2">সফল শিক্ষার্থীদের অভিজ্ঞতা</h2>
-              <div class="w-20 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-              <!-- Testimonial 1 -->
-              <div class="bg-brand-800/50 p-6 sm:p-8 rounded-2xl relative border border-brand-700/50 flex flex-col justify-between">
-                <div>
-                  <i data-lucide="quote" class="absolute top-6 right-6 text-brand-600/20 w-10 h-10 sm:w-12 sm:h-12"></i>
-                  <p class="text-brand-50 text-sm sm:text-base mb-6 relative z-10 italic">"কোর্সটি করার পর আমি আমার প্রথম ইউটিউব চ্যানেলের জন্য এনিমেশন ভিডিও বানিয়েছি এবং অলরেডি ভিউ আসতে শুরু করেছে। ধন্যবাদ মেন্টরকে!"</p>
-                </div>
-                <div class="flex items-center space-x-3 mt-auto border-t border-brand-800/80 pt-4">
-                  <img 
-                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_etl93Bmxupuq3BjL9odGjnilxh4bSkLoeu2Yk5Wm_5A_qJGSkVMfyp_T83AmwFBE-YTJ_MLB_Y9GikPnJDZSTbaSsma9zUKHMRpLVSiE7TspT-LzyoAbB-Kn198HYw3prjwySN7hcrUfkMxKJRaoORa_8kPSnrOYmNen_gMzaoR_CsJCPcACxHicG9FW/s320/muslim-boy-touching-neck-xijc9gqm90vyhvu9.jpg" 
-                    alt="আব্দুর রহমান" 
-                    class="w-12 h-12 rounded-full object-cover border-2 border-amber-500 shadow-md flex-shrink-0"
-                    onerror="this.src='https://placehold.co/100x100/0050b3/ffffff?text=AR'"
-                  />
-                  <div>
-                    <h4 class="font-bold text-white text-sm sm:text-base">আব্দুর রহমান</h4>
-                    <span class="text-brand-300 text-xs">ইউটিউবার ও কনটেন্ট ক্রিয়েটর</span>
-                  </div>
-                </div>
-              </div>
-              <!-- Testimonial 2 -->
-              <div class="bg-brand-800/50 p-6 sm:p-8 rounded-2xl relative border border-brand-700/50 flex flex-col justify-between">
-                <div>
-                  <i data-lucide="quote" class="absolute top-6 right-6 text-brand-600/20 w-10 h-10 sm:w-12 sm:h-12"></i>
-                  <p class="text-brand-50 text-sm sm:text-base mb-6 relative z-10 italic">"মোবাইল দিয়ে যে এত সুন্দর কার্টুন ভিডিও বানানো সম্ভব তা এই কোর্স না করলে বিশ্বাস হতো না। প্রতিটি ট্রিকস খুব চমৎকারভাবে দেখানো হয়েছে।"</p>
-                </div>
-                <div class="flex items-center space-x-3 mt-auto border-t border-brand-800/80 pt-4">
-                  <img 
-                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEidXmsEPTAfGXgB8x-A_NWq_8s0ilBW7v9N0fTYKf1n_zb0NmLE0luvJT34bt6mjMFeS98YmGlx1GfRZwLrB3QKKTLY6fn3_NzKTPZoxRHkrSPldE-rf6AmJlN6-AMEaN7nNeT7jJTY3mQOICF-Ln-q3rOAUqAezuDPeeTCcE5ZP697DPj_8ObQDCWPy6NZ/s320/1000_F_354661318_fuChM1w9NwhKe1ho2WLOp1i6mwInGdOm.jpg" 
-                    alt="মাহমুদুল্লাহ" 
-                    class="w-12 h-12 rounded-full object-cover border-2 border-amber-500 shadow-md flex-shrink-0"
-                    onerror="this.src='https://placehold.co/100x100/0050b3/ffffff?text=M'"
-                  />
-                  <div>
-                    <h4 class="font-bold text-white text-sm sm:text-base">মাহমুদুল্লাহ</h4>
-                    <span class="text-brand-300 text-xs">কার্টুন ডিজাইনার</span>
-                  </div>
-                </div>
-              </div>
-              <!-- Testimonial 3 -->
-              <div class="bg-brand-800/50 p-6 sm:p-8 rounded-2xl relative border border-brand-700/50 flex flex-col justify-between">
-                <div>
-                  <i data-lucide="quote" class="absolute top-6 right-6 text-brand-600/20 w-10 h-10 sm:w-12 sm:h-12"></i>
-                  <p class="text-brand-50 text-sm sm:text-base mb-6 relative z-10 italic">"আমি এআই ভয়েস ওভার এবং ৩D ক্যারেক্টার ডিজাইন খুব সহজে শিখেছি। সাপোর্ট টিম যেকোনো সমস্যায় সাথে সাথে সাহায্য করে।"</p>
-                </div>
-                <div class="flex items-center space-x-3 mt-auto border-t border-brand-800/80 pt-4">
-                  <img 
-                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjKSUqpnKGrN-eSBT78dxthN9tv0bE6Nz4SgX2jcJ457Nn42tFHCLii3lupBTycz8AYqZ5hS1FMzjPGZ_-8JB2MFW60GD5Vi3xme1LpwkrEUZX09VGyKvbUqKkHMn0DnB9mv-kz82yWO3XFNpW51Af-zL3XfZ8Y83GF7WY2lbRyPvpN5k4CTFU9VmXA74hY/s320/7c7fcb47e65fec252042d36326030554.jpg" 
-                    alt="মালিহা ইসলাম" 
-                    class="w-12 h-12 rounded-full object-cover border-2 border-amber-500 shadow-md flex-shrink-0"
-                    onerror="this.src='https://placehold.co/100x100/0050b3/ffffff?text=MI'"
-                  />
-                  <div>
-                    <h4 class="font-bold text-white text-sm sm:text-base">মালিহা ইসলাম</h4>
-                    <span class="text-brand-300 text-xs">কনটেন্ট ডেভেলপার</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="py-16 sm:py-20 bg-brand-50/30">
-          <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-10 sm:mb-12">
-              <h2 class="text-2xl sm:text-3xl font-bold text-brand-900 px-2">সাধারণ জিজ্ঞাসা (FAQ)</h2>
-              <div class="w-16 h-1 bg-amber-500 mx-auto mt-3 rounded-full"></div>
-            </div>
-            
-            <div class="space-y-4">
-              <!-- FAQ Item 1 -->
-              <div class="bg-white rounded-xl shadow-sm border border-brand-100 overflow-hidden">
-                <button onclick="toggleFAQ(0)" class="w-full text-left px-5 sm:px-6 py-4 flex justify-between items-center font-semibold text-brand-900 hover:bg-brand-50/50 transition-colors">
-                  <span class="text-sm sm:text-base">কোর্সটি করতে কি ল্যাপটপ বা কম্পিউটার লাগবে?</span>
-                  <i data-lucide="chevron-down" id="faq-icon-0" class="transform transition-transform text-brand-600 flex-shrink-0 ml-2"></i>
-                </button>
-                <div id="faq-ans-0" class="hidden px-5 sm:px-6 py-4 text-slate-600 bg-brand-50/30 border-t border-brand-50 leading-relaxed text-sm">
-                  না, আপনার কাছে যদি শুধুমাত্র একটি সাধারণ স্মার্টফোন থাকে, তবে সেটি দিয়েই আপনি সম্পূর্ণ প্রফেশনাল কার্টুন এনিমেশন শিখে ভিডিও তৈরি করতে পারবেন।
-                </div>
-              </div>
-              <!-- FAQ Item 2 -->
-              <div class="bg-white rounded-xl shadow-sm border border-brand-100 overflow-hidden">
-                <button onclick="toggleFAQ(1)" class="w-full text-left px-5 sm:px-6 py-4 flex justify-between items-center font-semibold text-brand-900 hover:bg-brand-50/50 transition-colors">
-                  <span class="text-sm sm:text-base">লাইফটাইম এক্সেস বা সাহায্য থাকবে কি?</span>
-                  <i data-lucide="chevron-down" id="faq-icon-1" class="transform transition-transform text-brand-600 flex-shrink-0 ml-2"></i>
-                </button>
-                <div id="faq-ans-1" class="hidden px-5 sm:px-6 py-4 text-slate-600 bg-brand-50/30 border-t border-brand-50 leading-relaxed text-sm">
-                  হ্যাঁ, একবার এই কোর্সে ভর্তি হয়ে গেলে আপনি কোর্সের সব ভিডিও ক্লাস, মেটেরিয়ালস এবং ফিউচার আপডেটের লাইফটাইম অ্যাক্সেস সম্পূর্ণ ফ্রি-তে পাবেন।
-                </div>
-              </div>
-              <!-- FAQ Item 3 -->
-              <div class="bg-white rounded-xl shadow-sm border border-brand-100 overflow-hidden">
-                <button onclick="toggleFAQ(2)" class="w-full text-left px-5 sm:px-6 py-4 flex justify-between items-center font-semibold text-brand-900 hover:bg-brand-50/50 transition-colors">
-                  <span class="text-sm sm:text-base">কার্টুন ভিডিও থেকে কীভাবে আয় করা সম্ভব?</span>
-                  <i data-lucide="chevron-down" id="faq-icon-2" class="transform transition-transform text-brand-600 flex-shrink-0 ml-2"></i>
-                </button>
-                <div id="faq-ans-2" class="hidden px-5 sm:px-6 py-4 text-slate-600 bg-brand-50/30 border-t border-brand-50 leading-relaxed text-sm">
-                  আপনি কার্টুন ভিডিও তৈরি করে নিজের ইউটিউব চ্যানেল বা ফেসবুক পেজে আপলোড করে মনিটাইজেশন পেতে পারেন। এছাড়া বিভিন্ন ফ্রিল্যান্সিং প্ল্যাটফর্মে ক্লায়েন্টের ভিডিও বানিয়ে বড় অংকের টাকা আয় করতে পারেন।
-                </div>
-              </div>
-              <!-- FAQ Item 4 -->
-              <div class="bg-white rounded-xl shadow-sm border border-brand-100 overflow-hidden">
-                <button onclick="toggleFAQ(3)" class="w-full text-left px-5 sm:px-6 py-4 flex justify-between items-center font-semibold text-brand-900 hover:bg-brand-50/50 transition-colors">
-                  <span class="text-sm sm:text-base">ভর্তি ফি কীভাবে পরিশোধ করতে হবে?</span>
-                  <i data-lucide="chevron-down" id="faq-icon-3" class="transform transition-transform text-brand-600 flex-shrink-0 ml-2"></i>
-                </button>
-                <div id="faq-ans-3" class="hidden px-5 sm:px-6 py-4 text-slate-600 bg-brand-50/30 border-t border-brand-50 leading-relaxed text-sm">
-                  নিবন্ধনের ফর্মটি পূরণ করে সাবমিট করার পর আমাদের অ্যাডমিশন টিম আপনার সাথে সরাসরি মোবাইল অথবা হোয়াটসঅ্যাপে যোগাযোগ করবে এবং পেমেন্টের পরবর্তী ধাপগুলো বুঝিয়ে দেবে।
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <!-- ==================== REGISTRATION FORM SECTION ==================== -->
-      <div id="registration-page" class="hidden max-w-4xl mx-auto py-8 sm:py-12 px-4 sm:px-6 lg:px-8 fade-in">
-        
-        <!-- Registration Success Card -->
-        <div id="success-card" class="hidden bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-brand-100 text-center flex flex-col items-center">
-          <div class="w-20 h-20 sm:w-24 sm:h-24 bg-brand-100 rounded-full flex items-center justify-center mb-6">
-            <svg class="text-brand-600 w-10 h-10 sm:w-12 sm:h-12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-          </div>
-          <h2 class="text-2xl sm:text-3xl font-bold text-brand-900 mb-4">নিবন্ধন সফল হয়েছে!</h2>
-          <p class="text-slate-600 mb-8 text-base sm:text-lg leading-relaxed max-w-lg">
-            আলহামদুলিল্লাহ, আপনার তথ্য সফলভাবে জমা দেওয়া হয়েছে। আমাদের কোর্স ম্যানেজমেন্ট ও অ্যাডমিশন টিম খুব দ্রুত আপনার সাথে সরাসরি যোগাযোগ করবে।
-          </p>
-          <button onclick="showPage('home')" class="bg-brand-700 hover:bg-brand-800 text-white px-8 py-3 rounded-full font-semibold transition-colors shadow-md">
-            হোমপেজে ফিরে যান
-          </button>
         </div>
+    </section>
 
-        <!-- Main Form Grid -->
-        <div id="main-form-card" class="bg-white shadow-xl rounded-3xl overflow-hidden border border-brand-100">
-          <!-- Form Header -->
-          <div class="bg-brand-900 text-white py-8 sm:py-10 px-6 sm:px-8 text-center relative overflow-hidden">
-            <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#fbbf24 2px, transparent 2px); background-size: 20px 20px;"></div>
-            <h2 class="text-2xl sm:text-3xl font-bold relative z-10">অনлайн ভিডিও কোর্স ভর্তি ফরম</h2>
-            <p class="text-brand-200 mt-1 sm:mt-2 text-sm sm:text-base relative z-10">আপনার সঠিক তথ্যগুলো দিয়ে ফরমটি পূরণ করুন।</p>
-          </div>
 
-          <!-- Form Fields Container -->
-          <form id="registration-form" onsubmit="handleFormSubmit(event)" class="p-6 sm:p-12 space-y-6 sm:space-y-8">
-            <div id="submit-error" class="hidden p-4 bg-red-50 border border-red-200 text-red-700 rounded-xl text-sm"></div>
-
-            <!-- Section 1: Personal Info -->
-            <div>
-              <h3 class="text-lg sm:text-xl font-bold text-brand-800 border-b border-brand-100 pb-2 mb-4 sm:mb-6">ব্যক্তিগত তথ্য</h3>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
-                
-                <div>
-                  <label class="block text-sm font-semibold text-slate-700 mb-1">শিক্ষার্থীর পূর্ণ নাম <span class="text-red-500">*</span></label>
-                  <input type="text" id="fullName" name="fullName" placeholder="যেমন: আব্দুল্লাহ আল মামুন" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-shadow bg-slate-50 text-base">
-                  <p id="err-fullName" class="text-red-500 text-xs mt-1 hidden"></p>
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white relative">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative" data-aos="fade-up-right">
+                    <div class="w-full h-[500px] rounded-3xl overflow-hidden shadow-premium relative">
+                        <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Making Oil" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent"></div>
+                        <div class="absolute bottom-8 left-8 right-8">
+                            <h3 class="text-white text-2xl font-bold mb-2">হাতে তৈরি যত্ন</h3>
+                            <p class="text-white/80">প্রতিটি বোতল অত্যন্ত যত্নের সাথে খাঁটি উপাদান দিয়ে তৈরি।</p>
+                        </div>
+                    </div>
+                    <!-- Decorative element -->
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-accent/20 rounded-full blur-2xl z-[-1]"></div>
                 </div>
 
-                <div>
-                  <label class="block text-sm font-semibold text-slate-700 mb-1">ইমেইল ঠিকানা <span class="text-red-500">*</span></label>
-                  <input type="email" id="email" name="email" placeholder="যেমন: student@example.com" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-shadow bg-slate-50 text-base">
-                  <p id="err-email" class="text-red-500 text-xs mt-1 hidden"></p>
-                </div>
 
-                <div>
-                  <label class="block text-sm font-semibold text-slate-700 mb-1">মোবাইল নম্বর <span class="text-red-500">*</span></label>
-                  <input type="tel" id="mobile" name="mobile" placeholder="যেমন: +৮৮০১XXXXXXXXX" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-shadow bg-slate-50 text-base">
-                  <p id="err-mobile" class="text-red-500 text-xs mt-1 hidden"></p>
+                <div data-aos="fade-up-left">
+                    <h4 class="text-primary font-bold tracking-wider mb-2 uppercase text-sm">আমাদের সম্পর্কে</h4>
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6 leading-tight">কেন <span class="text-gradient" id="aboutBrandName">ব্র্যান্ড</span> বেছে নিবেন?</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed" id="aboutDescription">
+                        আমরা বিশ্বাস করি প্রকৃতির মাঝেই লুকিয়ে আছে আসল সৌন্দর্য। আমাদের হেয়ার অয়েল সম্পূর্ণ দেশীয় ও খাঁটি প্রাকৃতিক উপাদান যেমন - নারকেল তেল, আমলা, মেথি, শিকাকাই, কালোজিরা এবং আরও অনেক দুর্লভ ভেষজ দিয়ে হাতে তৈরি। এতে কোনো ক্ষতিকর রাসায়নিক বা প্রিজারভেটিভ নেই।
+                    </p>
+                   
+                    <div class="grid grid-cols-2 gap-6 mt-10">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-primary text-xl shrink-0">
+                                <i class="fa-solid fa-flask-vial"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-1">কেমিক্যাল মুক্ত</h4>
+                                <p class="text-sm text-gray-500">কোনো কৃত্রিম রং বা সুগন্ধি নেই</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-primary text-xl shrink-0">
+                                <i class="fa-solid fa-hand-holding-heart"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-1">হাতে তৈরি</h4>
+                                <p class="text-sm text-gray-500">নিজেদের তত্ত্বাবধানে তৈরি</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-primary text-xl shrink-0">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-1">অর্গানিক উপাদান</h4>
+                                <p class="text-sm text-gray-500">১০০% প্রাকৃতিক ভেষজ</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-primary text-xl shrink-0">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-1">প্রমাণিত ফলাফল</h4>
+                                <p class="text-sm text-gray-500">শত শত সন্তুষ্ট গ্রাহক</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div>
-                  <label class="block text-sm font-semibold text-slate-700 mb-1">জন্ম তারিখ <span class="text-red-500">*</span></label>
-                  <input type="date" id="dob" name="dob" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-shadow bg-slate-50 text-base">
-                  <p id="err-dob" class="text-red-500 text-xs mt-1 hidden"></p>
-                </div>
 
-                <div class="col-span-1 md:col-span-2">
-                  <label class="block text-sm font-semibold text-slate-700 mb-2">লিঙ্গ <span class="text-red-500">*</span></label>
-                  <div class="flex gap-4">
-                    <label class="flex items-center cursor-pointer p-3 border border-slate-300 rounded-lg flex-1 hover:bg-brand-50 transition-colors">
-                      <input type="radio" name="gender" value="Male" class="w-4 h-4 text-brand-600 focus:ring-brand-500 border-slate-300">
-                      <span class="ml-2 text-slate-700 text-base">পুরুষ</span>
-                    </label>
-                    <label class="flex items-center cursor-pointer p-3 border border-slate-300 rounded-lg flex-1 hover:bg-brand-50 transition-colors">
-                      <input type="radio" name="gender" value="Female" class="w-4 h-4 text-brand-600 focus:ring-brand-500 border-slate-300">
-                      <span class="ml-2 text-slate-700 text-base">মহিলা</span>
-                    </label>
-                  </div>
-                  <p id="err-gender" class="text-red-500 text-xs mt-1 hidden"></p>
-                </div>
-
-                <div class="col-span-1 md:col-span-2">
-                  <label class="block text-sm font-semibold text-slate-700 mb-1">সম্পূর্ণ ঠিকানা <span class="text-red-500">*</span></label>
-                  <textarea id="address" name="address" rows="3" placeholder="গ্রাম/রাস্তা, মিরপুর, ঢাকা, বাংলাদেশ" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-shadow bg-slate-50 text-base"></textarea>
-                  <p id="err-address" class="text-red-500 text-xs mt-1 hidden"></p>
-                </div>
-
-              </div>
+    <!-- Products Section -->
+    <section id="products" class="py-24 bg-[#F5F8F6] relative">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <h4 class="text-primary font-bold tracking-wider mb-2 uppercase text-sm">আমাদের শপ</h4>
+                <h2 class="text-3xl md:text-5xl font-bold text-dark mb-4">প্রিমিয়াম <span class="text-gradient">প্রোডাক্টসমূহ</span></h2>
+                <p class="text-gray-600">আপনার চুলের প্রতিটি সমস্যার সমাধানের জন্য আমাদের আছে নির্দিষ্ট ও পরীক্ষিত পণ্য।</p>
             </div>
 
-            <!-- Section 2: Education & Course -->
-            <div>
-              <h3 class="text-lg sm:text-xl font-bold text-brand-800 border-b border-brand-100 pb-2 mb-4 sm:mb-6">শিক্ষাগত তথ্য ও কোর্স নির্বাচন</h3>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
-                
-                <div>
-                  <label class="block text-sm font-semibold text-slate-700 mb-1">সর্বোচ্চ শিক্ষাগত যোগ্যতা <span class="text-red-500">*</span></label>
-                  <input type="text" id="education" name="education" placeholder="যেমন: এসএসসি/এইচএসসি/অনার্স" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-shadow bg-slate-50 text-base">
-                  <p id="err-education" class="text-red-500 text-xs mt-1 hidden"></p>
-                </div>
 
-                <div>
-                  <label class="block text-sm font-semibold text-slate-700 mb-1">কাঙ্খিত কোর্স মডিউল নির্বাচন করুন <span class="text-red-500">*</span></label>
-                  <select id="course" name="course" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-shadow bg-slate-50 text-base">
-                    <option value="">-- কোর্স সিলেক্ট করুন --</option>
-                    <option value="বেসিক টু অ্যাডভান্সড AI কার্টুন ক্রিয়েশন">বেসিক টু অ্যাডভান্সড AI কার্টুন ক্রিয়েশন</option>
-                    <option value="মোবাইল দিয়ে ৩D কার্টুন এনিমেশন">মোবাইল দিয়ে ৩D কার্টুন এনিমেশন</option>
-                    <option value="ইউটিউব ও ফেসবুক মনিটাইজেশন মাস্টারক্লাস">ইউটিউব ও ফেসবুক মনিটাইজেশন মাস্টারক্লাস</option>
-                    <option value="এআই ক্যারেক্টার ও ভয়েস জেনারেশন কোর্স">এআই ক্যারেক্টার ও ভয়েস জেনারেশন কোর্স</option>
-                    <option value="ফ্রিল্যান্সিং মার্কেটপ্লেস গাইডলাইন">ফ্রিল্যান্সিং মার্কেটপ্লেস গাইডলাইন</option>
-                  </select>
-                  <p id="err-course" class="text-red-500 text-xs mt-1 hidden"></p>
-                </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="productGrid">
+                <!-- Products will be injected here via JS -->
+            </div>
+        </div>
+    </section>
 
-              </div>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-24 bg-dark relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary rounded-full mix-blend-overlay filter blur-3xl opacity-50"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-secondary rounded-full mix-blend-overlay filter blur-3xl opacity-50"></div>
+       
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <h4 class="text-accent font-bold tracking-wider mb-2 uppercase text-sm">উপকারিতা</h4>
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">কেন আমাদের তেল <span class="text-accent">সেরা?</span></h2>
             </div>
 
-            <!-- Section 3: Guardian Details -->
-            <div>
-              <h3 class="text-lg sm:text-xl font-bold text-brand-800 border-b border-brand-100 pb-2 mb-4 sm:mb-6">জরুরী যোগাযোগ / অভিভাবকের তথ্য</h3>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
-                
-                <div>
-                  <label class="block text-sm font-semibold text-slate-700 mb-1">অভিভাবকের নাম <span class="text-red-500">*</span></label>
-                  <input type="text" id="guardianName" name="guardianName" placeholder="অভিভাবক বা জরুরী যোগাযোগ ব্যক্তির নাম" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-shadow bg-slate-50 text-base">
-                  <p id="err-guardianName" class="text-red-500 text-xs mt-1 hidden"></p>
-                </div>
 
-                <div>
-                  <label class="block text-sm font-semibold text-slate-700 mb-1">অভিভাবকের মোবাইল নম্বর <span class="text-red-500">*</span></label>
-                  <input type="tel" id="guardianMobile" name="guardianMobile" placeholder="মোবাইল নম্বর" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-shadow bg-slate-50 text-base">
-                  <p id="err-guardianMobile" class="text-red-500 text-xs mt-1 hidden"></p>
-                </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="benefitsGrid">
+                <!-- Benefits injected via JS -->
+            </div>
+        </div>
+    </section>
 
-              </div>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <h4 class="text-primary font-bold tracking-wider mb-2 uppercase text-sm">গ্রাহক সন্তুষ্টি</h4>
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">আমাদের গ্রাহকরা <span class="text-gradient">কী বলেন?</span></h2>
             </div>
 
-            <!-- Form Footer / Submit -->
-            <div class="mt-8 border-t border-brand-100 pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <p class="text-xs sm:text-sm text-slate-500 w-full sm:w-2/3 leading-relaxed text-center sm:text-left">
-                নিবন্ধন করুন বাটনে ক্লিক করার মাধ্যমে আপনি IIOM-এর প্রাইভেসী পলিসি মেনে আপনার ডাটা প্রসেস করার সম্মতি প্রদান করছেন।
-              </p>
-              <button type="submit" id="submit-btn" class="bg-brand-700 hover:bg-brand-800 text-white px-8 py-3.5 sm:py-4 rounded-full font-bold shadow-lg transition-all w-full sm:w-auto text-center flex items-center justify-center text-base sm:text-lg">
-                <span>নিবন্ধন করুন</span>
-              </button>
+
+            <!-- Horizontal Scrollable Review Cards -->
+            <div class="flex overflow-x-auto gap-6 pb-10 hide-scroll-bar snap-x snap-mandatory" id="reviewsContainer" style="scrollbar-width: none;">
+                <!-- Reviews injected via JS -->
             </div>
+        </div>
+    </section>
 
-          </form>
-        </div>
 
-      </div>
-    </main>
+    <!-- FAQ Section -->
+    <section class="py-20 bg-[#F5F8F6]">
+        <div class="container mx-auto px-4 md:px-8 max-w-4xl">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">সাধারণ <span class="text-gradient">জিজ্ঞাসা (FAQ)</span></h2>
+            </div>
+           
+            <div class="flex flex-col gap-4" id="faqContainer">
+                <!-- FAQs injected via JS -->
+            </div>
+        </div>
+    </section>
 
-    <!-- Footer Section -->
-    <footer class="bg-brand-950 text-brand-200 py-12 border-t-4 border-amber-500">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <div class="flex items-center space-x-3 mb-4 justify-center md:justify-start">
-            <img 
-              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBcDTnbqscKmgueQ6wWXLxgE_GWXA3iTUHj5uv-rKIO2TsdFLpZ-c0hyphenhyphenTY7PQFe8YxNkAGOkF-ljJampHEs44xXvlELR5Q1ZKixEIng0U1w1AOa0QrAspUK1SUI4LUmW5oE0d3LnsOl9rU5djFRG3rIL4qZNZJ1xu2w9H9DDo58e2IyHR9EqXFDqJXQA8p/s320/d5664f8e-64ac-4540-a4e5-1b11e2bc533a.jfif" 
-              alt="IIOM Logo" 
-              class="h-10 w-10 rounded-full object-cover border border-amber-400"
-              onerror="this.src='https://placehold.co/100x100/0050b3/ffffff?text=IIOM'"
-            />
-            <h3 class="text-xl sm:text-2xl font-bold text-white">IIOM</h3>
-          </div>
-          <p class="text-sm text-brand-400 mb-4 max-w-xs leading-relaxed text-center md:text-left mx-auto md:mx-0">
-            স্মার্টফোন ও এআই প্রযুক্তি ব্যবহার করে যুগোপযোগী কার্টুন অ্যানিমেশন ভিডিও এবং কন্টেন্ট ক্রিয়েশন শিখুন সহজ বাংলা ভাষায়।
-          </p>
+
+    <!-- Order Section -->
+    <section id="order" class="py-24 relative bg-gradient-to-br from-primary to-dark text-white">
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="glass-dark rounded-3xl p-8 md:p-12 max-w-5xl mx-auto shadow-2xl border border-white/10" data-aos="zoom-in">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Text Info -->
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">এখনই <span class="text-accent">অর্ডার করুন</span></h2>
+                        <p class="text-gray-300 mb-8 leading-relaxed">
+                            ১০০% খাঁটি উপাদানে তৈরি আমাদের হেয়ার অয়েল পেতে নিচের ফর্মটি পূরণ করুন অথবা সরাসরি হোয়াটসঅ্যাপে মেসেজ দিন। সারা বাংলাদেশে ক্যাশ অন ডেলিভারি সুবিধা রয়েছে।
+                        </p>
+                       
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-accent text-xl">
+                                    <i class="fa-solid fa-truck-fast"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">ডেলিভারি চার্জ</h4>
+                                    <p class="text-sm text-gray-400">ঢাকার ভেতরে ৬০৳, ঢাকার বাইরে ১২০৳</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-accent text-xl">
+                                    <i class="fa-solid fa-headset"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">কাস্টমার সাপোর্ট</h4>
+                                    <p class="text-sm text-gray-400" id="contactPhoneText">০১৯৭৩১৯১৫৮৬</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Direct WhatsApp Button -->
+                        <div class="mt-10">
+                            <button onclick="orderViaWhatsAppDirect()" class="w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-4 px-6 rounded-xl flex items-center justify-center gap-3 transition-all transform hover:scale-105 shadow-lg">
+                                <i class="fa-brands fa-whatsapp text-2xl"></i> সরাসরি WhatsApp এ অর্ডার করুন
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <!-- Order Form -->
+                    <div class="bg-white rounded-2xl p-6 md:p-8 text-dark shadow-xl">
+                        <h3 class="text-2xl font-bold mb-6 border-b pb-4">অর্ডার ফর্ম</h3>
+                        <form id="orderForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-semibold mb-1">আপনার নাম *</label>
+                                <input type="text" id="custName" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors bg-gray-50" placeholder="নাম লিখুন">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold mb-1">মোবাইল নাম্বার *</label>
+                                <input type="tel" id="custPhone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors bg-gray-50" placeholder="01XXX-XXXXXX">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold mb-1">সম্পূর্ণ ঠিকানা *</label>
+                                <textarea id="custAddress" required rows="2" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors bg-gray-50" placeholder="বাসা, রাস্তা, এলাকা, জেলা"></textarea>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold mb-1">প্রোডাক্ট সিলেক্ট করুন *</label>
+                                <select id="productSelect" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors bg-gray-50 font-medium">
+                                    <!-- Options injected via JS -->
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full bg-dark hover:bg-primary text-white font-bold py-4 rounded-xl transition-colors shadow-md mt-4 text-lg">
+                                কনফার্ম অর্ডার
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="text-center md:text-left">
-          <h4 class="text-white font-bold mb-4">যোগাযোগ করুন</h4>
-          <ul class="space-y-3 text-sm inline-block md:block text-left">
-            <li class="flex items-center"><i data-lucide="mail" class="mr-2 text-amber-500 w-4 h-4 flex-shrink-0"></i> course@iiom.edu</li>
-            <li class="flex items-center"><i data-lucide="phone" class="mr-2 text-amber-500 w-4 h-4 flex-shrink-0"></i> +৮৮০১৩১৯৫৪৩২০০</li>
-            <li class="flex items-center"><i data-lucide="map-pin" class="mr-2 text-amber-500 w-4 h-4 flex-shrink-0"></i> মিরপুর, ঢাকা, বাংলাদেশ</li>
-          </ul>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-[#122b20] text-gray-300 pt-16 pb-8 border-t border-white/10">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- Brand Info -->
+                <div class="lg:col-span-1">
+                    <a href="#" class="flex items-center gap-2 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-accent flex items-center justify-center text-white font-bold text-xl">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <span class="font-bold text-2xl text-white" id="footerBrandName">ব্র্যান্ড</span>
+                    </a>
+                    <p class="text-sm text-gray-400 mb-6 leading-relaxed" id="footerTagline">
+                        Natural Hair Care for Healthy & Beautiful Hair
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full glass-dark flex items-center justify-center hover:bg-primary hover:text-white transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full glass-dark flex items-center justify-center hover:bg-primary hover:text-white transition-all"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full glass-dark flex items-center justify-center hover:bg-primary hover:text-white transition-all"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+
+                <!-- Links -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">গুরুত্বপূর্ণ লিংক</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="hover:text-accent transition-colors">হোম</a></li>
+                        <li><a href="#about" class="hover:text-accent transition-colors">আমাদের সম্পর্কে</a></li>
+                        <li><a href="#products" class="hover:text-accent transition-colors">সকল প্রোডাক্ট</a></li>
+                        <li><a href="#reviews" class="hover:text-accent transition-colors">কাস্টমার রিভিউ</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">যোগাযোগ</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-accent"></i>
+                            <span id="footerAddress">ঢাকা, বাংলাদেশ</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-accent"></i>
+                            <span id="footerPhone">০১৯৭৩১৯১৫৮৬</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-accent"></i>
+                            <span id="footerEmail">info@hairherbs.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- Map -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">আমাদের লোকেশন</h4>
+                    <div class="w-full h-32 rounded-xl overflow-hidden border border-white/10 glass-dark">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233667.8223908687!2d90.27923710646989!3d23.780887457084543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka%2C%20Bangladesh!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="border-t border-white/10 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; <span id="currentYear"></span> <span id="copyrightName">Hair Herb's Oil by Sakila</span>. All rights reserved.</p>
+                <p class="mt-2">Designed for Premium Organic Brand</p>
+            </div>
         </div>
-        <div class="text-center md:text-left">
-          <h4 class="text-white font-bold mb-4">প্রয়োজনীয় লিংক</h4>
-          <ul class="space-y-2 text-sm inline-block md:block text-left">
-            <li><a href="#" class="hover:text-amber-400 transition-colors">শর্তাবলী ও নীতিমালা</a></li>
-            <li><a href="#" class="hover:text-amber-400 transition-colors">গোপনীয়তা নীতি</a></li>
-            <li><a href="#" class="hover:text-amber-400 transition-colors">স্টুডেন্ট গ্রুপ</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-brand-800 text-center text-sm">
-        <p>&copy; <span id="current-year"></span> IIOM কার্টুন এনিমেশন একাডেমী। সর্বস্বত্ব সংরক্ষিত।</p>
-      </div>
     </footer>
 
-    <!-- Custom JavaScript Controls -->
+
+    <!-- Floating WhatsApp Icon -->
+    <a href="#" id="floatingWhatsApp" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-[0_4px_14px_0_rgba(37,211,102,0.5)] hover:scale-110 transition-transform z-50">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // ==================================================
-        // CONFIGURATION (গুগল ফর্ম এবং টেলিগ্রাম বট কনফিগারেশন)
-        // ==================================================
-        const GOOGLE_FORM_CONFIG = {
-            // আপনার গুগল ফর্মের 'formResponse' অ্যাকশন লিংকটি নিচে দিন:
-            FORM_URL: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSdc2H_D9Y-N6S3tS6oE6-YourRealGoogleFormIDHere/formResponse',
-            
-            // নিচে আপনার গুগল ফর্মের প্রতিটি ইনপুট ফিল্ডের এন্ট্রি আইডিগুলো বসান (entry.XXXXXX):
-            FIELDS: {
-                fullName: 'entry.1111111111', 
-                email: 'entry.2222222222',
-                mobile: 'entry.3333333333',
-                dob: 'entry.4444444444',
-                gender: 'entry.5555555555',
-                address: 'entry.6666666666',
-                education: 'entry.7777777777',
-                course: 'entry.8888888888',
-                guardianName: 'entry.9999999999',
-                guardianMobile: 'entry.1010101010'
-            }
-        };
-
-        const TELEGRAM_CONFIG = {
-            BOT_TOKEN: '8889524652:AAE0A-yCwZ3sXSIkcmtrKjaTl87UkwCe09A', // আপনার টেলিগ্রাম টোকেন
-            CHAT_ID: '8409850252'      // আপনার টেলিগ্রাম চ্যাট আইডি
-        };
-
-        // নিরাপদ উইন্ডো লোড কন্ট্রোল (কোনো ধরনের জাভাস্ক্রিপ্ট ক্র্যাশ এড়াতে)
-        window.addEventListener('load', function() {
-            // Lucide আইকন রেন্ডারিং ট্রাই-ক্যাচ
-            try {
-                if (typeof lucide !== 'undefined') {
-                    lucide.createIcons();
+        // ==========================================
+        // DYNAMIC DATA CONFIGURATION (Requirement #18)
+        // Edit variables here to update the entire site
+        // ==========================================
+        const siteData = {
+            brandName: "Hair Herb's Oil by Sakila",
+            tagline: "Natural Hair Care for Healthy & Beautiful Hair",
+            whatsappNumber: "8801973191586", // Include country code without '+'
+            displayPhone: "০১৯৭৩১৯১৫৮৬",
+            email: "info@hairherbs.com",
+            address: "ঢাকা, বাংলাদেশ",
+           
+            heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhERdGo6gRywhaABFhY_Wv93P6VpFQA7_OMHMKmtQJh5wQ9emSkg3uqU_LDoTREN2y00HPEJNMl-XkO9wsRZ8lknwu1jGlOzxaSzQZC_ibi1M7rb2xEVXQ6lOqAvdPc0lTJAWjM8GCgMHf7GxKg23ahhGsAl72nPTawjuf_7hkLadOP-K0NsHW-Ul0kooB8/s1014/Gemini_Generated_Image_gmq4czgmq4czgmq4.png",
+           
+            products: [
+                {
+                    id: "p1",
+                    name: "প্রিমিয়াম হারবাল হেয়ার অয়েল",
+                    originalPrice: "৫০০",
+                    discountPrice: "৪০০",
+                    rating: 5.0,
+                    reviewsCount: 124,
+                    badge: "Best Seller",
+                    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhERdGo6gRywhaABFhY_Wv93P6VpFQA7_OMHMKmtQJh5wQ9emSkg3uqU_LDoTREN2y00HPEJNMl-XkO9wsRZ8lknwu1jGlOzxaSzQZC_ibi1M7rb2xEVXQ6lOqAvdPc0lTJAWjM8GCgMHf7GxKg23ahhGsAl72nPTawjuf_7hkLadOP-K0NsHW-Ul0kooB8/s1014/Gemini_Generated_Image_gmq4czgmq4czgmq4.png"
+                },
+                {
+                    id: "p4",
+                    name: "Organic Hair Pake",
+                    originalPrice: "৫০০",
+                    discountPrice: "৩৯৯",
+                    rating: 5.0,
+                    reviewsCount: 42,
+                    badge: "New",
+                    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj6hyphenhyphen6BUSzxVNEl0lfsChk0jDKN1XWW14QbvK432G7Ply5pcA81KxmLFJyFUp2PnNi3i0KFv2HKw_MyPFZ45y6vH0lRM7gxEf73MkQ9mznJ-_nlb6xk4wveSYKyqPYfiOTCtfUkBKkqVya6ZYeLhjhJbukHwcZKwXcNIDN7-OnIC5MsNNJJ6SZRQHLg6QKQ/s320/9bd1fcca-9056-4d60-9c74-940b185ebe4f.png"
+                },
+                {
+                    id: "p5",
+                    name: "Organic Face Pake",
+                    originalPrice: "৫০০",
+                    discountPrice: "৩৯৯",
+                    rating: 5.0,
+                    reviewsCount: 35,
+                    badge: "New",
+                    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjT8h-1klfZ3Zxz3Hhrfo8RWHv8BaP1jmRkWjIGGJf6btD2r9qBJVl47ywaMJxCr60xPuRGWTuPlryqE0WeTr8KnKT-OdLDwqrEPDW2RbUdyMFS4CAvW9kb7sMklZw5XFxFfGzYwvqmoxLHHjYHndVKwbR1w-LVH6zS95qw34pW_lloMV3up70XeiZDkg_w/s320/e552f28e-33a8-46f2-9abc-b5cfa073bc6e.png"
                 }
-            } catch (err) {
-                console.error("Lucide failed to render safely: ", err);
-            }
+            ],
 
-            // ফুটার বর্তমান সাল সেট করা
-            var yearEl = document.getElementById('current-year');
-            if (yearEl) {
-                yearEl.innerText = new Date().getFullYear();
-            }
 
-            // মোবাইল মেনু ড্রপডাউন ইভেন্ট লিসেনার
-            var mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            var mobileDropdown = document.getElementById('mobile-dropdown');
-            if (mobileMenuBtn && mobileDropdown) {
-                mobileMenuBtn.addEventListener('click', function() {
-                    mobileDropdown.classList.toggle('hidden');
-                });
+            benefits: [
+                { icon: "fa-arrow-down", title: "চুল পড়া রোধ করে", desc: "চুলের গোড়া শক্ত করে এবং অতিরিক্ত চুল পড়া দ্রুত কমিয়ে আনে।" },
+                { icon: "fa-seedling", title: "নতুন চুল গজাতে সাহায্য করে", desc: "স্ক্যাল্পের রক্ত চলাচল বৃদ্ধি করে নতুন চুল গজাতে সহায়তা করে।" },
+                { icon: "fa-check-double", title: "খুশকি দূর করে", desc: "স্ক্যাল্পের ফাঙ্গাল ইনফেকশন ও খুশকি দূর করে মাথা পরিষ্কার রাখে।" },
+                { icon: "fa-leaf", title: "সম্পূর্ণ প্রাকৃতিক", desc: "১০০% খাঁটি ভেষজ উপাদানে তৈরি, কোনো কেমিক্যাল বা প্রিজারভেটিভ নেই।" },
+                { icon: "fa-spa", title: "চুলের রুক্ষতা কমায়", desc: "ড্যামেজ চুল রিপেয়ার করে এবং চুলকে করে সিল্কি ও শাইনি।" },
+                { icon: "fa-bed", title: "অতিরিক্ত ঘুম আনে", desc: "মাথা ঠান্ডা রাখে এবং রাতে ভালো ও গভীর ঘুম হতে সাহায্য করে।" }
+            ],
+
+
+            reviews: [
+                { name: "নাসিমা বেগম", text: "তেলটা সত্যিই অনেক ভালো। মাত্র ২ সপ্তাহ ব্যবহার করে আমার চুল পড়া অনেক কমে গেছে। প্যাকেজিং ও অনেক প্রিমিয়াম ছিল।", rating: 5 },
+                { name: "রুমা আক্তার", text: "আমি অনেক দিন ধরে খুশকির সমস্যায় ভুগছিলাম। এই তেলটা ব্যবহারের পর খুশকি একদম নাই হয়ে গেছে। হাইলি রেকমেন্ডেড!", rating: 5 },
+                { name: "সুমা আক্তার", text: "তেলের সুগন্ধটা একদম প্রাকৃতিক। মাথায় দিলে খুব ঠান্ডা অনুভব হয়। চুল আগের চেয়ে অনেক সিল্কি হয়েছে।", rating: 4 },
+                { name: "রোজা বেগম", text: "ওদের সার্ভিস খুব ভালো। অর্ডার করার ২ দিনের মধ্যেই প্রোডাক্ট হাতে পেয়েছি। কোয়ালিটি নিয়ে কোনো সন্দেহ নেই।", rating: 5 },
+                { name: "জান্নাত খাতুন", text: "প্রোডাক্টটি অসাধারণ! আমার চুলের রুক্ষতা একদম কমে গেছে এবং নতুন চুল গজাতে শুরু করেছে। ধন্যবাদ Hair Herb's কে।", rating: 5 }
+            ],
+
+
+            faqs: [
+                { q: "তেলটি কীভাবে ব্যবহার করতে হবে?", a: "সপ্তাহে ২-৩ দিন রাতে ঘুমানোর আগে চুলের গোড়ায় ভালোভাবে ম্যাসাজ করে লাগান। পরদিন সকালে মাইল্ড শ্যাম্পু দিয়ে ধুয়ে ফেলুন।" },
+                { q: "কতদিন ব্যবহার করলে ফলাফল পাওয়া যাবে?", a: "নিয়মিত ব্যবহারে ২ থেকে ৩ সপ্তাহের মধ্যেই আপনি চুল পড়া কমা এবং চুলের স্বাস্থ্য উন্নত হওয়ার পার্থক্য বুঝতে পারবেন।" },
+                { q: "ছেলে-মেয়ে সবাই কি ব্যবহার করতে পারবে?", a: "হ্যাঁ, আমাদের এই অর্গানিক তেলটি ছেলে ও মেয়ে উভয়ের চুলের জন্যই সম্পূর্ণ নিরাপদ এবং কার্যকরী।" },
+                { q: "ডেলিভারি চার্জ কত এবং কিভাবে পেমেন্ট করবো?", a: "ঢাকার ভেতরে ডেলিভারি চার্জ ৬০ টাকা এবং ঢাকার বাইরে ১২০ টাকা। আপনি প্রোডাক্ট হাতে পেয়ে পেমেন্ট (Cash on Delivery) করতে পারবেন।" }
+            ]
+        };
+
+
+        // ==========================================
+        // INITIALIZATION & DOM MANIPULATION
+        // ==========================================
+        document.addEventListener('DOMContentLoaded', () => {
+           
+            // 1. Inject Basic Text Data
+            document.title = `${siteData.brandName} | Premium Organic Hair Care`;
+            document.getElementById('navBrandName').innerText = siteData.brandName;
+            document.getElementById('loaderBrandName').innerText = siteData.brandName;
+            document.getElementById('aboutBrandName').innerText = siteData.brandName;
+            document.getElementById('footerBrandName').innerText = siteData.brandName;
+            document.getElementById('footerTagline').innerText = siteData.tagline;
+            document.getElementById('contactPhoneText').innerText = siteData.displayPhone;
+            document.getElementById('footerPhone').innerText = siteData.displayPhone;
+            document.getElementById('footerEmail').innerText = siteData.email;
+            document.getElementById('footerAddress').innerText = siteData.address;
+            document.getElementById('currentYear').innerText = new Date().getFullYear();
+            document.getElementById('copyrightName').innerText = siteData.brandName;
+           
+            // Set Images (Hero image logic skipped as image is removed)
+            const heroImgElement = document.getElementById('heroImage');
+            if (heroImgElement) { heroImgElement.src = siteData.heroImage; }
+           
+            // Set WhatsApp Link
+            const waLink = `https://wa.me/${siteData.whatsappNumber}?text=হ্যালো, আমি আপনার ওয়েবসাইট থেকে একটি অর্ডার করতে চাই।`;
+            document.getElementById('floatingWhatsApp').href = waLink;
+
+
+            // 2. Render Products
+            const productGrid = document.getElementById('productGrid');
+            const productSelect = document.getElementById('productSelect');
+           
+            siteData.products.forEach((prod, index) => {
+                // Add to Grid
+                productGrid.innerHTML += `
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100" data-aos="fade-up" data-aos-delay="${index * 100}">
+                        <div class="relative overflow-hidden aspect-[4/3]">
+                            ${prod.badge ? `<div class="absolute top-4 left-4 z-10 bg-accent text-dark font-bold text-xs px-3 py-1 rounded-full shadow-md">${prod.badge}</div>` : ''}
+                            <div class="absolute top-4 right-4 z-10 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 cursor-pointer transition-colors shadow-sm">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <img src="${prod.image}" alt="${prod.name}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                           
+                            <!-- Quick Add Overlay -->
+                            <div class="absolute inset-0 bg-dark/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <a href="#order" class="bg-white text-dark font-bold px-6 py-2 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all hover:bg-accent">
+                                    অর্ডার করুন
+                                </a>
+                            </div>
+                        </div>
+                        <div class="p-6 relative">
+                            <div class="flex items-center gap-1 text-yellow-400 text-sm mb-2">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span class="text-gray-400 text-xs ml-1">(${prod.reviewsCount})</span>
+                            </div>
+                            <h3 class="font-bold text-xl text-dark mb-2 line-clamp-1">${prod.name}</h3>
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="text-2xl font-bold text-primary">৳${prod.discountPrice}</span>
+                                ${prod.originalPrice ? `<span class="text-gray-400 line-through text-sm">৳${prod.originalPrice}</span>` : ''}
+                            </div>
+                            <a href="#order" class="block w-full text-center py-3 rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors">
+                                <i class="fa-solid fa-cart-shopping mr-2"></i> কার্টে যোগ করুন
+                            </a>
+                        </div>
+                    </div>
+                `;
+               
+                // Add to Select Dropdown in Form
+                productSelect.innerHTML += `<option value="${prod.name}"> ${prod.name} - ৳${prod.discountPrice} </option>`;
+            });
+
+
+            // 3. Render Benefits
+            const benefitsGrid = document.getElementById('benefitsGrid');
+            siteData.benefits.forEach((benefit, index) => {
+                benefitsGrid.innerHTML += `
+                    <div class="glass-dark p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="${index * 100}">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent to-primary flex items-center justify-center text-white text-2xl mb-6 shadow-glow group-hover:rotate-12 transition-transform">
+                            <i class="fa-solid ${benefit.icon}"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">${benefit.title}</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">${benefit.desc}</p>
+                    </div>
+                `;
+            });
+
+
+            // 4. Render Reviews
+            const reviewsContainer = document.getElementById('reviewsContainer');
+            siteData.reviews.forEach((review, index) => {
+                let starsHTML = '';
+                for(let i=0; i<5; i++) {
+                    starsHTML += `<i class="fa-solid fa-star ${i < review.rating ? 'text-yellow-400' : 'text-gray-300'} text-sm"></i>`;
+                }
+
+
+                reviewsContainer.innerHTML += `
+                    <div class="min-w-[300px] md:min-w-[400px] bg-[#F8F9FA] p-8 rounded-3xl snap-center shadow-sm border border-gray-100" data-aos="fade-left" data-aos-delay="${index * 100}">
+                        <div class="flex gap-1 mb-4">${starsHTML}</div>
+                        <p class="text-gray-600 mb-6 italic line-clamp-4">"${review.text}"</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-primary to-accent flex items-center justify-center text-white text-xl shadow-md shrink-0">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark text-sm">${review.name}</h4>
+                                <p class="text-xs text-gray-500 flex items-center gap-1"><i class="fa-solid fa-circle-check text-green-500"></i> ভেরিফাইড ক্রেতা</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+
+            // 5. Render FAQs
+            const faqContainer = document.getElementById('faqContainer');
+            siteData.faqs.forEach((faq, index) => {
+                faqContainer.innerHTML += `
+                    <details class="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden" data-aos="fade-up" data-aos-delay="${index * 50}">
+                        <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-dark group-open:text-primary transition-colors">
+                            <span>${faq.q}</span>
+                            <span class="transition group-open:rotate-180">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 p-6 pt-0 border-t border-gray-50 text-sm leading-relaxed">
+                            ${faq.a}
+                        </div>
+                    </details>
+                `;
+            });
+
+
+            // 6. Initialize AOS Animations
+            AOS.init({
+                once: true,
+                offset: 50,
+                duration: 800,
+                easing: 'ease-out-cubic',
+            });
+
+
+            // Remove Loader
+            setTimeout(() => {
+                const loader = document.getElementById('loader');
+                loader.style.opacity = '0';
+                setTimeout(() => loader.style.display = 'none', 500);
+            }, 800);
+        });
+
+
+        // ==========================================
+        // UI INTERACTIONS & EVENT LISTENERS
+        // ==========================================
+       
+        // Sticky Navbar Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white/80', 'backdrop-blur-md', 'shadow-sm');
+                nav.classList.remove('bg-transparent', 'py-4');
+                nav.classList.add('py-2');
+            } else {
+                nav.classList.remove('bg-white/80', 'backdrop-blur-md', 'shadow-sm', 'py-2');
+                nav.classList.add('bg-transparent', 'py-4');
             }
         });
 
-        // ==================================================
-        // NAVIGATION CONTROLLER
-        // ==================================================
-        function showPage(pageId) {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            
-            const homePage = document.getElementById('home-page');
-            const regPage = document.getElementById('registration-page');
-            const mainFormCard = document.getElementById('main-form-card');
-            const successCard = document.getElementById('success-card');
 
-            if (pageId === 'home') {
-                if (homePage) homePage.classList.remove('hidden');
-                if (regPage) regPage.classList.add('hidden');
-            } else if (pageId === 'register') {
-                if (homePage) homePage.classList.add('hidden');
-                if (regPage) regPage.classList.remove('hidden');
-                if (mainFormCard) mainFormCard.classList.remove('hidden');
-                if (successCard) successCard.classList.add('hidden');
-                
-                const formElement = document.getElementById('registration-form');
-                if (formElement) formElement.reset();
-                clearValidationErrors();
-            }
-            
-            // মোবাইল মেনু বন্ধ করা
-            const mobileDropdown = document.getElementById('mobile-dropdown');
-            if (mobileDropdown) mobileDropdown.classList.add('hidden');
-        }
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
 
-        // FAQ টগল লজিক
-        function toggleFAQ(idx) {
-            const ans = document.getElementById(`faq-ans-${idx}`);
-            const icon = document.getElementById(`faq-icon-${idx}`);
-            
-            if (ans && icon) {
-                ans.classList.toggle('hidden');
-                icon.classList.toggle('rotate-180');
-            }
-        }
 
-        // ==================================================
-        // FORM VALIDATION & SUBMISSION
-        // ==================================================
-        function clearValidationErrors() {
-            const errorFields = ['fullName', 'email', 'mobile', 'dob', 'gender', 'address', 'education', 'course', 'guardianName', 'guardianMobile'];
-            errorFields.forEach(field => {
-                const errElement = document.getElementById(`err-${field}`);
-                if (errElement) {
-                    errElement.innerText = '';
-                    errElement.classList.add('hidden');
-                }
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+
+        // Close mobile menu on link click
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
             });
-            const submitErr = document.getElementById('submit-error');
-            if (submitErr) {
-                submitErr.classList.add('hidden');
-                submitErr.innerText = '';
-            }
+        });
+
+
+        // ==========================================
+        // FORM HANDLING & WHATSAPP REDIRECTION
+        // ==========================================
+        function handleFormSubmit(e) {
+            e.preventDefault();
+           
+            // Get form values
+            const name = document.getElementById('custName').value;
+            const phone = document.getElementById('custPhone').value;
+            const address = document.getElementById('custAddress').value;
+            const product = document.getElementById('productSelect').value;
+           
+            // Format WhatsApp Message
+            const message = `*নতুন অর্ডার!*\n\n*নাম:* ${name}\n*মোবাইল:* ${phone}\n*ঠিকানা:* ${address}\n*প্রোডাক্ট:* ${product}\n\nদয়া করে আমার অর্ডারটি কনফার্ম করুন।`;
+           
+            // Encode for URL
+            const encodedMessage = encodeURIComponent(message);
+            const waUrl = `https://wa.me/${siteData.whatsappNumber}?text=${encodedMessage}`;
+           
+            // Open WhatsApp in new tab
+            window.open(waUrl, '_blank');
+           
+            // Optional: Reset form
+            document.getElementById('orderForm').reset();
+           
+            // Show Custom Alert Message
+            showCustomMessage("অর্ডার রিকোয়েস্ট সফলভাবে তৈরি হয়েছে! আপনাকে WhatsApp-এ রিডাইরেক্ট করা হচ্ছে।");
         }
 
-        function validateForm(data) {
-            let isValid = true;
-            clearValidationErrors();
 
-            if (!data.fullName.trim()) {
-                showError('fullName', 'পূর্ণ নাম আবশ্যক');
-                isValid = false;
-            }
-            if (!data.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
-                showError('email', 'সঠিক ইমেইল ঠিকানা প্রদান করুন');
-                isValid = false;
-            }
-            if (!data.mobile.trim() || !/^\+?[\d\s-]{8,15}$/.test(data.mobile)) {
-                showError('mobile', 'সঠিক মোবাইল নম্বর প্রদান করুন');
-                isValid = false;
-            }
-            if (!data.dob) {
-                showError('dob', 'জন্ম তারিখ নির্বাচন করুন');
-                isValid = false;
-            }
-            if (!data.gender) {
-                showError('gender', 'লিঙ্গ নির্বাচন করুন');
-                isValid = false;
-            }
-            if (!data.address.trim()) {
-                showError('address', 'সম্পূর্ণ ঠিকানা প্রদান করুন');
-                isValid = false;
-            }
-            if (!data.education.trim()) {
-                showError('education', 'শিক্ষাগত যোগ্যতা আবশ্যক');
-                isValid = false;
-            }
-            if (!data.course) {
-                showError('course', 'কোর্স মডিউল নির্বাচন করুন');
-                isValid = false;
-            }
-            if (!data.guardianName.trim()) {
-                showError('guardianName', 'অভিভাবক বা যোগাযোগ ব্যক্তির নাম আবশ্যক');
-                isValid = false;
-            }
-            if (!data.guardianMobile.trim()) {
-                showError('guardianMobile', 'অভিভাবক বা যোগাযোগ নম্বর আবশ্যক');
-                isValid = false;
-            }
-
-            return isValid;
+        // Direct WhatsApp Button function
+        function orderViaWhatsAppDirect() {
+            const message = "হ্যালো, আমি আপনার ওয়েবসাইট থেকে একটি অর্ডার করতে চাই। বিস্তারিত জানতে চাচ্ছি।";
+            const waUrl = `https://wa.me/${siteData.whatsappNumber}?text=${encodeURIComponent(message)}`;
+            window.open(waUrl, '_blank');
         }
 
-        function showError(field, message) {
-            const errElement = document.getElementById(`err-${field}`);
-            if (errElement) {
-                errElement.innerText = message;
-                errElement.classList.remove('hidden');
-            }
-        }
 
-        // টেলিগ্রাম মেসেজ প্রেরণ
-        async function sendTelegramNotification(data) {
-            if (!TELEGRAM_CONFIG.BOT_TOKEN || TELEGRAM_CONFIG.BOT_TOKEN === 'YOUR_TELEGRAM_BOT_TOKEN') {
-                console.warn("Telegram bot is not configured yet.");
-                return;
-            }
-
-            const message = `
-🔔 *নতুন AI কার্টুন কোর্স নিবন্ধন (IIOM)*
-👤 *নাম:* ${data.fullName}
-📱 *মোবাইল:* ${data.mobile}
-📧 *ইমেইল:* ${data.email}
-🎓 *নির্বাচিত মডিউল:* ${data.course}
-🎂 *জন্ম তারিখ:* ${data.dob}
-🚻 *লিঙ্গ:* ${data.gender === 'Male' ? 'পুরুষ' : 'মহিলা'}
-📍 *ঠিকানা:* ${data.address}
-📚 *শিক্ষাগত যোগ্যতা:* ${data.education}
-👨 *যোগাযোগ ব্যক্তি:* ${data.guardianName}
-📞 *যোগাযোগ নম্বর:* ${data.guardianMobile}
-⏰ *নিবন্ধন সময়:* ${new Date().toLocaleString('bn-BD')}
-            `;
-
-            try {
-                await fetch(`https://api.telegram.org/bot${TELEGRAM_CONFIG.BOT_TOKEN}/sendMessage`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        chat_id: TELEGRAM_CONFIG.CHAT_ID,
-                        text: message,
-                        parse_mode: 'Markdown'
-                    })
-                });
-            } catch (err) {
-                console.error("Telegram notification failed:", err);
-            }
-        }
-
-        // গুগল ফর্ম ডেটা সাবমিশন
-        async function sendToGoogleForm(data) {
-            if (!GOOGLE_FORM_CONFIG.FORM_URL || GOOGLE_FORM_CONFIG.FORM_URL.includes('YourRealGoogleFormIDHere')) {
-                console.warn("Google Form is not configured yet.");
-                return;
-            }
-
-            const formBody = new URLSearchParams();
-            formBody.append(GOOGLE_FORM_CONFIG.FIELDS.fullName, data.fullName);
-            formBody.append(GOOGLE_FORM_CONFIG.FIELDS.email, data.email);
-            formBody.append(GOOGLE_FORM_CONFIG.FIELDS.mobile, data.mobile);
-            formBody.append(GOOGLE_FORM_CONFIG.FIELDS.dob, data.dob);
-            formBody.append(GOOGLE_FORM_CONFIG.FIELDS.gender, data.gender);
-            formBody.append(GOOGLE_FORM_CONFIG.FIELDS.address, data.address);
-            formBody.append(GOOGLE_FORM_CONFIG.FIELDS.education, data.education);
-            formBody.append(GOOGLE_FORM_CONFIG.FIELDS.course, data.course);
-            formBody.append(GOOGLE_FORM_CONFIG.FIELDS.guardianName, data.guardianName);
-            formBody.append(GOOGLE_FORM_CONFIG.FIELDS.guardianMobile, data.guardianMobile);
-
-            try {
-                await fetch(GOOGLE_FORM_CONFIG.FORM_URL, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded'
-                    },
-                    body: formBody.toString()
-                });
-            } catch (err) {
-                console.error("Google Forms submission issue:", err);
-            }
-        }
-
-        // ফর্ম সাবমিশন ট্রিগার
-        async function handleFormSubmit(event) {
-            event.preventDefault();
-            
-            const submitBtn = document.getElementById('submit-btn');
-            const submitError = document.getElementById('submit-error');
-            const form = event.target;
-            
-            // জেন্ডার ইনপুট ভ্যালু সুরক্ষিত উপায়ে সংগ্রহ
-            const genderChecked = form.querySelector('input[name="gender"]:checked');
-            const genderVal = genderChecked ? genderChecked.value : '';
-            
-            const data = {
-                fullName: document.getElementById('fullName').value,
-                email: document.getElementById('email').value,
-                mobile: document.getElementById('mobile').value,
-                dob: document.getElementById('dob').value,
-                gender: genderVal,
-                address: document.getElementById('address').value,
-                education: document.getElementById('education').value,
-                course: document.getElementById('course').value,
-                guardianName: document.getElementById('guardianName').value,
-                guardianMobile: document.getElementById('guardianMobile').value
-            };
-
-            if (!validateForm(data)) {
-                return;
-            }
-
-            // বাটন লক করা
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = `<span>প্রসেসিং হচ্ছে...</span>`;
-
-            try {
-                // ১. গুগল ফর্মে ডাটা সাবমিট
-                await sendToGoogleForm(data);
-
-                // ২. টেলিগ্রাম নোটিফিকেশন সাবমিট
-                await sendTelegramNotification(data);
-
-                // সফলতার স্ক্রিন প্রদর্শন
-                document.getElementById('main-form-card').classList.add('hidden');
-                document.getElementById('success-card').classList.remove('hidden');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-
-            } catch (err) {
-                console.error("Submission failed:", err);
-                if (submitError) {
-                    submitError.innerText = "একটি অভ্যন্তরীণ ত্রুটি ঘটেছে। অনুগ্রহ করে আবার চেষ্টা করুন অথবা সরাসরি আমাদের সাথে যোগাযোগ করুন।";
-                    submitError.classList.remove('hidden');
-                }
-            } finally {
-                // বাটন পূর্বের অবস্থায় ফেরত আনা
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = `<span>নিবন্ধন করুন</span>`;
-            }
+        // Custom Message Box (Replacement for alert())
+        function showCustomMessage(msg) {
+            const box = document.createElement('div');
+            box.className = 'fixed top-24 left-1/2 transform -translate-x-1/2 bg-dark text-white px-6 py-3 rounded-xl shadow-2xl z-[100] flex items-center gap-3 animate-bounce';
+            box.innerHTML = `<i class="fa-solid fa-circle-check text-accent"></i> <span>${msg}</span>`;
+            document.body.appendChild(box);
+           
+            setTimeout(() => {
+                box.remove();
+            }, 4000);
         }
     </script>
 </body>
 </html>
+
