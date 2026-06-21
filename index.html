@@ -3,861 +3,1131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hair Herb's Oil by Sakila | Premium Organic Hair Care</title>
-   
-    <!-- Google Fonts: Hind Siliguri -->
+    <title>ভর্তি চলছে ২০২৬ - দারুল হেদায়া ক্বওমী মাদ্রাসা</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="দারুল হেদায়া ক্বওমী মাদ্রাসা ২০২৬ শিক্ষাবর্ষে হিফজ ও কিতাব বিভাগে সীমিত আসনে ভর্তি চলছে। আপনার সন্তানকে কুরআন ও সুন্নাহর আদর্শ শিক্ষায় গড়ে তুলুন।">
+    <meta name="keywords" content="দারুল হেদায়া ক্বওমী মাদ্রাসা, মাদ্রাসা ভর্তি ২০২৬, হিফজ বিভাগ, কিতাব বিভাগ, কওমী মাদ্রাসা ঢাকা, আদর্শ ইসলামিক শিক্ষা">
+    <meta name="author" content="দারুল হেদায়া ক্বওমী মাদ্রাসা">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ভর্তি চলছে ২০২৬ - দারুল হেদায়া ক্বওমী মাদ্রাসা">
+    <meta property="og:description" content="আপনার সন্তানের জন্য কুরআন ও সুন্নাহভিত্তিক আদর্শ শিক্ষা নিশ্চিত করুন। অভিজ্ঞ উস্তাযদের তত্ত্বাবধানে ভর্তি কার্যক্রম চলমান।">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1200&h=630">
+
+    <!-- Google Fonts: Hind Siliguri (Premium Bengali Font) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-   
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-   
-    <!-- AOS Animation CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-
-    <!-- Tailwind CSS (CDN for Single File config) -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        primary: '#2D6A4F',
-                        secondary: '#40916C',
-                        accent: '#95D5B2',
-                        dark: '#1B4332',
-                        cream: '#F8F9FA',
-                        creamDark: '#E9EDC9'
-                    },
                     fontFamily: {
-                        bengali: ['"Hind Siliguri"', 'sans-serif'],
+                        sans: ['Hind Siliguri', 'sans-serif'],
                     },
-                    boxShadow: {
-                        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.15)',
-                        'glow': '0 0 20px rgba(149, 213, 178, 0.5)',
-                        'premium': '0 10px 40px -10px rgba(27,67,50,0.3)',
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        gold: {
+                            50: '#fdfbeb',
+                            100: '#fcf6cd',
+                            500: '#eab308',
+                            600: '#ca8a04',
+                            700: '#a16207',
+                        }
                     }
                 }
             }
         }
     </script>
 
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Alpine.js (for reactive components: mobile menu, FAQ accordion, modals) -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Schema Markup for Madrasa / Educational Institution -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "দারুল হেদায়া ক্বওমী মাদ্রাসা",
+      "description": "কুরআন ও সুন্নাহভিত্তিক আদর্শ দ্বীনি শিক্ষা প্রতিষ্ঠান।",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "রোড #১২, সেক্টর #১০, উত্তরা",
+        "addressLocality": "ঢাকা",
+        "postalCode": "১২৩০",
+        "addressCountry": "BD"
+      },
+      "telephone": "+8801712345678",
+      "url": "https://darulhedaya.edu.bd"
+    }
+    </script>
 
     <style>
-        body {
-            font-family: 'Hind Siliguri', sans-serif;
-            background-color: #F8F9FA;
-            color: #1B4332;
-            overflow-x: hidden;
+        /* Smooth transitions & animations */
+        .hover-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
+        .hover-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
-        ::-webkit-scrollbar-track {
-            background: #F8F9FA;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #40916C;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #2D6A4F;
-        }
-
-
-        /* Glassmorphism Utilities */
-        .glass {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-        }
-       
-        .glass-dark {
-            background: rgba(27, 67, 50, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(149, 213, 178, 0.2);
-        }
-
-
-        /* Animations */
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
-        .floating {
-            animation: float 4s ease-in-out infinite;
-        }
-       
-        @keyframes float-slow {
-            0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(5deg); }
-            100% { transform: translateY(0px) rotate(0deg); }
-        }
-        .floating-slow {
-            animation: float-slow 6s ease-in-out infinite;
-        }
-
-
-        /* Gradient Text */
-        .text-gradient {
-            background: linear-gradient(to right, #2D6A4F, #40916C);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-
-        /* Smooth reveal for details/summary */
-        details > summary {
-            list-style: none;
-        }
-        details > summary::-webkit-details-marker {
-            display: none;
-        }
-       
-        /* Loader */
-        #loader {
-            position: fixed;
-            inset: 0;
-            background: #F8F9FA;
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: opacity 0.5s ease;
-        }
-        .spinner {
-            width: 50px;
-            height: 50px;
-            border: 4px solid rgba(45, 106, 79, 0.2);
-            border-top-color: #2D6A4F;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin { 100% { transform: rotate(360deg); } }
+        [x-cloak] { display: none !important; }
     </style>
 </head>
-<body class="antialiased font-bengali selection:bg-accent selection:text-dark">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased" x-data="{ mobileMenu: false, admissionModal: false }">
 
-
-    <!-- Loading Screen -->
-    <div id="loader">
-        <div class="flex flex-col items-center">
-            <div class="spinner mb-4"></div>
-            <h2 class="text-xl font-bold text-primary" id="loaderBrandName">লোড হচ্ছে...</h2>
+    <!-- Top Info Bar -->
+    <div class="bg-primary-900 text-white py-2 px-4 text-xs md:text-sm border-b border-primary-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span><i class="fa-solid fa-envelope text-gold-500 mr-2"></i> info@darulhedaya.edu.bd</span>
+                <span class="hidden sm:inline">|</span>
+                <span><i class="fa-solid fa-location-dot text-gold-500 mr-2"></i> উত্তরা, ঢাকা, বাংলাদেশ</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="bg-red-600 text-white animate-pulse px-2 py-0.5 rounded text-xs font-bold">ভর্তি চলছে ২০২৬</span>
+                <a href="tel:+8801712345678" class="hover:text-gold-500 transition"><i class="fa-solid fa-phone mr-1"></i> +৮৮০ ১৭১২-৩৪৫৬৭৮</a>
+            </div>
         </div>
     </div>
 
-
-    <!-- Navbar -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
-        <div class="container mx-auto px-4 md:px-8">
-            <div class="glass rounded-full px-6 py-3 flex justify-between items-center shadow-sm">
-                <!-- Logo -->
-                <a href="#" class="flex items-center gap-2 group">
-                    <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-accent flex items-center justify-center text-white font-bold text-xl shadow-glow group-hover:rotate-12 transition-transform">
-                        <i class="fa-solid fa-leaf"></i>
-                    </div>
-                    <span class="font-bold text-xl md:text-2xl text-dark" id="navBrandName">ব্র্যান্ড নাম</span>
-                </a>
-
-
-                <!-- Desktop Menu -->
-                <div class="hidden lg:flex items-center gap-8 font-medium text-dark/80">
-                    <a href="#home" class="hover:text-primary transition-colors">হোম</a>
-                    <a href="#about" class="hover:text-primary transition-colors">আমাদের সম্পর্কে</a>
-                    <a href="#products" class="hover:text-primary transition-colors">প্রোডাক্টস</a>
-                    <a href="#benefits" class="hover:text-primary transition-colors">উপকারিতা</a>
-                    <a href="#reviews" class="hover:text-primary transition-colors">রিভিউ</a>
+    <!-- Sticky Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+            <!-- Logo Section -->
+            <a href="#" class="flex items-center gap-3">
+                <div class="bg-primary-700 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-md border-2 border-gold-500">
+                    <i class="fa-solid fa-book-quran text-2xl"></i>
                 </div>
+                <div>
+                    <h1 class="text-xl md:text-2xl font-bold text-primary-900 leading-tight">দারুল হেদায়া</h1>
+                    <p class="text-xs md:text-sm text-gold-700 font-medium tracking-wide">ক্বওমী মাদ্রাসা ও এতিমখানা</p>
+                </div>
+            </a>
 
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-6 text-[15px] font-medium text-slate-700">
+                <a href="#" class="hover:text-primary-700 transition">মূল পাতা</a>
+                <a href="#why-choose-us" class="hover:text-primary-700 transition">আমাদের বৈশিষ্ট্য</a>
+                <a href="#departments" class="hover:text-primary-700 transition">বিভাগসমূহ</a>
+                <a href="#gallery" class="hover:text-primary-700 transition">গ্যালারি</a>
+                <a href="#teachers" class="hover:text-primary-700 transition">শিক্ষকমণ্ডলী</a>
+                <a href="#admission" class="hover:text-primary-700 transition">ভর্তি তথ্য</a>
+                <a href="#faq" class="hover:text-primary-700 transition">জিজ্ঞাসা</a>
+                <a href="#contact" class="hover:text-primary-700 transition">যোগাযোগ</a>
+            </nav>
 
-                <!-- CTA & Icons -->
-                <div class="hidden lg:flex items-center gap-4">
-                    <a href="#order" class="bg-primary hover:bg-dark text-white px-6 py-2 rounded-full transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1">
-                        অর্ডার করুন
+            <!-- CTA Button (Desktop) -->
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="#admission-form" class="bg-primary-700 hover:bg-primary-800 text-white font-semibold px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    ভর্তি আবেদন করুন
+                </a>
+            </div>
+
+            <!-- Hamburger Button (Mobile) -->
+            <button @click="mobileMenu = !mobileMenu" class="lg:hidden text-primary-900 focus:outline-none p-2 rounded-lg bg-primary-50">
+                <i class="fa-solid text-2xl" :class="mobileMenu ? 'fa-xmark' : 'fa-bars'"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div x-show="mobileMenu" 
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 -translate-y-4"
+             x-transition:enter-end="opacity-100 translate-y-0"
+             x-transition:leave="transition ease-in duration-150"
+             x-transition:leave-start="opacity-100 translate-y-0"
+             x-transition:leave-end="opacity-0 -translate-y-4"
+             class="lg:hidden bg-white border-b border-slate-100 shadow-lg" x-cloak>
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#" @click="mobileMenu = false" class="block px-4 py-3 rounded-lg text-slate-700 hover:bg-primary-50 hover:text-primary-700 transition font-medium">মূল পাতা</a>
+                <a href="#why-choose-us" @click="mobileMenu = false" class="block px-4 py-3 rounded-lg text-slate-700 hover:bg-primary-50 hover:text-primary-700 transition font-medium">আমাদের বৈশিষ্ট্য</a>
+                <a href="#departments" @click="mobileMenu = false" class="block px-4 py-3 rounded-lg text-slate-700 hover:bg-primary-50 hover:text-primary-700 transition font-medium">বিভাগসমূহ</a>
+                <a href="#gallery" @click="mobileMenu = false" class="block px-4 py-3 rounded-lg text-slate-700 hover:bg-primary-50 hover:text-primary-700 transition font-medium">গ্যালারি</a>
+                <a href="#teachers" @click="mobileMenu = false" class="block px-4 py-3 rounded-lg text-slate-700 hover:bg-primary-50 hover:text-primary-700 transition font-medium">শিক্ষকমণ্ডলী</a>
+                <a href="#admission" @click="mobileMenu = false" class="block px-4 py-3 rounded-lg text-slate-700 hover:bg-primary-50 hover:text-primary-700 transition font-medium">ভর্তি তথ্য</a>
+                <a href="#faq" @click="mobileMenu = false" class="block px-4 py-3 rounded-lg text-slate-700 hover:bg-primary-50 hover:text-primary-700 transition font-medium">জিজ্ঞাসা</a>
+                <a href="#contact" @click="mobileMenu = false" class="block px-4 py-3 rounded-lg text-slate-700 hover:bg-primary-50 hover:text-primary-700 transition font-medium">যোগাযোগ</a>
+                
+                <div class="pt-4 border-t border-slate-100 px-4">
+                    <a href="#admission-form" @click="mobileMenu = false" class="w-full text-center bg-primary-700 hover:bg-primary-800 text-white font-semibold py-3 px-4 rounded-lg shadow-md block">
+                        <i class="fa-solid fa-pen-to-square mr-2"></i> ভর্তি আবেদন করুন
                     </a>
                 </div>
-
-
-                <!-- Mobile Menu Button -->
-                <button id="mobileMenuBtn" class="lg:hidden text-dark text-2xl focus:outline-none">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
             </div>
         </div>
-
-
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden absolute top-20 left-4 right-4 glass rounded-2xl p-4 flex flex-col gap-4 shadow-lg border-t border-white/50 lg:hidden transform origin-top transition-transform">
-            <a href="#home" class="mobile-link text-center font-medium p-2 hover:bg-accent/20 rounded-lg">হোম</a>
-            <a href="#about" class="mobile-link text-center font-medium p-2 hover:bg-accent/20 rounded-lg">আমাদের সম্পর্কে</a>
-            <a href="#products" class="mobile-link text-center font-medium p-2 hover:bg-accent/20 rounded-lg">প্রোডাক্টস</a>
-            <a href="#benefits" class="mobile-link text-center font-medium p-2 hover:bg-accent/20 rounded-lg">উপকারিতা</a>
-            <a href="#order" class="mobile-link text-center font-medium p-2 bg-primary text-white rounded-full mt-2">অর্ডার করুন</a>
-        </div>
-    </nav>
-
+    </header>
 
     <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center pt-24 pb-12 overflow-hidden bg-gradient-to-br from-cream via-[#e8f3ee] to-creamDark">
-        <!-- Abstract Background Shapes -->
-        <div class="absolute top-20 left-10 w-64 h-64 bg-accent/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 floating-slow"></div>
-        <div class="absolute bottom-10 right-10 w-72 h-72 bg-primary/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 floating"></div>
-       
-        <div class="container mx-auto px-4 md:px-8 relative z-10">
-            <div class="flex flex-col items-center justify-center text-center max-w-4xl mx-auto">
-                <!-- Text Content -->
-                <div data-aos="fade-up" data-aos-duration="1000">
-                    <div class="inline-block px-4 py-1.5 rounded-full bg-accent/30 text-primary font-semibold text-sm mb-6 border border-accent/50 backdrop-blur-sm">
-                        <i class="fa-solid fa-leaf mr-2"></i> ১০০% অর্গানিক ও প্রাকৃতিক
+    <section class="relative bg-primary-950 text-white overflow-hidden py-16 md:py-28 min-h-[85vh] flex items-center">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1920" alt="Students studying Quran" class="w-full h-full object-cover opacity-20 transform scale-105 motion-safe:animate-[pulse_8s_infinite]">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary-950 via-primary-900/90 to-transparent"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-emerald-800/80 border border-emerald-600 px-4 py-2 rounded-full text-sm font-semibold tracking-wide shadow-inner">
+                        <span class="w-2.5 h-2.5 bg-gold-500 rounded-full animate-ping"></span>
+                        <span class="text-gold-100">২০২৬ শিক্ষাবর্ষের ভর্তি কার্যক্রম চলমান</span>
                     </div>
-                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-dark">
-                        <span id="heroTitle1">প্রাকৃতিকভাবে আপনার</span><br>
-                        <span class="text-gradient" id="heroTitle2">চুলের সৌন্দর্য</span>
-                        <span id="heroTitle3">ফিরিয়ে আনুন</span>
-                    </h1>
-                    <p class="text-lg md:text-xl text-gray-700 mb-8 max-w-2xl mx-auto" id="heroSubtitle">
-                        সম্পূর্ণ প্রাকৃতিক উপাদানে তৈরি আমাদের অর্গানিক হেয়ার অয়েল, যা চুল পড়া বন্ধ করে এবং নতুন চুল গজাতে সাহায্য করে।
+
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white">
+                        হিফজ ও কিতাব বিভাগে <br class="hidden sm:inline">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-500 via-amber-300 to-gold-400">ভর্তি চলছে – ২০২৬</span>
+                    </h2>
+
+                    <p class="text-xl text-emerald-100 font-semibold max-w-xl mx-auto lg:mx-0">
+                        আপনার সন্তানের জন্য কুরআন ও সুন্নাহভিত্তিক আদর্শ শিক্ষা নিশ্চিত করুন
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="#order" class="bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-full font-bold text-lg shadow-premium hover:shadow-glow hover:-translate-y-1 transition-all flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-bag-shopping"></i> এখনই কিনুন
-                        </a>
-                        <a href="#products" class="glass px-8 py-4 rounded-full font-bold text-dark text-lg hover:bg-white transition-all flex items-center justify-center gap-2">
-                            <i class="fa-regular fa-eye"></i> প্রোডাক্ট দেখুন
-                        </a>
-                    </div>
-                   
-                    <!-- Trust Badges -->
-                    <div class="mt-10 flex items-center justify-center gap-6 opacity-80">
-                        <div class="flex items-center gap-2 text-sm font-medium"><i class="fa-solid fa-check-circle text-primary"></i> কেমিক্যাল মুক্ত</div>
-                        <div class="flex items-center gap-2 text-sm font-medium"><i class="fa-solid fa-star text-yellow-500"></i> সেরা কোয়ালিটি</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-
-    <!-- About Section -->
-    <section id="about" class="py-24 bg-white relative">
-        <div class="container mx-auto px-4 md:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="relative" data-aos="fade-up-right">
-                    <div class="w-full h-[500px] rounded-3xl overflow-hidden shadow-premium relative">
-                        <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Making Oil" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent"></div>
-                        <div class="absolute bottom-8 left-8 right-8">
-                            <h3 class="text-white text-2xl font-bold mb-2">হাতে তৈরি যত্ন</h3>
-                            <p class="text-white/80">প্রতিটি বোতল অত্যন্ত যত্নের সাথে খাঁটি উপাদান দিয়ে তৈরি।</p>
-                        </div>
-                    </div>
-                    <!-- Decorative element -->
-                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-accent/20 rounded-full blur-2xl z-[-1]"></div>
-                </div>
-
-
-                <div data-aos="fade-up-left">
-                    <h4 class="text-primary font-bold tracking-wider mb-2 uppercase text-sm">আমাদের সম্পর্কে</h4>
-                    <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6 leading-tight">কেন <span class="text-gradient" id="aboutBrandName">ব্র্যান্ড</span> বেছে নিবেন?</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed" id="aboutDescription">
-                        আমরা বিশ্বাস করি প্রকৃতির মাঝেই লুকিয়ে আছে আসল সৌন্দর্য। আমাদের হেয়ার অয়েল সম্পূর্ণ দেশীয় ও খাঁটি প্রাকৃতিক উপাদান যেমন - নারকেল তেল, আমলা, মেথি, শিকাকাই, কালোজিরা এবং আরও অনেক দুর্লভ ভেষজ দিয়ে হাতে তৈরি। এতে কোনো ক্ষতিকর রাসায়নিক বা প্রিজারভেটিভ নেই।
+                    <p class="text-base text-slate-300 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                        অভিজ্ঞ উস্তাযদের তত্ত্বাবধানে সহীহ তাজওয়ীদ, মজবুত হিফজ, কিতাব অধ্যয়ন এবং উন্নত নৈতিক শিক্ষার সমন্বয়ে গড়ে তোলা হচ্ছে আগামী দিনের যোগ্য হাফেজ ও আলেম।
                     </p>
-                   
-                    <div class="grid grid-cols-2 gap-6 mt-10">
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-primary text-xl shrink-0">
-                                <i class="fa-solid fa-flask-vial"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-dark mb-1">কেমিক্যাল মুক্ত</h4>
-                                <p class="text-sm text-gray-500">কোনো কৃত্রিম রং বা সুগন্ধি নেই</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-primary text-xl shrink-0">
-                                <i class="fa-solid fa-hand-holding-heart"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-dark mb-1">হাতে তৈরি</h4>
-                                <p class="text-sm text-gray-500">নিজেদের তত্ত্বাবধানে তৈরি</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-primary text-xl shrink-0">
-                                <i class="fa-solid fa-leaf"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-dark mb-1">অর্গানিক উপাদান</h4>
-                                <p class="text-sm text-gray-500">১০০% প্রাকৃতিক ভেষজ</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-primary text-xl shrink-0">
-                                <i class="fa-solid fa-shield-halved"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-dark mb-1">প্রমাণিত ফলাফল</h4>
-                                <p class="text-sm text-gray-500">শত শত সন্তুষ্ট গ্রাহক</p>
+
+                    <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#admission-form" class="bg-gold-500 hover:bg-gold-600 text-primary-950 font-bold px-8 py-4 rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2 text-lg">
+                            <i class="fa-solid fa-file-signature text-xl"></i>
+                            📝 ভর্তি আবেদন করুন
+                        </a>
+                        <a href="tel:+8801712345678" class="bg-transparent hover:bg-white/10 border-2 border-white/40 hover:border-white text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 text-lg">
+                            <i class="fa-solid fa-phone-volume text-xl"></i>
+                            📞 এখনই যোগাযোগ করুন
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Video / Decorative Image Card -->
+                <div class="lg:col-span-5 relative hidden lg:block">
+                    <div class="relative mx-auto max-w-md">
+                        <!-- Background Glow decoration -->
+                        <div class="absolute -inset-2 bg-gradient-to-r from-gold-500 to-primary-500 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                        
+                        <div class="relative bg-primary-900 border-4 border-gold-600/40 rounded-2xl overflow-hidden shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&q=80&w=600" alt="Islamic Study Quran Room" class="w-full h-[400px] object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary-950/90 via-transparent to-transparent flex items-end p-6">
+                                <div class="text-left">
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <div class="flex text-gold-400 text-sm">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <span class="text-xs text-slate-300">(অভিভাবকদের আস্থা)</span>
+                                    </div>
+                                    <h4 class="text-lg font-bold text-white">দ্বীনি ও নৈতিক শিক্ষার শ্রেষ্ঠ প্রতিষ্ঠান</h4>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
+    <!-- Why Choose Us Section -->
+    <section id="why-choose-us" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <span class="text-primary-700 font-bold tracking-wider text-sm uppercase bg-primary-50 px-3 py-1.5 rounded-full">আমাদের বিশিষ্টতা</span>
+            <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-3 mb-4">
+                কেন দারুল হেদায়ে ক্বওমী মাদ্রাসাকে বেছে নিবেন?
+            </h3>
+            <p class="text-slate-600 max-w-2xl mx-auto text-base md:text-lg">
+                আমরা কেবল পুঁথিগত বিদ্যা নয়, বরং প্রতিটি শিক্ষার্থীর নৈতিক চরিত্র গঠন, আধ্যাত্মিক বিকাশ ও বাস্তব জীবনের জন্য যোগ্য করে তোলার চেষ্টা করি।
+            </p>
 
-    <!-- Products Section -->
-    <section id="products" class="py-24 bg-[#F5F8F6] relative">
-        <div class="container mx-auto px-4 md:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
-                <h4 class="text-primary font-bold tracking-wider mb-2 uppercase text-sm">আমাদের শপ</h4>
-                <h2 class="text-3xl md:text-5xl font-bold text-dark mb-4">প্রিমিয়াম <span class="text-gradient">প্রোডাক্টসমূহ</span></h2>
-                <p class="text-gray-600">আপনার চুলের প্রতিটি সমস্যার সমাধানের জন্য আমাদের আছে নির্দিষ্ট ও পরীক্ষিত পণ্য।</p>
-            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                
+                <!-- Feature 1 -->
+                <div class="bg-slate-50 border border-slate-100 p-8 rounded-2xl text-center hover-card">
+                    <div class="bg-primary-100 text-primary-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl shadow-sm">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">অভিজ্ঞ ও দক্ষ শিক্ষকমণ্ডলী</h4>
+                    <p class="text-slate-600 leading-relaxed">
+                        দেশসেরা ক্বওমী ও হিফজ মাদ্রাসায় অধ্যয়ন সম্পন্নকারী এবং বহু বছর পাঠদানে অভিজ্ঞ শিক্ষকবৃন্দের দ্বারা পাঠদান।
+                    </p>
+                </div>
 
+                <!-- Feature 2 -->
+                <div class="bg-slate-50 border border-slate-100 p-8 rounded-2xl text-center hover-card">
+                    <div class="bg-primary-100 text-primary-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl shadow-sm">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">কুরআন ও সুন্নাহভিত্তিক শিক্ষা</h4>
+                    <p class="text-slate-600 leading-relaxed">
+                        সুন্নাতভিত্তিক জীবন গঠন এবং প্রতিটি বিষয়ে সহীহ তালীম ও তারবিয়াতের সমন্বয়ে পাঠ্যসূচি পরিচালিত হয়।
+                    </p>
+                </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="productGrid">
-                <!-- Products will be injected here via JS -->
+                <!-- Feature 3 -->
+                <div class="bg-slate-50 border border-slate-100 p-8 rounded-2xl text-center hover-card">
+                    <div class="bg-primary-100 text-primary-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl shadow-sm">
+                        <i class="fa-solid fa-arrows-spin"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">সবক, তাকরার ও মুরাজাআত</h4>
+                    <p class="text-slate-600 leading-relaxed">
+                        হিফজকে দীর্ঘস্থায়ী করার জন্য প্রতিদিনের নতুন সবক, গতদিনের পড়া ও পুরাতন পাড়া শুনানোর সুশৃঙ্খল ব্যবস্থা।
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-slate-50 border border-slate-100 p-8 rounded-2xl text-center hover-card">
+                    <div class="bg-primary-100 text-primary-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl shadow-sm">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">ব্যক্তিগত অগ্রগতি পর্যবেক্ষণ</h4>
+                    <p class="text-slate-600 leading-relaxed">
+                        প্রতিটি শিক্ষার্থীর জন্য স্বতন্ত্র ডায়েরি এবং সাপ্তাহিক ও মাসিক মূল্যায়নের মাধ্যমে নিবিড় পর্যবেক্ষণ নিশ্চিত করা।
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-slate-50 border border-slate-100 p-8 rounded-2xl text-center hover-card">
+                    <div class="bg-primary-100 text-primary-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl shadow-sm">
+                        <i class="fa-solid fa-mosque"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">সুন্দর ও সুশৃঙ্খল পরিবেশ</h4>
+                    <p class="text-slate-600 leading-relaxed">
+                        একটি সুন্দর ও মনোরম কোলাহলমুক্ত শান্ত পরিবেশে শিক্ষার্থীদের পড়াশোনা করার চমৎকার দ্বীনি পরিবেশ রয়েছে।
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-slate-50 border border-slate-100 p-8 rounded-2xl text-center hover-card">
+                    <div class="bg-primary-100 text-primary-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl shadow-sm">
+                        <i class="fa-solid fa-users-viewfinder"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">অভিভাবকদের সাথে যোগাযোগ</h4>
+                    <p class="text-slate-600 leading-relaxed">
+                        অভিভাবকদের সাথে নিয়মিত মাসিক বৈঠক ও মোবাইল ফোনে শিক্ষার্থীর অগ্রগতি সম্পর্কে অবহিত করা।
+                    </p>
+                </div>
+
             </div>
         </div>
     </section>
 
+    <!-- Departments Section -->
+    <section id="departments" class="py-20 bg-slate-50 border-t border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <span class="text-primary-700 font-bold tracking-wider text-sm bg-primary-100 px-3 py-1.5 rounded-full">প্রধান বিভাগসমূহ</span>
+            <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-3 mb-4">
+                আমাদের শিক্ষা বিভাগসমূহ
+            </h3>
+            <p class="text-slate-600 max-w-2xl mx-auto text-base">
+                দারুল হেদায়া ক্বওমী মাদ্রাসায় যুগোপযোগী ও ঐতিহ্যগত কওমি সিলেবাসের সমন্বয়ে দুটি প্রধান ধারায় শিক্ষা প্রদান করা হয়।
+            </p>
 
-    <!-- Benefits Section -->
-    <section id="benefits" class="py-24 bg-dark relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-primary rounded-full mix-blend-overlay filter blur-3xl opacity-50"></div>
-        <div class="absolute bottom-0 left-0 w-96 h-96 bg-secondary rounded-full mix-blend-overlay filter blur-3xl opacity-50"></div>
-       
-        <div class="container mx-auto px-4 md:px-8 relative z-10">
-            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
-                <h4 class="text-accent font-bold tracking-wider mb-2 uppercase text-sm">উপকারিতা</h4>
-                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">কেন আমাদের তেল <span class="text-accent">সেরা?</span></h2>
-            </div>
+            <div class="grid lg:grid-cols-2 gap-10 mt-12 max-w-5xl mx-auto">
+                
+                <!-- Hifz Card -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-100 hover-card flex flex-col justify-between">
+                    <div>
+                        <div class="bg-gradient-to-r from-primary-800 to-primary-900 text-white p-8 text-left relative overflow-hidden">
+                            <div class="absolute right-0 bottom-0 text-9xl text-white/5 font-bold translate-y-12 translate-x-4"><i class="fa-solid fa-book-quran"></i></div>
+                            <div class="bg-gold-500 text-primary-950 px-3 py-1 text-xs font-bold rounded-full uppercase inline-block mb-4">ভর্তি চলছে</div>
+                            <h4 class="text-2xl font-bold flex items-center gap-2">
+                                <span>📖 হিফজ বিভাগ</span>
+                            </h4>
+                            <p class="text-emerald-100 mt-2 text-sm leading-relaxed">সহীহ তাজওয়ীদের মাধ্যমে কুরআনুল কারিম হিফজ সম্পন্ন করার জন্য ডেডিকেটেড সেল।</p>
+                        </div>
+                        <div class="p-8 text-left space-y-4">
+                            <div class="flex items-start gap-3">
+                                <span class="bg-primary-50 text-primary-700 p-1.5 rounded-full text-xs mt-1"><i class="fa-solid fa-check"></i></span>
+                                <p class="text-slate-700 font-medium">সহীহ তাজওয়ীদের মাধ্যমে কুরআনুল কারিম হিফজ</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="bg-primary-50 text-primary-700 p-1.5 rounded-full text-xs mt-1"><i class="fa-solid fa-check"></i></span>
+                                <p class="text-slate-700 font-medium">দৈনিক সবক, আমুখতা ও মুরাজাআত</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="bg-primary-50 text-primary-700 p-1.5 rounded-full text-xs mt-1"><i class="fa-solid fa-check"></i></span>
+                                <p class="text-slate-700 font-medium">নিয়মিত সাপ্তাহিক ও মাসিক মূল্যায়ন ও পুরস্কার ব্যবস্থা</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="bg-primary-50 text-primary-700 p-1.5 rounded-full text-xs mt-1"><i class="fa-solid fa-check"></i></span>
+                                <p class="text-slate-700 font-medium">ব্যক্তিগত যত্ন ও চরিত্র গঠনের চমৎকার পরিবেশ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-0 text-left">
+                        <a href="#admission-form" class="block text-center bg-primary-700 hover:bg-primary-800 text-white font-semibold py-3 rounded-xl transition duration-300">
+                            হিফজ বিভাগে আবেদন করুন
+                        </a>
+                    </div>
+                </div>
 
+                <!-- Kitab Card -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md border border-slate-100 hover-card flex flex-col justify-between">
+                    <div>
+                        <div class="bg-gradient-to-r from-emerald-800 to-emerald-900 text-white p-8 text-left relative overflow-hidden">
+                            <div class="absolute right-0 bottom-0 text-9xl text-white/5 font-bold translate-y-12 translate-x-4"><i class="fa-solid fa-book-open"></i></div>
+                            <div class="bg-gold-500 text-primary-950 px-3 py-1 text-xs font-bold rounded-full uppercase inline-block mb-4">ভর্তি চলছে</div>
+                            <h4 class="text-2xl font-bold flex items-center gap-2">
+                                <span>📚 কিতাব বিভাগ</span>
+                            </h4>
+                            <p class="text-emerald-100 mt-2 text-sm leading-relaxed">নাহু, সরফ, ফিকহ, হাদিস ও আরবি সাহিত্য অধ্যয়নের মাধ্যমে বিজ্ঞ আলেম হওয়ার প্রথম ধাপ।</p>
+                        </div>
+                        <div class="p-8 text-left space-y-4">
+                            <div class="flex items-start gap-3">
+                                <span class="bg-primary-50 text-primary-700 p-1.5 rounded-full text-xs mt-1"><i class="fa-solid fa-check"></i></span>
+                                <p class="text-slate-700 font-medium">নাহু, সরফ, ফিকহ, হাদিস ও আরবি সাহিত্য চর্চা</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="bg-primary-50 text-primary-700 p-1.5 rounded-full text-xs mt-1"><i class="fa-solid fa-check"></i></span>
+                                <p class="text-slate-700 font-medium">ধাপে ধাপে বেফাকুল মাদারিসিল আরাবিয়া (কওমী) সিলেবাস অনুসরণ</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="bg-primary-50 text-primary-700 p-1.5 rounded-full text-xs mt-1"><i class="fa-solid fa-check"></i></span>
+                                <p class="text-slate-700 font-medium">অভিজ্ঞ ও বিজ্ঞ মুফতি ও মাওলানা উস্তাযদের সরাসরি তত্ত্বাবধান</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="bg-primary-50 text-primary-700 p-1.5 rounded-full text-xs mt-1"><i class="fa-solid fa-check"></i></span>
+                                <p class="text-slate-700 font-medium">ইসলামিক বক্তৃতা ও সাহিত্য বিষয়ক বিশেষ কর্মশালা</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-0 text-left">
+                        <a href="#admission-form" class="block text-center bg-emerald-700 hover:bg-emerald-800 text-white font-semibold py-3 rounded-xl transition duration-300">
+                            কিতাব বিভাগে আবেদন করুন
+                        </a>
+                    </div>
+                </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="benefitsGrid">
-                <!-- Benefits injected via JS -->
             </div>
         </div>
     </section>
 
+    <!-- Madrasa Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <span class="text-primary-700 font-bold tracking-wider text-sm bg-primary-50 px-3 py-1.5 rounded-full">ছবিঘরে আমাদের ক্যাম্পাস</span>
+            <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-3 mb-4">
+                মাদ্রাসার মনোরম পরিবেশ ও কার্যক্রম
+            </h3>
+            <p class="text-slate-600 max-w-2xl mx-auto text-base mb-12">
+                আমাদের মাদ্রাসার কিছু বাস্তব চিত্রের মাধ্যমে শিক্ষার্থীদের পঠন-পাঠন ও দ্বীনি জীবনযাত্রার চমৎকার পরিবেশ দেখুন।
+            </p>
 
-    <!-- Reviews Section -->
-    <section id="reviews" class="py-24 bg-white">
-        <div class="container mx-auto px-4 md:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
-                <h4 class="text-primary font-bold tracking-wider mb-2 uppercase text-sm">গ্রাহক সন্তুষ্টি</h4>
-                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">আমাদের গ্রাহকরা <span class="text-gradient">কী বলেন?</span></h2>
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Photo 1 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md h-72">
+                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=800" alt="মাদ্রাসা ভবন" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary-950/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div class="text-left">
+                            <span class="text-gold-400 text-xs font-semibold uppercase">ক্যাম্পাস</span>
+                            <h5 class="text-white text-lg font-bold">মাদ্রাসা লাইব্রেরি ও ভবন</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo 2 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md h-72">
+                    <img src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&q=80&w=800" alt="হিফজ ক্লাস" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary-950/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div class="text-left">
+                            <span class="text-gold-400 text-xs font-semibold uppercase">ক্লাসরুম</span>
+                            <h5 class="text-white text-lg font-bold">নিবিড় হিফজ তিলাওয়াত সেশন</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo 3 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md h-72">
+                    <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&q=80&w=800" alt="কিতাব ক্লাস" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary-950/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div class="text-left">
+                            <span class="text-gold-400 text-xs font-semibold uppercase">শিক্ষা কার্যক্রম</span>
+                            <h5 class="text-white text-lg font-bold">কিতাব বিভাগের দরস (ক্লাস)</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo 4 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md h-72">
+                    <img src="https://images.unsplash.com/photo-1609599006353-e629f1d29718?auto=format&fit=crop&q=80&w=800" alt="শিক্ষার্থীদের তিলাওয়াত" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary-950/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div class="text-left">
+                            <span class="text-gold-400 text-xs font-semibold uppercase">তাকওয়া</span>
+                            <h5 class="text-white text-lg font-bold">সহীহ কুরআনুল কারিম তিলাওয়াত</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo 5 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md h-72">
+                    <img src="https://images.unsplash.com/photo-1466442929976-97f336a657be?auto=format&fit=crop&q=80&w=800" alt="ইসলামিক পরিবেশ" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary-950/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div class="text-left">
+                            <span class="text-gold-400 text-xs font-semibold uppercase">আধ্যাত্মিকতা</span>
+                            <h5 class="text-white text-lg font-bold">ইসলামিক সুশৃঙ্খল পরিবেশ ও প্রার্থনা</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo 6 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-md h-72 bg-gradient-to-r from-primary-800 to-primary-950 flex flex-col items-center justify-center p-6 border-2 border-dashed border-gold-500/50">
+                    <i class="fa-solid fa-images text-5xl text-gold-500 mb-3 animate-bounce"></i>
+                    <h5 class="text-white text-xl font-bold">আরও অনেক কিছু...</h5>
+                    <p class="text-slate-300 text-sm mt-1 text-center">সরাসরি আমাদের মাদ্রাসা ক্যাম্পাস পরিদর্শন করে যাচাই করার আমন্ত্রণ রইল।</p>
+                    <a href="#contact" class="mt-4 bg-gold-500 text-primary-950 px-4 py-2 rounded-lg text-xs font-bold hover:bg-gold-600 transition">ক্যাম্পাস ম্যাপ দেখুন</a>
+                </div>
             </div>
 
+        </div>
+    </section>
 
-            <!-- Horizontal Scrollable Review Cards -->
-            <div class="flex overflow-x-auto gap-6 pb-10 hide-scroll-bar snap-x snap-mandatory" id="reviewsContainer" style="scrollbar-width: none;">
-                <!-- Reviews injected via JS -->
+    <!-- Teacher Section -->
+    <section id="teachers" class="py-20 bg-slate-50 border-t border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <span class="text-primary-700 font-bold tracking-wider text-sm bg-primary-100 px-3 py-1.5 rounded-full">উস্তাযবৃন্দ</span>
+            <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-3 mb-4">
+                আমাদের সুযোগ্য শিক্ষকমণ্ডলী
+            </h3>
+            <p class="text-slate-600 max-w-2xl mx-auto text-base mb-12">
+                দেশ-বিদেশের স্বনামধন্য দ্বীনি প্রতিষ্ঠান থেকে উচ্চতর ডিগ্রিপ্রাপ্ত অভিজ্ঞ উস্তাযগণের সংক্ষিপ্ত পরিচয়।
+            </p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                
+                <!-- Principal Card -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200/60 p-6 hover-card text-center">
+                    <div class="w-28 h-28 rounded-full border-4 border-gold-500 mx-auto overflow-hidden mb-4 bg-slate-100 flex items-center justify-center">
+                        <i class="fa-solid fa-user-tie text-5xl text-slate-400"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900">মুফতি মাহমুদ হাসান</h4>
+                    <p class="text-xs text-gold-700 font-semibold mb-2">মুহতামিম ও প্রধান শায়খ</p>
+                    <div class="bg-primary-50 py-1.5 px-3 rounded-lg text-xs text-slate-700 inline-block mb-4">
+                        ইফতা ও দাওরাহ হাদিস (ঢাকা)
+                    </div>
+                    <p class="text-slate-600 text-xs leading-relaxed">
+                        দীর্ঘ ১৫ বছর যাবত কওমি অঙ্গনে সুনামের সাথে শিক্ষকতা ও মাদ্রাসা প্রশাসনিক কার্যক্রম পরিচালনা করছেন।
+                    </p>
+                </div>
+
+                <!-- Hifz Teacher -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200/60 p-6 hover-card text-center">
+                    <div class="w-28 h-28 rounded-full border-4 border-emerald-600 mx-auto overflow-hidden mb-4 bg-slate-100 flex items-center justify-center">
+                        <i class="fa-solid fa-user text-5xl text-slate-400"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900">হাফেজ মাওলানা ওবায়দুল্লাহ</h4>
+                    <p class="text-xs text-gold-700 font-semibold mb-2">প্রধান হিফজ উস্তাদ</p>
+                    <div class="bg-primary-50 py-1.5 px-3 rounded-lg text-xs text-slate-700 inline-block mb-4">
+                        হাফেজে কুরআন ও তাজবিদ বিশেষজ্ঞ
+                    </div>
+                    <p class="text-slate-600 text-xs leading-relaxed">
+                        গত ১০ বছরে শতাধিক শিক্ষার্থীকে অত্যন্ত নিপুণতা ও সহীহ তাজবীদে হিফজ সম্পন্ন করিয়েছেন।
+                    </p>
+                </div>
+
+                <!-- Kitab Teacher -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200/60 p-6 hover-card text-center">
+                    <div class="w-28 h-28 rounded-full border-4 border-emerald-600 mx-auto overflow-hidden mb-4 bg-slate-100 flex items-center justify-center">
+                        <i class="fa-solid fa-user text-5xl text-slate-400"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900">মাওলানা আব্দুর রহমান</h4>
+                    <p class="text-xs text-gold-700 font-semibold mb-2">সিনিয়র কিতাব উস্তাদ</p>
+                    <div class="bg-primary-50 py-1.5 px-3 rounded-lg text-xs text-slate-700 inline-block mb-4">
+                        এম.এ ইন ইসলামিক স্টাডিজ
+                    </div>
+                    <p class="text-slate-600 text-xs leading-relaxed">
+                        আরবি ভাষা, নাহু-সরফ ও ফিকহ শিক্ষাদানে ১২ বছরের দীর্ঘ অভিজ্ঞতাসম্পন্ন একজন সফল মুরুব্বী।
+                    </p>
+                </div>
+
             </div>
         </div>
     </section>
 
+    <!-- Admission Information & Documents Section -->
+    <section id="admission" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column: Key Stats & Admission Process -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-primary-700 font-bold tracking-wider text-sm bg-primary-50 px-3 py-1.5 rounded-full inline-block">ভর্তি সংক্রান্ত তথ্য</span>
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
+                        ভর্তি সংক্রান্ত প্রয়োজনীয় নির্দেশিকা ও গুরুত্বপূর্ণ বিষয়সমূহ
+                    </h3>
+                    <p class="text-slate-600 text-base">
+                        নতুন শিক্ষাবর্ষে আপনার সন্তানকে ভর্তির করানোর পূর্বে গুরুত্বপূর্ণ তথ্যসমূহ এবং ভর্তি প্রক্রিয়ার সময় যে সকল তথ্যাদি প্রয়োজন হবে তা ভালো করে জেনে নিন।
+                    </p>
+
+                    <!-- Stat Cards Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+                        <div class="bg-emerald-50 border border-emerald-100 rounded-xl p-5 text-center">
+                            <i class="fa-solid fa-calendar-check text-2xl text-emerald-700 mb-2"></i>
+                            <h5 class="text-xs text-slate-500 uppercase font-bold">ভর্তি কার্যক্রম</h5>
+                            <p class="text-lg font-bold text-slate-900 mt-1">চলমান ২০২৬</p>
+                        </div>
+                        <div class="bg-amber-50 border border-amber-100 rounded-xl p-5 text-center">
+                            <i class="fa-solid fa-users text-2xl text-amber-600 mb-2"></i>
+                            <h5 class="text-xs text-slate-500 uppercase font-bold">আসন সংখ্যা</h5>
+                            <p class="text-lg font-bold text-slate-900 mt-1">অত্যন্ত সীমিত</p>
+                        </div>
+                        <div class="bg-sky-50 border border-sky-100 rounded-xl p-5 text-center">
+                            <i class="fa-solid fa-chalkboard-user text-2xl text-sky-700 mb-2"></i>
+                            <h5 class="text-xs text-slate-500 uppercase font-bold">ক্লাস শুরু</h5>
+                            <p class="text-lg font-bold text-slate-900 mt-1">শীঘ্রই ইনশাআল্লাহ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Required Documents Checklist -->
+                <div class="lg:col-span-6 bg-gradient-to-br from-primary-900 to-primary-950 text-white rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden">
+                    <div class="absolute -right-12 -bottom-12 text-white/5 text-9xl font-bold"><i class="fa-solid fa-folder-open"></i></div>
+                    
+                    <h4 class="text-xl md:text-2xl font-bold mb-6 text-gold-400 flex items-center gap-2">
+                        <i class="fa-solid fa-file-invoice"></i>
+                        ভর্তির জন্য প্রয়োজনীয় কাগজপত্রসমূহ:
+                    </h4>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-gold-500 text-primary-950 w-8 h-8 rounded-full flex items-center justify-center shrink-0 font-bold text-sm">১</div>
+                            <div>
+                                <h5 class="font-bold text-white text-base">জন্ম নিবন্ধনের ফটোকপি</h5>
+                                <p class="text-slate-300 text-xs mt-1">অনলাইন কপি ও মূল কপির এক সেট স্পষ্ট রঙিন ফটোকপি জমা দিতে হবে।</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-gold-500 text-primary-950 w-8 h-8 rounded-full flex items-center justify-center shrink-0 font-bold text-sm">২</div>
+                            <div>
+                                <h5 class="font-bold text-white text-base">দুই কপি পাসপোর্ট সাইজ ছবি</h5>
+                                <p class="text-slate-300 text-xs mt-1">শিক্ষার্থীর সদ্য তোলা ল্যাব প্রিন্ট পাসপোর্ট সাইজের রঙ্গিন ছবি।</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-gold-500 text-primary-950 w-8 h-8 rounded-full flex items-center justify-center shrink-0 font-bold text-sm">৩</div>
+                            <div>
+                                <h5 class="font-bold text-white text-base">অভিভাবকের এনআইডি (NID) কার্ডের ফটোকপি</h5>
+                                <p class="text-slate-300 text-xs mt-1">পিতা ও মাতা উভয়ের জাতীয় পরিচয়পত্রের ফটোকপি জমা দিতে হবে।</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-gold-500 text-primary-950 w-8 h-8 rounded-full flex items-center justify-center shrink-0 font-bold text-sm">৪</div>
+                            <div>
+                                <h5 class="font-bold text-white text-base">পূর্ববর্তী প্রতিষ্ঠানের সনদ (যদি থাকে)</h5>
+                                <p class="text-slate-300 text-xs mt-1">যদি অন্য মাদ্রাসা থেকে এসে থাকে, তবে সেখানকার শেষ বার্ষিক পরীক্ষার মার্কশিট বা প্রশংসাপত্র।</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Form Section -->
+    <section id="admission-form" class="py-20 bg-emerald-50/50 border-t border-b border-emerald-100" x-data="{ 
+        studentName: '', 
+        studentAge: '', 
+        selectedDept: '', 
+        fatherName: '', 
+        phone: '', 
+        address: '', 
+        formSubmitted: false,
+        isSubmitting: false,
+        submitForm() {
+            if (!this.studentName || !this.studentAge || !this.selectedDept || !this.fatherName || !this.phone) {
+                alert('অনুগ্রহ করে সকল আবশ্যকীয় তথ্য পূরণ করুন।');
+                return;
+            }
+            this.isSubmitting = true;
+            // Simulated submission API
+            setTimeout(() => {
+                this.isSubmitting = false;
+                this.formSubmitted = true;
+            }, 1500);
+        }
+    }">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            
+            <div class="text-center mb-12">
+                <span class="text-primary-700 font-bold tracking-wider text-sm bg-primary-100 px-3 py-1.5 rounded-full inline-block">ভর্তি আবেদন অনলাইন</span>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-3 mb-4">
+                    সহজ অনলাইন ভর্তি ফরম
+                </h3>
+                <p class="text-slate-600 max-w-xl mx-auto text-base">
+                    আপনার সুবিধার্থে আমরা অনলাইন আবেদন ব্যবস্থা চালু করেছি। ফরমটি পূরণ করে সাবমিট করুন, আমরা অতি শীঘ্রই যোগাযোগ করব।
+                </p>
+            </div>
+
+            <!-- Form Wrapper -->
+            <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-100 relative">
+                
+                <!-- Success State Overlay Modal -->
+                <div x-show="formSubmitted" 
+                     class="absolute inset-0 bg-white rounded-3xl flex flex-col items-center justify-center text-center p-8 z-10"
+                     x-transition:enter="transition ease-out duration-300"
+                     x-transition:enter-start="opacity-0 scale-95"
+                     x-transition:enter-end="opacity-100 scale-100" x-cloak>
+                    <div class="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-4xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-slate-900 mb-2">আবেদনটি সফলভাবে জমা হয়েছে!</h4>
+                    <p class="text-slate-600 max-w-md mx-auto mb-6 text-sm">
+                        মুহতারাম <span class="font-bold text-primary-800" x-text="fatherName"></span>, আপনার সন্তান <span class="font-bold text-primary-800" x-text="studentName"></span> এর আবেদনটি আমাদের এডমিশন সেল গ্রহণ করেছে। আগামী ২৪ ঘণ্টার মধ্যে আমাদের একজন দায়িত্বশীল শিক্ষক আপনার প্রদত্ত মোবাইল নম্বর (<span class="font-bold text-slate-800" x-text="phone"></span>) এ যোগাযোগ করবেন।
+                    </p>
+                    <button @click="formSubmitted = false; studentName=''; studentAge=''; selectedDept=''; fatherName=''; phone=''; address=''" class="bg-primary-700 hover:bg-primary-800 text-white font-semibold py-3 px-8 rounded-xl transition duration-300 shadow-md">
+                        নতুন করে ফরম পূরণ করুন
+                    </button>
+                </div>
+
+                <!-- The HTML Form -->
+                <form @submit.prevent="submitForm()" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Student Name -->
+                        <div>
+                            <label class="block text-slate-700 font-semibold mb-2">শিক্ষার্থীর নাম <span class="text-red-500">*</span></label>
+                            <input type="text" x-model="studentName" required placeholder="যেমন: আব্দুল্লাহ হাসান" class="w-full px-4 py-3.5 rounded-xl border border-slate-200 focus:outline-none focus:border-primary-600 focus:ring-1 focus:ring-primary-600 transition">
+                        </div>
+
+                        <!-- Age -->
+                        <div>
+                            <label class="block text-slate-700 font-semibold mb-2">বয়স <span class="text-red-500">*</span></label>
+                            <input type="number" x-model="studentAge" required placeholder="যেমন: ৯" class="w-full px-4 py-3.5 rounded-xl border border-slate-200 focus:outline-none focus:border-primary-600 focus:ring-1 focus:ring-primary-600 transition">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Class/Department selection -->
+                        <div>
+                            <label class="block text-slate-700 font-semibold mb-2">কাঙ্ক্ষিত বিভাগ নির্বাচন <span class="text-red-500">*</span></label>
+                            <select x-model="selectedDept" required class="w-full px-4 py-3.5 rounded-xl border border-slate-200 focus:outline-none focus:border-primary-600 focus:ring-1 focus:ring-primary-600 transition bg-white">
+                                <option value="" disabled selected>বিভাগ বেছে নিন</option>
+                                <option value="hifz">📖 হিফজ বিভাগ (সহীহ তাজবীদ সহ)</option>
+                                <option value="kitab">📚 কিতাব বিভাগ (কওমী সিলেবাস)</option>
+                            </select>
+                        </div>
+
+                        <!-- Father's Name -->
+                        <div>
+                            <label class="block text-slate-700 font-semibold mb-2">পিতা/অভিভাবকের নাম <span class="text-red-500">*</span></label>
+                            <input type="text" x-model="fatherName" required placeholder="যেমন: আব্দুর রহিম" class="w-full px-4 py-3.5 rounded-xl border border-slate-200 focus:outline-none focus:border-primary-600 focus:ring-1 focus:ring-primary-600 transition">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-1 gap-6">
+                        <!-- Mobile Number -->
+                        <div>
+                            <label class="block text-slate-700 font-semibold mb-2">মোবাইল নম্বর <span class="text-red-500">*</span></label>
+                            <div class="relative">
+                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 font-medium">+৮৮</span>
+                                <input type="tel" x-model="phone" required placeholder="০১৭১২-৩৪৫৬৭৮" class="w-full pl-16 pr-4 py-3.5 rounded-xl border border-slate-200 focus:outline-none focus:border-primary-600 focus:ring-1 focus:ring-primary-600 transition">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div>
+                        <label class="block text-slate-700 font-semibold mb-2">ঠিকানা</label>
+                        <textarea x-model="address" rows="3" placeholder="বর্তমান ঠিকানা ও জেলা" class="w-full px-4 py-3.5 rounded-xl border border-slate-200 focus:outline-none focus:border-primary-600 focus:ring-1 focus:ring-primary-600 transition"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" :disabled="isSubmitting" class="w-full bg-primary-700 hover:bg-primary-800 text-white font-bold py-4 rounded-xl shadow-lg transition duration-300 flex items-center justify-center gap-2 text-lg">
+                        <template x-if="isSubmitting">
+                            <span class="inline-flex items-center">
+                                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
+                                আবেদন পাঠানো হচ্ছে...
+                            </span>
+                        </template>
+                        <template x-if="!isSubmitting">
+                            <span class="flex items-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                ভর্তি আবেদন পাঠান
+                            </span>
+                        </template>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <span class="text-primary-700 font-bold tracking-wider text-sm bg-primary-50 px-3 py-1.5 rounded-full">অভিভাবক মন্তব্য</span>
+            <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-3 mb-4">
+                আমাদের সম্পর্কে অভিভাবকদের মতামত
+            </h3>
+            <p class="text-slate-600 max-w-2xl mx-auto text-base mb-12">
+                দারুল হেদায়া ক্বওমী মাদ্রাসায় পড়ুয়া শিক্ষার্থীদের সম্মানিত অভিভাবকদের বাস্তব সন্তুষ্টির চিত্র ও অভিজ্ঞতা।
+            </p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Testimonial 1 -->
+                <div class="bg-slate-50 border border-slate-100 p-8 rounded-2xl text-left relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-gold-500 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 italic text-sm leading-relaxed mb-6">
+                            "আমার ছেলে এই মাদ্রাসায় মাত্র ২ বছরে সুন্দর তাজবিদের সাথে হিফজ সম্পন্ন করেছে। উস্তাযদের আচরণ অত্যন্ত অমায়িক এবং যত্নশীল। আমি এই মাদ্রাসার প্রতিটি ব্যবস্থায় পুরোপুরি সন্তুষ্ট।"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="bg-primary-100 text-primary-700 w-10 h-10 rounded-full flex items-center justify-center font-bold">আ</div>
+                        <div>
+                            <h5 class="font-bold text-slate-900 text-sm">আবু সুফিয়ান</h5>
+                            <p class="text-slate-400 text-xs">ব্যবসায়ী, উত্তরা</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-slate-50 border border-slate-100 p-8 rounded-2xl text-left relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-gold-500 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 italic text-sm leading-relaxed mb-6">
+                            "কিতাব বিভাগের জন্য ঢাকা শহরের মধ্যে আমার মনে হয় এটি সেরা প্রতিষ্ঠান। প্রতিটি বিষয়ে পুঙ্খানুপুঙ্খ শিক্ষা দেওয়া হয়। উস্তাদদের ব্যক্তিগত নজরদারি সত্যি অতুলনীয়।"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="bg-primary-100 text-primary-700 w-10 h-10 rounded-full flex items-center justify-center font-bold">মা</div>
+                        <div>
+                            <h5 class="font-bold text-slate-900 text-sm">মাওলানা জসিম উদ্দিন</h5>
+                            <p class="text-slate-400 text-xs">শিক্ষাবিদ, টঙ্গী</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-slate-50 border border-slate-100 p-8 rounded-2xl text-left relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-gold-500 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-600 italic text-sm leading-relaxed mb-6">
+                            "লেখাপড়ার পাশাপাশি শিক্ষার্থীদের সুন্নাহভিত্তিক আমল ও নৈতিকতা শেখানো হয়। নিয়মিত মা-বাবার সাথে ব্যবহারের ব্যাপারেও নসিহত করা হয়, যা আমার ছেলের ক্ষেত্রে বড় পরিবর্তন এনেছে।"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="bg-primary-100 text-primary-700 w-10 h-10 rounded-full flex items-center justify-center font-bold">তা</div>
+                        <div>
+                            <h5 class="font-bold text-slate-900 text-sm">তারেক রহমান</h5>
+                            <p class="text-slate-400 text-xs">সরকারি চাকুরিজীবী, ঢাকা</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <!-- FAQ Section -->
-    <section class="py-20 bg-[#F5F8F6]">
-        <div class="container mx-auto px-4 md:px-8 max-w-4xl">
-            <div class="text-center mb-12" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">সাধারণ <span class="text-gradient">জিজ্ঞাসা (FAQ)</span></h2>
+    <section id="faq" class="py-20 bg-slate-50 border-t border-b border-slate-100" x-data="{ activeFaq: null }">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            
+            <div class="text-center mb-12">
+                <span class="text-primary-700 font-bold tracking-wider text-sm bg-primary-100 px-3 py-1.5 rounded-full inline-block">সাধারণ জিজ্ঞাসা</span>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-3 mb-4">
+                    সচরাচর জিজ্ঞাসিত প্রশ্নসমূহ
+                </h3>
+                <p class="text-slate-600 max-w-xl mx-auto text-base">
+                    ভর্তি সংক্রান্ত বিভিন্ন বিষয়ে সাধারণত যে সমস্ত প্রশ্ন অভিভাবকগণের মনে জাগে, সেগুলোর উত্তর নিচে দেওয়া হলো।
+                </p>
             </div>
-           
-            <div class="flex flex-col gap-4" id="faqContainer">
-                <!-- FAQs injected via JS -->
-            </div>
-        </div>
-    </section>
 
-
-    <!-- Order Section -->
-    <section id="order" class="py-24 relative bg-gradient-to-br from-primary to-dark text-white">
-        <div class="container mx-auto px-4 md:px-8 relative z-10">
-            <div class="glass-dark rounded-3xl p-8 md:p-12 max-w-5xl mx-auto shadow-2xl border border-white/10" data-aos="zoom-in">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <!-- Text Info -->
-                    <div>
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4">এখনই <span class="text-accent">অর্ডার করুন</span></h2>
-                        <p class="text-gray-300 mb-8 leading-relaxed">
-                            ১০০% খাঁটি উপাদানে তৈরি আমাদের হেয়ার অয়েল পেতে নিচের ফর্মটি পূরণ করুন অথবা সরাসরি হোয়াটসঅ্যাপে মেসেজ দিন। সারা বাংলাদেশে ক্যাশ অন ডেলিভারি সুবিধা রয়েছে।
-                        </p>
-                       
-                        <div class="space-y-6">
-                            <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-accent text-xl">
-                                    <i class="fa-solid fa-truck-fast"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">ডেলিভারি চার্জ</h4>
-                                    <p class="text-sm text-gray-400">ঢাকার ভেতরে ৬০৳, ঢাকার বাইরে ১২০৳</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-accent text-xl">
-                                    <i class="fa-solid fa-headset"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold">কাস্টমার সাপোর্ট</h4>
-                                    <p class="text-sm text-gray-400" id="contactPhoneText">০১৯৭৩১৯১৫৮৬</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <!-- Direct WhatsApp Button -->
-                        <div class="mt-10">
-                            <button onclick="orderViaWhatsAppDirect()" class="w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-4 px-6 rounded-xl flex items-center justify-center gap-3 transition-all transform hover:scale-105 shadow-lg">
-                                <i class="fa-brands fa-whatsapp text-2xl"></i> সরাসরি WhatsApp এ অর্ডার করুন
-                            </button>
-                        </div>
-                    </div>
-
-
-                    <!-- Order Form -->
-                    <div class="bg-white rounded-2xl p-6 md:p-8 text-dark shadow-xl">
-                        <h3 class="text-2xl font-bold mb-6 border-b pb-4">অর্ডার ফর্ম</h3>
-                        <form id="orderForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
-                            <div>
-                                <label class="block text-sm font-semibold mb-1">আপনার নাম *</label>
-                                <input type="text" id="custName" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors bg-gray-50" placeholder="নাম লিখুন">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-semibold mb-1">মোবাইল নাম্বার *</label>
-                                <input type="tel" id="custPhone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors bg-gray-50" placeholder="01XXX-XXXXXX">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-semibold mb-1">সম্পূর্ণ ঠিকানা *</label>
-                                <textarea id="custAddress" required rows="2" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors bg-gray-50" placeholder="বাসা, রাস্তা, এলাকা, জেলা"></textarea>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-semibold mb-1">প্রোডাক্ট সিলেক্ট করুন *</label>
-                                <select id="productSelect" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors bg-gray-50 font-medium">
-                                    <!-- Options injected via JS -->
-                                </select>
-                            </div>
-                            <button type="submit" class="w-full bg-dark hover:bg-primary text-white font-bold py-4 rounded-xl transition-colors shadow-md mt-4 text-lg">
-                                কনফার্ম অর্ডার
-                            </button>
-                        </form>
+            <!-- FAQ Accordion -->
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 1 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button @click="activeFaq = activeFaq === 1 ? null : 1" class="w-full text-left px-6 py-5 flex justify-between items-center font-bold text-slate-800 text-base md:text-lg focus:outline-none">
+                        <span>১. ভর্তি প্রক্রিয়া কীভাবে সম্পন্ন করবো?</span>
+                        <i class="fa-solid text-sm text-primary-700 transition-transform duration-300" :class="activeFaq === 1 ? 'fa-minus' : 'fa-plus'"></i>
+                    </button>
+                    <div x-show="activeFaq === 1" x-transition.opacity class="px-6 pb-6 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100" x-cloak>
+                        ভর্তি প্রক্রিয়া সম্পন্ন করতে প্রথমে উপরে দেওয়া অনলাইন ফরমটি পূরণ করতে পারেন অথবা সরাসরি আমাদের অফিসে এসে আবেদনপত্র সংগ্রহ করতে পারেন। প্রয়োজনীয় কাগজপত্র নিয়ে মাদ্রাসায় আসার পর মেধা যাচাই পরীক্ষার মাধ্যমে ভর্তি নিশ্চিত করা হবে।
                     </div>
                 </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button @click="activeFaq = activeFaq === 2 ? null : 2" class="w-full text-left px-6 py-5 flex justify-between items-center font-bold text-slate-800 text-base md:text-lg focus:outline-none">
+                        <span>২. ভর্তির জন্য বয়সসীমা কত?</span>
+                        <i class="fa-solid text-sm text-primary-700 transition-transform duration-300" :class="activeFaq === 2 ? 'fa-minus' : 'fa-plus'"></i>
+                    </button>
+                    <div x-show="activeFaq === 2" x-transition.opacity class="px-6 pb-6 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100" x-cloak>
+                        হিফজ বিভাগের জন্য সাধারণত ৭ থেকে ১২ বছর বয়সী শিক্ষার্থীদের অগ্রাধিকার দেওয়া হয়। কিতাব বিভাগের ক্ষেত্রে পূর্ববর্তী ক্লাসের যোগ্যতার ভিত্তিতে বয়স নির্ধারণ করা হবে।
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button @click="activeFaq = activeFaq === 3 ? null : 3" class="w-full text-left px-6 py-5 flex justify-between items-center font-bold text-slate-800 text-base md:text-lg focus:outline-none">
+                        <span>৩. আবাসিক ও অনাবাসিক কি উভয় সুবিধাই আছে?</span>
+                        <i class="fa-solid text-sm text-primary-700 transition-transform duration-300" :class="activeFaq === 3 ? 'fa-minus' : 'fa-plus'"></i>
+                    </button>
+                    <div x-show="activeFaq === 3" x-transition.opacity class="px-6 pb-6 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100" x-cloak>
+                        জ্বী হ্যাঁ, আমাদের মাদ্রাসায় দূরবর্তী শিক্ষার্থীদের জন্য সুপরিকল্পিত আবাসিক সুবিধা রয়েছে, যেখানে অত্যন্ত পুষ্টিকর খাবার, উন্নত আবাসন ব্যবস্থা এবং ২৪ ঘণ্টা শিক্ষকের অধীনে থাকার ব্যবস্থা আছে। এছাড়াও স্থানীয় শিক্ষার্থীদের জন্য ডে-কেয়ার এবং অনাবাসিক সুবিধা রয়েছে।
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all duration-300">
+                    <button @click="activeFaq = activeFaq === 4 ? null : 4" class="w-full text-left px-6 py-5 flex justify-between items-center font-bold text-slate-800 text-base md:text-lg focus:outline-none">
+                        <span>৪. মাসিক খরচ ও পড়াশোনার ফি কেমন?</span>
+                        <i class="fa-solid text-sm text-primary-700 transition-transform duration-300" :class="activeFaq === 4 ? 'fa-minus' : 'fa-plus'"></i>
+                    </button>
+                    <div x-show="activeFaq === 4" x-transition.opacity class="px-6 pb-6 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100" x-cloak>
+                        আবাসিক ও অনাবাসিক ক্যাটাগরি অনুযায়ী পড়ার খরচ ভিন্ন হয়ে থাকে। অত্যন্ত সুলভ মূল্যে সর্বোচ্চ মানের দ্বীনি সেবা প্রদান করা হয়। এছাড়া এতিম ও অসচ্ছল পরিবারের শিক্ষার্থীদের জন্য বিশেষ ছাড় ও বৃত্তির ব্যবস্থা রয়েছে। সুনির্দিষ্ট ফির জন্য অনুগ্রহ করে আমাদের দেয়া নম্বরে যোগাযোগ করুন।
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
+    <!-- Contact Section with Map -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary-700 font-bold tracking-wider text-sm bg-primary-50 px-3 py-1.5 rounded-full inline-block">সরাসরি যোগাযোগ করুন</span>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-3 mb-4">
+                    আমাদের সাথে যোগাযোগের মাধ্যম
+                </h3>
+                <p class="text-slate-600 max-w-xl mx-auto text-base">
+                    ভর্তি সংক্রান্ত যে কোনো পরামর্শ বা জিজ্ঞাসা নিয়ে সরাসরি আমাদের ঠিকানায় চলে আসুন অথবা নিচে দেওয়া ফোন নম্বরে যোগাযোগ করুন।
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-10 items-stretch">
+                
+                <!-- Contact Details Grid -->
+                <div class="lg:col-span-5 space-y-6 flex flex-col justify-between">
+                    
+                    <!-- Address Card -->
+                    <div class="bg-slate-50 border border-slate-100 rounded-2xl p-6 flex items-start gap-4 hover:border-primary-200 transition">
+                        <div class="bg-primary-100 text-primary-700 w-12 h-12 rounded-full flex items-center justify-center shrink-0 text-xl">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-lg mb-1">মাদ্রাসার ঠিকানা</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                রোড #১২, সেক্টর #১০, উত্তরা, ঢাকা-১২৩০, বাংলাদেশ
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Call Card -->
+                    <div class="bg-slate-50 border border-slate-100 rounded-2xl p-6 flex items-start gap-4 hover:border-primary-200 transition">
+                        <div class="bg-primary-100 text-primary-700 w-12 h-12 rounded-full flex items-center justify-center shrink-0 text-xl">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-lg mb-1">মোবাইল নম্বর</h4>
+                            <p class="text-slate-600 text-sm font-semibold">
+                                +৮৮০ ১৭১২-৩৪৫৬৭৮ <br>
+                                +৮৮০ ১৯১১-৮৭৬৫৪৩
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- WhatsApp Card -->
+                    <div class="bg-slate-50 border border-slate-100 rounded-2xl p-6 flex items-start gap-4 hover:border-primary-200 transition">
+                        <div class="bg-emerald-100 text-emerald-600 w-12 h-12 rounded-full flex items-center justify-center shrink-0 text-xl">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-lg mb-1">সরাসরি হোয়াটসঅ্যাপ (WhatsApp)</h4>
+                            <p class="text-slate-600 text-sm">
+                                <a href="https://wa.me/8801712345678" target="_blank" class="text-emerald-600 font-bold hover:underline">মেসেজ করতে এখানে ক্লিক করুন</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Google Maps Card -->
+                <div class="lg:col-span-7 bg-slate-100 rounded-3xl overflow-hidden shadow-inner border border-slate-200 min-h-[350px]">
+                    <!-- Embedded Google Map -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14594.131109017688!2d90.38883652611736!3d23.861862590747107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c4228965f7c3%3A0xebe76db8980b190a!2sUttara%20Sector%2010%20Park!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd" 
+                        class="w-full h-full border-0 min-h-[350px]" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Banner -->
+    <section class="py-20 relative bg-primary-950 text-white overflow-hidden text-center">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1466442929976-97f336a657be?auto=format&fit=crop&q=80&w=1920" alt="Islamic Study Room background" class="w-full h-full object-cover opacity-15">
+            <div class="absolute inset-0 bg-gradient-to-b from-primary-950/90 to-primary-950/100"></div>
+        </div>
+
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6">
+            <h3 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
+                আসন সীমিত — আজই আপনার সন্তানের <br>
+                ভর্তি সুনিশ্চিত করুন
+            </h3>
+            <p class="text-lg text-emerald-100 font-semibold mb-8 max-w-2xl mx-auto leading-relaxed">
+                আপনার সন্তানকে দ্বীনি শিক্ষায় দীক্ষিত করে কুরআন ও সুন্নাহভিত্তিক একজন আদর্শ মুসলিম এবং যোগ্য আলেম হিসেবে গড়ে তোলার সুযোগ হাতছাড়া করবেন না।
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#admission-form" class="w-full sm:w-auto bg-gold-500 hover:bg-gold-600 text-primary-950 font-bold px-8 py-4 rounded-xl shadow-lg transition duration-300 text-lg flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-file-pen text-xl"></i>
+                    অনলাইনে ভর্তি আবেদন করুন
+                </a>
+                <a href="tel:+8801712345678" class="w-full sm:w-auto bg-transparent border-2 border-white/50 hover:border-white text-white font-bold px-8 py-4 rounded-xl transition duration-300 text-lg flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone-volume text-xl"></i>
+                    সরাসরি কল করুন
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-[#122b20] text-gray-300 pt-16 pb-8 border-t border-white/10">
-        <div class="container mx-auto px-4 md:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-                <!-- Brand Info -->
-                <div class="lg:col-span-1">
-                    <a href="#" class="flex items-center gap-2 mb-6">
-                        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-accent flex items-center justify-center text-white font-bold text-xl">
-                            <i class="fa-solid fa-leaf"></i>
-                        </div>
-                        <span class="font-bold text-2xl text-white" id="footerBrandName">ব্র্যান্ড</span>
-                    </a>
-                    <p class="text-sm text-gray-400 mb-6 leading-relaxed" id="footerTagline">
-                        Natural Hair Care for Healthy & Beautiful Hair
-                    </p>
-                    <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full glass-dark flex items-center justify-center hover:bg-primary hover:text-white transition-all"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full glass-dark flex items-center justify-center hover:bg-primary hover:text-white transition-all"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full glass-dark flex items-center justify-center hover:bg-primary hover:text-white transition-all"><i class="fa-brands fa-tiktok"></i></a>
+    <footer class="bg-slate-900 text-slate-400 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            
+            <!-- Brand Column -->
+            <div class="space-y-4">
+                <a href="#" class="flex items-center gap-3">
+                    <div class="bg-primary-700 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md">
+                        <i class="fa-solid fa-book-quran text-xl"></i>
                     </div>
-                </div>
-
-
-                <!-- Links -->
-                <div>
-                    <h4 class="text-white font-bold text-lg mb-6">গুরুত্বপূর্ণ লিংক</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#home" class="hover:text-accent transition-colors">হোম</a></li>
-                        <li><a href="#about" class="hover:text-accent transition-colors">আমাদের সম্পর্কে</a></li>
-                        <li><a href="#products" class="hover:text-accent transition-colors">সকল প্রোডাক্ট</a></li>
-                        <li><a href="#reviews" class="hover:text-accent transition-colors">কাস্টমার রিভিউ</a></li>
-                    </ul>
-                </div>
-
-
-                <!-- Contact -->
-                <div>
-                    <h4 class="text-white font-bold text-lg mb-6">যোগাযোগ</h4>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-location-dot mt-1 text-accent"></i>
-                            <span id="footerAddress">ঢাকা, বাংলাদেশ</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-phone text-accent"></i>
-                            <span id="footerPhone">০১৯৭৩১৯১৫৮৬</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fa-solid fa-envelope text-accent"></i>
-                            <span id="footerEmail">info@hairherbs.com</span>
-                        </li>
-                    </ul>
-                </div>
-
-
-                <!-- Map -->
-                <div>
-                    <h4 class="text-white font-bold text-lg mb-6">আমাদের লোকেশন</h4>
-                    <div class="w-full h-32 rounded-xl overflow-hidden border border-white/10 glass-dark">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233667.8223908687!2d90.27923710646989!3d23.780887457084543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka%2C%20Bangladesh!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div>
+                        <h4 class="text-lg font-bold text-white">দারুল হেদায়া</h4>
+                        <p class="text-xs text-gold-500 tracking-wider">ক্বওমী মাদ্রাসা</p>
                     </div>
+                </a>
+                <p class="text-xs leading-relaxed text-slate-400">
+                    আমাদের লক্ষ্য শিক্ষার্থীদের হৃদয়ে কুরআন ও সুন্নাহর সঠিক ইলম প্রোথিত করা এবং সুন্নাতি আমলের আলো ছড়িয়ে দেওয়া।
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h5 class="text-white font-bold mb-4 text-base tracking-wide border-l-4 border-gold-500 pl-3">গুরুত্বপূর্ণ লিংকসমূহ</h5>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-gold-500 transition"><i class="fa-solid fa-chevron-right text-xs text-primary-600 mr-2"></i> মূল পাতা</a></li>
+                    <li><a href="#why-choose-us" class="hover:text-gold-500 transition"><i class="fa-solid fa-chevron-right text-xs text-primary-600 mr-2"></i> আমাদের বৈশিষ্ট্য</a></li>
+                    <li><a href="#departments" class="hover:text-gold-500 transition"><i class="fa-solid fa-chevron-right text-xs text-primary-600 mr-2"></i> বিভাগসমূহ</a></li>
+                    <li><a href="#admission" class="hover:text-gold-500 transition"><i class="fa-solid fa-chevron-right text-xs text-primary-600 mr-2"></i> ভর্তি নির্দেশিকা</a></li>
+                    <li><a href="#contact" class="hover:text-gold-500 transition"><i class="fa-solid fa-chevron-right text-xs text-primary-600 mr-2"></i> যোগাযোগ</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Information -->
+            <div>
+                <h5 class="text-white font-bold mb-4 text-base tracking-wide border-l-4 border-gold-500 pl-3">যোগাযোগের ঠিকানা</h5>
+                <ul class="space-y-2 text-xs">
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-location-dot text-gold-500 mt-1"></i>
+                        <span>রোড #১২, সেক্টর #১০, উত্তরা, ঢাকা-১২৩০</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-gold-500"></i>
+                        <span>+৮৮০ ১৭১২-৩৪৫৬৭৮</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-envelope text-gold-500"></i>
+                        <span>info@darulhedaya.edu.bd</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Social Media & Certifications -->
+            <div>
+                <h5 class="text-white font-bold mb-4 text-base tracking-wide border-l-4 border-gold-500 pl-3">সামাজিক মাধ্যম ও যোগাযোগ</h5>
+                <p class="text-xs text-slate-400 mb-4">আমাদের নিয়মিত কার্যক্রম ও দোয়া সেশনের আপডেট পেতে ফেসবুক পেজে যুক্ত থাকুন।</p>
+                <div class="flex gap-3">
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 text-white flex items-center justify-center hover:bg-blue-600 transition text-lg"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 text-white flex items-center justify-center hover:bg-red-600 transition text-lg"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://wa.me/8801712345678" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 text-white flex items-center justify-center hover:bg-emerald-600 transition text-lg"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
-           
-            <div class="border-t border-white/10 pt-8 text-center text-sm text-gray-500">
-                <p>&copy; <span id="currentYear"></span> <span id="copyrightName">Hair Herb's Oil by Sakila</span>. All rights reserved.</p>
-                <p class="mt-2">Designed for Premium Organic Brand</p>
-            </div>
+
+        </div>
+
+        <!-- Copyright section -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-slate-800 text-center text-xs">
+            <p>&copy; ২০২৬ দারুল হেদায়া ক্বওমী মাদ্রাসা। সর্বস্বত্ব সংরক্ষিত।</p>
+            <p class="mt-1 text-slate-500">ডিজাইন ও ডেভেলপমেন্টে - মাদ্রাসা আইটি টিম</p>
         </div>
     </footer>
 
+    <!-- Floating Quick Actions Buttons (Call & WhatsApp) for conversion rate optimization -->
+    <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
+        <!-- Floating WhatsApp -->
+        <a href="https://wa.me/8801712345678?text=আসসালামু%20আলাইকুম,%20আমি%20দারুল%20হেদায়া%20মাদ্রাসায়%20ভর্তি%20সংক্রান্ত%20জানতে%20চাই" target="_blank" class="w-14 h-14 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center shadow-xl hover:shadow-2xl transition transform hover:-translate-y-1 group relative">
+            <i class="fa-brands fa-whatsapp text-3xl animate-pulse"></i>
+            <!-- Tooltip -->
+            <span class="absolute right-16 top-1/2 -translate-y-1/2 bg-slate-900 text-white text-xs px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none">হোয়াটসঅ্যাপ এ মেসেজ করুন</span>
+        </a>
 
-    <!-- Floating WhatsApp Icon -->
-    <a href="#" id="floatingWhatsApp" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-[0_4px_14px_0_rgba(37,211,102,0.5)] hover:scale-110 transition-transform z-50">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+        <!-- Floating Call -->
+        <a href="tel:+8801712345678" class="w-14 h-14 rounded-full bg-primary-700 hover:bg-primary-600 text-white flex items-center justify-center shadow-xl hover:shadow-2xl transition transform hover:-translate-y-1 group relative">
+            <i class="fa-solid fa-phone-volume text-2xl"></i>
+            <!-- Tooltip -->
+            <span class="absolute right-16 top-1/2 -translate-y-1/2 bg-slate-900 text-white text-xs px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none">এখনই কল করুন</span>
+        </a>
+    </div>
 
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // ==========================================
-        // DYNAMIC DATA CONFIGURATION (Requirement #18)
-        // Edit variables here to update the entire site
-        // ==========================================
-        const siteData = {
-            brandName: "Hair Herb's Oil by Sakila",
-            tagline: "Natural Hair Care for Healthy & Beautiful Hair",
-            whatsappNumber: "8801973191586", // Include country code without '+'
-            displayPhone: "০১৯৭৩১৯১৫৮৬",
-            email: "info@hairherbs.com",
-            address: "ঢাকা, বাংলাদেশ",
-           
-            heroImage: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhERdGo6gRywhaABFhY_Wv93P6VpFQA7_OMHMKmtQJh5wQ9emSkg3uqU_LDoTREN2y00HPEJNMl-XkO9wsRZ8lknwu1jGlOzxaSzQZC_ibi1M7rb2xEVXQ6lOqAvdPc0lTJAWjM8GCgMHf7GxKg23ahhGsAl72nPTawjuf_7hkLadOP-K0NsHW-Ul0kooB8/s1014/Gemini_Generated_Image_gmq4czgmq4czgmq4.png",
-           
-            products: [
-                {
-                    id: "p1",
-                    name: "প্রিমিয়াম হারবাল হেয়ার অয়েল",
-                    originalPrice: "৫০০",
-                    discountPrice: "৪০০",
-                    rating: 5.0,
-                    reviewsCount: 124,
-                    badge: "Best Seller",
-                    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhERdGo6gRywhaABFhY_Wv93P6VpFQA7_OMHMKmtQJh5wQ9emSkg3uqU_LDoTREN2y00HPEJNMl-XkO9wsRZ8lknwu1jGlOzxaSzQZC_ibi1M7rb2xEVXQ6lOqAvdPc0lTJAWjM8GCgMHf7GxKg23ahhGsAl72nPTawjuf_7hkLadOP-K0NsHW-Ul0kooB8/s1014/Gemini_Generated_Image_gmq4czgmq4czgmq4.png"
-                },
-                {
-                    id: "p4",
-                    name: "Organic Hair Pake",
-                    originalPrice: "৫০০",
-                    discountPrice: "৩৯৯",
-                    rating: 5.0,
-                    reviewsCount: 42,
-                    badge: "New",
-                    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj6hyphenhyphen6BUSzxVNEl0lfsChk0jDKN1XWW14QbvK432G7Ply5pcA81KxmLFJyFUp2PnNi3i0KFv2HKw_MyPFZ45y6vH0lRM7gxEf73MkQ9mznJ-_nlb6xk4wveSYKyqPYfiOTCtfUkBKkqVya6ZYeLhjhJbukHwcZKwXcNIDN7-OnIC5MsNNJJ6SZRQHLg6QKQ/s320/9bd1fcca-9056-4d60-9c74-940b185ebe4f.png"
-                },
-                {
-                    id: "p5",
-                    name: "Organic Face Pake",
-                    originalPrice: "৫০০",
-                    discountPrice: "৩৯৯",
-                    rating: 5.0,
-                    reviewsCount: 35,
-                    badge: "New",
-                    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjT8h-1klfZ3Zxz3Hhrfo8RWHv8BaP1jmRkWjIGGJf6btD2r9qBJVl47ywaMJxCr60xPuRGWTuPlryqE0WeTr8KnKT-OdLDwqrEPDW2RbUdyMFS4CAvW9kb7sMklZw5XFxFfGzYwvqmoxLHHjYHndVKwbR1w-LVH6zS95qw34pW_lloMV3up70XeiZDkg_w/s320/e552f28e-33a8-46f2-9abc-b5cfa073bc6e.png"
-                }
-            ],
-
-
-            benefits: [
-                { icon: "fa-arrow-down", title: "চুল পড়া রোধ করে", desc: "চুলের গোড়া শক্ত করে এবং অতিরিক্ত চুল পড়া দ্রুত কমিয়ে আনে।" },
-                { icon: "fa-seedling", title: "নতুন চুল গজাতে সাহায্য করে", desc: "স্ক্যাল্পের রক্ত চলাচল বৃদ্ধি করে নতুন চুল গজাতে সহায়তা করে।" },
-                { icon: "fa-check-double", title: "খুশকি দূর করে", desc: "স্ক্যাল্পের ফাঙ্গাল ইনফেকশন ও খুশকি দূর করে মাথা পরিষ্কার রাখে।" },
-                { icon: "fa-leaf", title: "সম্পূর্ণ প্রাকৃতিক", desc: "১০০% খাঁটি ভেষজ উপাদানে তৈরি, কোনো কেমিক্যাল বা প্রিজারভেটিভ নেই।" },
-                { icon: "fa-spa", title: "চুলের রুক্ষতা কমায়", desc: "ড্যামেজ চুল রিপেয়ার করে এবং চুলকে করে সিল্কি ও শাইনি।" },
-                { icon: "fa-bed", title: "অতিরিক্ত ঘুম আনে", desc: "মাথা ঠান্ডা রাখে এবং রাতে ভালো ও গভীর ঘুম হতে সাহায্য করে।" }
-            ],
-
-
-            reviews: [
-                { name: "নাসিমা বেগম", text: "তেলটা সত্যিই অনেক ভালো। মাত্র ২ সপ্তাহ ব্যবহার করে আমার চুল পড়া অনেক কমে গেছে। প্যাকেজিং ও অনেক প্রিমিয়াম ছিল।", rating: 5 },
-                { name: "রুমা আক্তার", text: "আমি অনেক দিন ধরে খুশকির সমস্যায় ভুগছিলাম। এই তেলটা ব্যবহারের পর খুশকি একদম নাই হয়ে গেছে। হাইলি রেকমেন্ডেড!", rating: 5 },
-                { name: "সুমা আক্তার", text: "তেলের সুগন্ধটা একদম প্রাকৃতিক। মাথায় দিলে খুব ঠান্ডা অনুভব হয়। চুল আগের চেয়ে অনেক সিল্কি হয়েছে।", rating: 4 },
-                { name: "রোজা বেগম", text: "ওদের সার্ভিস খুব ভালো। অর্ডার করার ২ দিনের মধ্যেই প্রোডাক্ট হাতে পেয়েছি। কোয়ালিটি নিয়ে কোনো সন্দেহ নেই।", rating: 5 },
-                { name: "জান্নাত খাতুন", text: "প্রোডাক্টটি অসাধারণ! আমার চুলের রুক্ষতা একদম কমে গেছে এবং নতুন চুল গজাতে শুরু করেছে। ধন্যবাদ Hair Herb's কে।", rating: 5 }
-            ],
-
-
-            faqs: [
-                { q: "তেলটি কীভাবে ব্যবহার করতে হবে?", a: "সপ্তাহে ২-৩ দিন রাতে ঘুমানোর আগে চুলের গোড়ায় ভালোভাবে ম্যাসাজ করে লাগান। পরদিন সকালে মাইল্ড শ্যাম্পু দিয়ে ধুয়ে ফেলুন।" },
-                { q: "কতদিন ব্যবহার করলে ফলাফল পাওয়া যাবে?", a: "নিয়মিত ব্যবহারে ২ থেকে ৩ সপ্তাহের মধ্যেই আপনি চুল পড়া কমা এবং চুলের স্বাস্থ্য উন্নত হওয়ার পার্থক্য বুঝতে পারবেন।" },
-                { q: "ছেলে-মেয়ে সবাই কি ব্যবহার করতে পারবে?", a: "হ্যাঁ, আমাদের এই অর্গানিক তেলটি ছেলে ও মেয়ে উভয়ের চুলের জন্যই সম্পূর্ণ নিরাপদ এবং কার্যকরী।" },
-                { q: "ডেলিভারি চার্জ কত এবং কিভাবে পেমেন্ট করবো?", a: "ঢাকার ভেতরে ডেলিভারি চার্জ ৬০ টাকা এবং ঢাকার বাইরে ১২০ টাকা। আপনি প্রোডাক্ট হাতে পেয়ে পেমেন্ট (Cash on Delivery) করতে পারবেন।" }
-            ]
-        };
-
-
-        // ==========================================
-        // INITIALIZATION & DOM MANIPULATION
-        // ==========================================
-        document.addEventListener('DOMContentLoaded', () => {
-           
-            // 1. Inject Basic Text Data
-            document.title = `${siteData.brandName} | Premium Organic Hair Care`;
-            document.getElementById('navBrandName').innerText = siteData.brandName;
-            document.getElementById('loaderBrandName').innerText = siteData.brandName;
-            document.getElementById('aboutBrandName').innerText = siteData.brandName;
-            document.getElementById('footerBrandName').innerText = siteData.brandName;
-            document.getElementById('footerTagline').innerText = siteData.tagline;
-            document.getElementById('contactPhoneText').innerText = siteData.displayPhone;
-            document.getElementById('footerPhone').innerText = siteData.displayPhone;
-            document.getElementById('footerEmail').innerText = siteData.email;
-            document.getElementById('footerAddress').innerText = siteData.address;
-            document.getElementById('currentYear').innerText = new Date().getFullYear();
-            document.getElementById('copyrightName').innerText = siteData.brandName;
-           
-            // Set Images (Hero image logic skipped as image is removed)
-            const heroImgElement = document.getElementById('heroImage');
-            if (heroImgElement) { heroImgElement.src = siteData.heroImage; }
-           
-            // Set WhatsApp Link
-            const waLink = `https://wa.me/${siteData.whatsappNumber}?text=হ্যালো, আমি আপনার ওয়েবসাইট থেকে একটি অর্ডার করতে চাই।`;
-            document.getElementById('floatingWhatsApp').href = waLink;
-
-
-            // 2. Render Products
-            const productGrid = document.getElementById('productGrid');
-            const productSelect = document.getElementById('productSelect');
-           
-            siteData.products.forEach((prod, index) => {
-                // Add to Grid
-                productGrid.innerHTML += `
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100" data-aos="fade-up" data-aos-delay="${index * 100}">
-                        <div class="relative overflow-hidden aspect-[4/3]">
-                            ${prod.badge ? `<div class="absolute top-4 left-4 z-10 bg-accent text-dark font-bold text-xs px-3 py-1 rounded-full shadow-md">${prod.badge}</div>` : ''}
-                            <div class="absolute top-4 right-4 z-10 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 cursor-pointer transition-colors shadow-sm">
-                                <i class="fa-regular fa-heart"></i>
-                            </div>
-                            <img src="${prod.image}" alt="${prod.name}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                           
-                            <!-- Quick Add Overlay -->
-                            <div class="absolute inset-0 bg-dark/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <a href="#order" class="bg-white text-dark font-bold px-6 py-2 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all hover:bg-accent">
-                                    অর্ডার করুন
-                                </a>
-                            </div>
-                        </div>
-                        <div class="p-6 relative">
-                            <div class="flex items-center gap-1 text-yellow-400 text-sm mb-2">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star-half-stroke"></i>
-                                <span class="text-gray-400 text-xs ml-1">(${prod.reviewsCount})</span>
-                            </div>
-                            <h3 class="font-bold text-xl text-dark mb-2 line-clamp-1">${prod.name}</h3>
-                            <div class="flex items-center gap-3 mb-4">
-                                <span class="text-2xl font-bold text-primary">৳${prod.discountPrice}</span>
-                                ${prod.originalPrice ? `<span class="text-gray-400 line-through text-sm">৳${prod.originalPrice}</span>` : ''}
-                            </div>
-                            <a href="#order" class="block w-full text-center py-3 rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors">
-                                <i class="fa-solid fa-cart-shopping mr-2"></i> কার্টে যোগ করুন
-                            </a>
-                        </div>
-                    </div>
-                `;
-               
-                // Add to Select Dropdown in Form
-                productSelect.innerHTML += `<option value="${prod.name}"> ${prod.name} - ৳${prod.discountPrice} </option>`;
-            });
-
-
-            // 3. Render Benefits
-            const benefitsGrid = document.getElementById('benefitsGrid');
-            siteData.benefits.forEach((benefit, index) => {
-                benefitsGrid.innerHTML += `
-                    <div class="glass-dark p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="${index * 100}">
-                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent to-primary flex items-center justify-center text-white text-2xl mb-6 shadow-glow group-hover:rotate-12 transition-transform">
-                            <i class="fa-solid ${benefit.icon}"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">${benefit.title}</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed">${benefit.desc}</p>
-                    </div>
-                `;
-            });
-
-
-            // 4. Render Reviews
-            const reviewsContainer = document.getElementById('reviewsContainer');
-            siteData.reviews.forEach((review, index) => {
-                let starsHTML = '';
-                for(let i=0; i<5; i++) {
-                    starsHTML += `<i class="fa-solid fa-star ${i < review.rating ? 'text-yellow-400' : 'text-gray-300'} text-sm"></i>`;
-                }
-
-
-                reviewsContainer.innerHTML += `
-                    <div class="min-w-[300px] md:min-w-[400px] bg-[#F8F9FA] p-8 rounded-3xl snap-center shadow-sm border border-gray-100" data-aos="fade-left" data-aos-delay="${index * 100}">
-                        <div class="flex gap-1 mb-4">${starsHTML}</div>
-                        <p class="text-gray-600 mb-6 italic line-clamp-4">"${review.text}"</p>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-primary to-accent flex items-center justify-center text-white text-xl shadow-md shrink-0">
-                                <i class="fa-solid fa-user"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-dark text-sm">${review.name}</h4>
-                                <p class="text-xs text-gray-500 flex items-center gap-1"><i class="fa-solid fa-circle-check text-green-500"></i> ভেরিফাইড ক্রেতা</p>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            });
-
-
-            // 5. Render FAQs
-            const faqContainer = document.getElementById('faqContainer');
-            siteData.faqs.forEach((faq, index) => {
-                faqContainer.innerHTML += `
-                    <details class="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden" data-aos="fade-up" data-aos-delay="${index * 50}">
-                        <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-dark group-open:text-primary transition-colors">
-                            <span>${faq.q}</span>
-                            <span class="transition group-open:rotate-180">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </span>
-                        </summary>
-                        <div class="text-gray-600 p-6 pt-0 border-t border-gray-50 text-sm leading-relaxed">
-                            ${faq.a}
-                        </div>
-                    </details>
-                `;
-            });
-
-
-            // 6. Initialize AOS Animations
-            AOS.init({
-                once: true,
-                offset: 50,
-                duration: 800,
-                easing: 'ease-out-cubic',
-            });
-
-
-            // Remove Loader
-            setTimeout(() => {
-                const loader = document.getElementById('loader');
-                loader.style.opacity = '0';
-                setTimeout(() => loader.style.display = 'none', 500);
-            }, 800);
-        });
-
-
-        // ==========================================
-        // UI INTERACTIONS & EVENT LISTENERS
-        // ==========================================
-       
-        // Sticky Navbar Effect
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                nav.classList.add('bg-white/80', 'backdrop-blur-md', 'shadow-sm');
-                nav.classList.remove('bg-transparent', 'py-4');
-                nav.classList.add('py-2');
-            } else {
-                nav.classList.remove('bg-white/80', 'backdrop-blur-md', 'shadow-sm', 'py-2');
-                nav.classList.add('bg-transparent', 'py-4');
-            }
-        });
-
-
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-
-        // Close mobile menu on link click
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-
-        // ==========================================
-        // FORM HANDLING & WHATSAPP REDIRECTION
-        // ==========================================
-        function handleFormSubmit(e) {
-            e.preventDefault();
-           
-            // Get form values
-            const name = document.getElementById('custName').value;
-            const phone = document.getElementById('custPhone').value;
-            const address = document.getElementById('custAddress').value;
-            const product = document.getElementById('productSelect').value;
-           
-            // Format WhatsApp Message
-            const message = `*নতুন অর্ডার!*\n\n*নাম:* ${name}\n*মোবাইল:* ${phone}\n*ঠিকানা:* ${address}\n*প্রোডাক্ট:* ${product}\n\nদয়া করে আমার অর্ডারটি কনফার্ম করুন।`;
-           
-            // Encode for URL
-            const encodedMessage = encodeURIComponent(message);
-            const waUrl = `https://wa.me/${siteData.whatsappNumber}?text=${encodedMessage}`;
-           
-            // Open WhatsApp in new tab
-            window.open(waUrl, '_blank');
-           
-            // Optional: Reset form
-            document.getElementById('orderForm').reset();
-           
-            // Show Custom Alert Message
-            showCustomMessage("অর্ডার রিকোয়েস্ট সফলভাবে তৈরি হয়েছে! আপনাকে WhatsApp-এ রিডাইরেক্ট করা হচ্ছে।");
-        }
-
-
-        // Direct WhatsApp Button function
-        function orderViaWhatsAppDirect() {
-            const message = "হ্যালো, আমি আপনার ওয়েবসাইট থেকে একটি অর্ডার করতে চাই। বিস্তারিত জানতে চাচ্ছি।";
-            const waUrl = `https://wa.me/${siteData.whatsappNumber}?text=${encodeURIComponent(message)}`;
-            window.open(waUrl, '_blank');
-        }
-
-
-        // Custom Message Box (Replacement for alert())
-        function showCustomMessage(msg) {
-            const box = document.createElement('div');
-            box.className = 'fixed top-24 left-1/2 transform -translate-x-1/2 bg-dark text-white px-6 py-3 rounded-xl shadow-2xl z-[100] flex items-center gap-3 animate-bounce';
-            box.innerHTML = `<i class="fa-solid fa-circle-check text-accent"></i> <span>${msg}</span>`;
-            document.body.appendChild(box);
-           
-            setTimeout(() => {
-                box.remove();
-            }, 4000);
-        }
-    </script>
 </body>
 </html>
-
